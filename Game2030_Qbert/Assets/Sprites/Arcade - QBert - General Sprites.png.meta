@@ -1,0 +1,7644 @@
+fileFormatVersion: 2
+guid: fc7e3709b7068824c91bc24f7976ddb3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 647202532104486867
+    second: Arcade - QBert - General Sprites_0
+  - first:
+      213: -4501258087548600063
+    second: Arcade - QBert - General Sprites_1
+  - first:
+      213: -6046982209513605874
+    second: Arcade - QBert - General Sprites_2
+  - first:
+      213: 5026745101192052531
+    second: Arcade - QBert - General Sprites_3
+  - first:
+      213: -7225402005889496539
+    second: Arcade - QBert - General Sprites_4
+  - first:
+      213: -111158130267387716
+    second: Arcade - QBert - General Sprites_5
+  - first:
+      213: -5986871437558002088
+    second: Arcade - QBert - General Sprites_6
+  - first:
+      213: 6889771624918720271
+    second: Arcade - QBert - General Sprites_7
+  - first:
+      213: 4741598549320691408
+    second: Arcade - QBert - General Sprites_8
+  - first:
+      213: 5832833644797230060
+    second: Arcade - QBert - General Sprites_9
+  - first:
+      213: -3050982385006529923
+    second: Arcade - QBert - General Sprites_10
+  - first:
+      213: 6206418991806182112
+    second: Arcade - QBert - General Sprites_11
+  - first:
+      213: -8516687695921319298
+    second: Arcade - QBert - General Sprites_12
+  - first:
+      213: -9164106392326533316
+    second: Arcade - QBert - General Sprites_13
+  - first:
+      213: -3861013163540226594
+    second: Arcade - QBert - General Sprites_14
+  - first:
+      213: 5485104765206361947
+    second: Arcade - QBert - General Sprites_15
+  - first:
+      213: 5432622151822217752
+    second: Arcade - QBert - General Sprites_16
+  - first:
+      213: 5083006542814635923
+    second: Arcade - QBert - General Sprites_17
+  - first:
+      213: -984407568945595954
+    second: Arcade - QBert - General Sprites_18
+  - first:
+      213: -7390146694181061726
+    second: Arcade - QBert - General Sprites_19
+  - first:
+      213: -2013410987080361637
+    second: Arcade - QBert - General Sprites_20
+  - first:
+      213: -4068081382307434652
+    second: Arcade - QBert - General Sprites_21
+  - first:
+      213: 7293330122668532308
+    second: Arcade - QBert - General Sprites_22
+  - first:
+      213: -1223583730630082890
+    second: Arcade - QBert - General Sprites_23
+  - first:
+      213: -9120735610108917473
+    second: Arcade - QBert - General Sprites_24
+  - first:
+      213: 7655949219395803195
+    second: Arcade - QBert - General Sprites_25
+  - first:
+      213: -2504448500247765596
+    second: Arcade - QBert - General Sprites_26
+  - first:
+      213: 5887683151980540294
+    second: Arcade - QBert - General Sprites_27
+  - first:
+      213: -1175709554318683943
+    second: Arcade - QBert - General Sprites_28
+  - first:
+      213: 1582552263169144260
+    second: Arcade - QBert - General Sprites_29
+  - first:
+      213: 602554089542174074
+    second: Arcade - QBert - General Sprites_30
+  - first:
+      213: -2314729650704675571
+    second: Arcade - QBert - General Sprites_31
+  - first:
+      213: -8821158844214226702
+    second: Arcade - QBert - General Sprites_32
+  - first:
+      213: 3862168870084005534
+    second: Arcade - QBert - General Sprites_33
+  - first:
+      213: -3580427957995223397
+    second: Arcade - QBert - General Sprites_34
+  - first:
+      213: -4432994484562789017
+    second: Arcade - QBert - General Sprites_35
+  - first:
+      213: 6252240552695797673
+    second: Arcade - QBert - General Sprites_36
+  - first:
+      213: 5531123284725589217
+    second: Arcade - QBert - General Sprites_37
+  - first:
+      213: -7532458518561171923
+    second: Arcade - QBert - General Sprites_38
+  - first:
+      213: -465317289159585333
+    second: Arcade - QBert - General Sprites_39
+  - first:
+      213: -2330343201805120961
+    second: Arcade - QBert - General Sprites_40
+  - first:
+      213: 8305362496144415341
+    second: Arcade - QBert - General Sprites_41
+  - first:
+      213: 3640321512141011858
+    second: Arcade - QBert - General Sprites_42
+  - first:
+      213: 6069765056450111810
+    second: Arcade - QBert - General Sprites_43
+  - first:
+      213: -8910197826495908875
+    second: Arcade - QBert - General Sprites_44
+  - first:
+      213: 1711379782777921979
+    second: Arcade - QBert - General Sprites_45
+  - first:
+      213: -4563872315485024631
+    second: Arcade - QBert - General Sprites_46
+  - first:
+      213: 3050365006101209723
+    second: Arcade - QBert - General Sprites_47
+  - first:
+      213: -6468922672060777271
+    second: Arcade - QBert - General Sprites_48
+  - first:
+      213: -5514327286437363012
+    second: Arcade - QBert - General Sprites_49
+  - first:
+      213: -1477427059105709316
+    second: Arcade - QBert - General Sprites_50
+  - first:
+      213: 9089499675518395129
+    second: Arcade - QBert - General Sprites_51
+  - first:
+      213: 2591725773088091352
+    second: Arcade - QBert - General Sprites_52
+  - first:
+      213: -3944869106932966436
+    second: Arcade - QBert - General Sprites_53
+  - first:
+      213: -1625193745050764621
+    second: Arcade - QBert - General Sprites_54
+  - first:
+      213: 2989107256592374547
+    second: Arcade - QBert - General Sprites_55
+  - first:
+      213: 3274022690532718931
+    second: Arcade - QBert - General Sprites_56
+  - first:
+      213: 1707894114734750510
+    second: Arcade - QBert - General Sprites_57
+  - first:
+      213: 2843825435004753167
+    second: Arcade - QBert - General Sprites_58
+  - first:
+      213: -332055346517287686
+    second: Arcade - QBert - General Sprites_59
+  - first:
+      213: 4736084979876037903
+    second: Arcade - QBert - General Sprites_60
+  - first:
+      213: -646074658829387048
+    second: Arcade - QBert - General Sprites_61
+  - first:
+      213: 8634038673425745169
+    second: Arcade - QBert - General Sprites_62
+  - first:
+      213: 680105674322717279
+    second: Arcade - QBert - General Sprites_63
+  - first:
+      213: 8626105356267960621
+    second: Arcade - QBert - General Sprites_64
+  - first:
+      213: -2074964004764216334
+    second: Arcade - QBert - General Sprites_65
+  - first:
+      213: -7406443629812241348
+    second: Arcade - QBert - General Sprites_66
+  - first:
+      213: -3347577738616427082
+    second: Arcade - QBert - General Sprites_67
+  - first:
+      213: 2971535451334692677
+    second: Arcade - QBert - General Sprites_68
+  - first:
+      213: -1045596666173065355
+    second: Arcade - QBert - General Sprites_69
+  - first:
+      213: 357220614887884985
+    second: Arcade - QBert - General Sprites_70
+  - first:
+      213: 6896347553708957254
+    second: Arcade - QBert - General Sprites_71
+  - first:
+      213: 8812918305130523635
+    second: Arcade - QBert - General Sprites_72
+  - first:
+      213: 1661107331495192698
+    second: Arcade - QBert - General Sprites_73
+  - first:
+      213: -7723816313047162009
+    second: Arcade - QBert - General Sprites_74
+  - first:
+      213: 2867009031004470310
+    second: Arcade - QBert - General Sprites_75
+  - first:
+      213: -4275866196105782830
+    second: Arcade - QBert - General Sprites_76
+  - first:
+      213: -7176623168520388911
+    second: Arcade - QBert - General Sprites_77
+  - first:
+      213: 8973521345939061505
+    second: Arcade - QBert - General Sprites_78
+  - first:
+      213: -165797399315191068
+    second: Arcade - QBert - General Sprites_79
+  - first:
+      213: -8743652183721001699
+    second: Arcade - QBert - General Sprites_80
+  - first:
+      213: 4318459888335411165
+    second: Arcade - QBert - General Sprites_81
+  - first:
+      213: -828246381597848904
+    second: Arcade - QBert - General Sprites_82
+  - first:
+      213: 9006176960794131505
+    second: Arcade - QBert - General Sprites_83
+  - first:
+      213: 7232566141260903697
+    second: Arcade - QBert - General Sprites_84
+  - first:
+      213: -2870419315338590817
+    second: Arcade - QBert - General Sprites_85
+  - first:
+      213: 1311507286246533742
+    second: Arcade - QBert - General Sprites_86
+  - first:
+      213: -1267356274145355580
+    second: Arcade - QBert - General Sprites_87
+  - first:
+      213: -183657541574108599
+    second: Arcade - QBert - General Sprites_88
+  - first:
+      213: -8772651287088615862
+    second: Arcade - QBert - General Sprites_89
+  - first:
+      213: 8269866469877656214
+    second: Arcade - QBert - General Sprites_90
+  - first:
+      213: -2505650747026188286
+    second: Arcade - QBert - General Sprites_91
+  - first:
+      213: -6350271680306959137
+    second: Arcade - QBert - General Sprites_92
+  - first:
+      213: 6930340330377605589
+    second: Arcade - QBert - General Sprites_93
+  - first:
+      213: 9037842479942383620
+    second: Arcade - QBert - General Sprites_94
+  - first:
+      213: 2651066350621620238
+    second: Arcade - QBert - General Sprites_95
+  - first:
+      213: 8806358210707124222
+    second: Arcade - QBert - General Sprites_96
+  - first:
+      213: 1326280003800685443
+    second: Arcade - QBert - General Sprites_97
+  - first:
+      213: -2013538701312352503
+    second: Arcade - QBert - General Sprites_98
+  - first:
+      213: 953638566123889606
+    second: Arcade - QBert - General Sprites_99
+  - first:
+      213: -3811296614218184150
+    second: Arcade - QBert - General Sprites_100
+  - first:
+      213: 5663731517401313209
+    second: Arcade - QBert - General Sprites_101
+  - first:
+      213: -232731724742544401
+    second: Arcade - QBert - General Sprites_102
+  - first:
+      213: -5186749692033896441
+    second: Arcade - QBert - General Sprites_103
+  - first:
+      213: -5160924508478209980
+    second: Arcade - QBert - General Sprites_104
+  - first:
+      213: 5278633161594551394
+    second: Arcade - QBert - General Sprites_105
+  - first:
+      213: 389540405518901382
+    second: Arcade - QBert - General Sprites_106
+  - first:
+      213: -355019619725643014
+    second: Arcade - QBert - General Sprites_107
+  - first:
+      213: 3920488101997158221
+    second: Arcade - QBert - General Sprites_108
+  - first:
+      213: -5967076710843029889
+    second: Arcade - QBert - General Sprites_109
+  - first:
+      213: 6921337663676239150
+    second: Arcade - QBert - General Sprites_110
+  - first:
+      213: 2272033607571886989
+    second: Arcade - QBert - General Sprites_111
+  - first:
+      213: -6202276654032433508
+    second: Arcade - QBert - General Sprites_112
+  - first:
+      213: 287987364764858403
+    second: Arcade - QBert - General Sprites_113
+  - first:
+      213: 2508358313698596922
+    second: Arcade - QBert - General Sprites_114
+  - first:
+      213: 3131784055247728212
+    second: Arcade - QBert - General Sprites_115
+  - first:
+      213: 7208523725536563675
+    second: Arcade - QBert - General Sprites_116
+  - first:
+      213: -4014581628101982836
+    second: Arcade - QBert - General Sprites_117
+  - first:
+      213: -2977657055199177259
+    second: Arcade - QBert - General Sprites_118
+  - first:
+      213: -6249147659437142415
+    second: Arcade - QBert - General Sprites_119
+  - first:
+      213: -1797733163052727654
+    second: Arcade - QBert - General Sprites_120
+  - first:
+      213: 7082047903191226071
+    second: Arcade - QBert - General Sprites_121
+  - first:
+      213: 2822705080218125814
+    second: Arcade - QBert - General Sprites_122
+  - first:
+      213: 2454597881238311844
+    second: Arcade - QBert - General Sprites_123
+  - first:
+      213: 178344097332078942
+    second: Arcade - QBert - General Sprites_124
+  - first:
+      213: -3883187115598350137
+    second: Arcade - QBert - General Sprites_125
+  - first:
+      213: 8490263424630019668
+    second: Arcade - QBert - General Sprites_126
+  - first:
+      213: -2756211461424266838
+    second: Arcade - QBert - General Sprites_127
+  - first:
+      213: -8581742844009370305
+    second: Arcade - QBert - General Sprites_128
+  - first:
+      213: 4781121491666885282
+    second: Arcade - QBert - General Sprites_129
+  - first:
+      213: 3671118232603595935
+    second: Arcade - QBert - General Sprites_130
+  - first:
+      213: -5677465086321483890
+    second: Arcade - QBert - General Sprites_131
+  - first:
+      213: 1077583796261262126
+    second: Arcade - QBert - General Sprites_132
+  - first:
+      213: 9106786443116944688
+    second: Arcade - QBert - General Sprites_133
+  - first:
+      213: -8300428711941485961
+    second: Arcade - QBert - General Sprites_134
+  - first:
+      213: -3259144848560198663
+    second: Arcade - QBert - General Sprites_135
+  - first:
+      213: 2815297733536238336
+    second: Arcade - QBert - General Sprites_136
+  - first:
+      213: 8808093814448208822
+    second: Arcade - QBert - General Sprites_137
+  - first:
+      213: 6510582042861755363
+    second: Arcade - QBert - General Sprites_138
+  - first:
+      213: -7176813628498695073
+    second: Arcade - QBert - General Sprites_139
+  - first:
+      213: 2118187043568914225
+    second: Arcade - QBert - General Sprites_140
+  - first:
+      213: 6437618376088198786
+    second: Arcade - QBert - General Sprites_141
+  - first:
+      213: -2572043312093900733
+    second: Arcade - QBert - General Sprites_142
+  - first:
+      213: 2411802340836937301
+    second: Arcade - QBert - General Sprites_143
+  - first:
+      213: 5798683883176365703
+    second: Arcade - QBert - General Sprites_144
+  - first:
+      213: -4236510667036847422
+    second: Arcade - QBert - General Sprites_145
+  - first:
+      213: -3465706826405971812
+    second: Arcade - QBert - General Sprites_146
+  - first:
+      213: 5254057987621527391
+    second: Arcade - QBert - General Sprites_147
+  - first:
+      213: 6188929113703716841
+    second: Arcade - QBert - General Sprites_148
+  - first:
+      213: 3420206095826245512
+    second: Arcade - QBert - General Sprites_149
+  - first:
+      213: -794648226824783440
+    second: Arcade - QBert - General Sprites_150
+  - first:
+      213: -8316280989314526652
+    second: Arcade - QBert - General Sprites_151
+  - first:
+      213: -2238724114819721953
+    second: Arcade - QBert - General Sprites_152
+  - first:
+      213: -1420650079176574024
+    second: Arcade - QBert - General Sprites_153
+  - first:
+      213: 8413672821027323164
+    second: Arcade - QBert - General Sprites_154
+  - first:
+      213: -254444229532891520
+    second: Arcade - QBert - General Sprites_155
+  - first:
+      213: 5370738805069889852
+    second: Arcade - QBert - General Sprites_156
+  - first:
+      213: 5448668241074909684
+    second: Arcade - QBert - General Sprites_157
+  - first:
+      213: -7188800797402038802
+    second: Arcade - QBert - General Sprites_158
+  - first:
+      213: -5170945497995151364
+    second: Arcade - QBert - General Sprites_159
+  - first:
+      213: -2480854948569573309
+    second: Arcade - QBert - General Sprites_160
+  - first:
+      213: 7102592054124040870
+    second: Arcade - QBert - General Sprites_161
+  - first:
+      213: 7554850187006132427
+    second: Arcade - QBert - General Sprites_162
+  - first:
+      213: 8868489215571882125
+    second: Arcade - QBert - General Sprites_163
+  - first:
+      213: 5608941340523303234
+    second: Arcade - QBert - General Sprites_164
+  - first:
+      213: -4178182815214456990
+    second: Arcade - QBert - General Sprites_165
+  - first:
+      213: 5178628716041929875
+    second: Arcade - QBert - General Sprites_166
+  - first:
+      213: 2316722144476174817
+    second: Arcade - QBert - General Sprites_167
+  - first:
+      213: -6095898138334014776
+    second: Arcade - QBert - General Sprites_168
+  - first:
+      213: -1277703941005821755
+    second: Arcade - QBert - General Sprites_169
+  - first:
+      213: -8486384152302555897
+    second: Arcade - QBert - General Sprites_170
+  - first:
+      213: -1762338991414024921
+    second: Arcade - QBert - General Sprites_171
+  - first:
+      213: 6208285371860728661
+    second: Arcade - QBert - General Sprites_172
+  - first:
+      213: 3884179202172741198
+    second: Arcade - QBert - General Sprites_173
+  - first:
+      213: -6317809420763522008
+    second: Arcade - QBert - General Sprites_174
+  - first:
+      213: -8082846545318874539
+    second: Arcade - QBert - General Sprites_175
+  - first:
+      213: 5116868510470189067
+    second: Arcade - QBert - General Sprites_176
+  - first:
+      213: 9038895518683238282
+    second: Arcade - QBert - General Sprites_177
+  - first:
+      213: -4208264507400488310
+    second: Arcade - QBert - General Sprites_178
+  - first:
+      213: 61179046418654079
+    second: Arcade - QBert - General Sprites_179
+  - first:
+      213: -6218910341075573770
+    second: Arcade - QBert - General Sprites_180
+  - first:
+      213: -6207716857773416633
+    second: Arcade - QBert - General Sprites_181
+  - first:
+      213: 4677881101981313359
+    second: Arcade - QBert - General Sprites_182
+  - first:
+      213: -871497668223664975
+    second: Arcade - QBert - General Sprites_183
+  - first:
+      213: -1380972578697498885
+    second: Arcade - QBert - General Sprites_184
+  - first:
+      213: -4398019517297503867
+    second: Arcade - QBert - General Sprites_185
+  - first:
+      213: -302418693162227269
+    second: Arcade - QBert - General Sprites_186
+  - first:
+      213: -4340508733313889385
+    second: Arcade - QBert - General Sprites_187
+  - first:
+      213: 3545078254358780258
+    second: Arcade - QBert - General Sprites_188
+  - first:
+      213: -1047805513652718919
+    second: Arcade - QBert - General Sprites_189
+  - first:
+      213: 6906943260712706106
+    second: Arcade - QBert - General Sprites_190
+  - first:
+      213: 8500706873488469830
+    second: Arcade - QBert - General Sprites_191
+  - first:
+      213: 15271107459559131
+    second: Arcade - QBert - General Sprites_192
+  - first:
+      213: -124895562719039361
+    second: Arcade - QBert - General Sprites_193
+  - first:
+      213: 5027571789358625605
+    second: Arcade - QBert - General Sprites_194
+  - first:
+      213: -6525455699540480358
+    second: Arcade - QBert - General Sprites_195
+  - first:
+      213: 5001634632164702506
+    second: Arcade - QBert - General Sprites_196
+  - first:
+      213: 5376611724427128703
+    second: Arcade - QBert - General Sprites_197
+  - first:
+      213: -6617534638040108786
+    second: Arcade - QBert - General Sprites_198
+  - first:
+      213: 6322504255703181530
+    second: Arcade - QBert - General Sprites_199
+  - first:
+      213: -8624299518745629638
+    second: Arcade - QBert - General Sprites_200
+  - first:
+      213: -5867727354559671111
+    second: Arcade - QBert - General Sprites_201
+  - first:
+      213: 3864349009125478807
+    second: Arcade - QBert - General Sprites_202
+  - first:
+      213: -1994860592785056397
+    second: Arcade - QBert - General Sprites_203
+  - first:
+      213: -930653992622082564
+    second: Arcade - QBert - General Sprites_204
+  - first:
+      213: 9087645017793010265
+    second: Arcade - QBert - General Sprites_205
+  - first:
+      213: 1783642081495458122
+    second: Arcade - QBert - General Sprites_206
+  - first:
+      213: -2251840785169366677
+    second: Arcade - QBert - General Sprites_207
+  - first:
+      213: -4813866224262892320
+    second: Arcade - QBert - General Sprites_208
+  - first:
+      213: 142099564595739181
+    second: Arcade - QBert - General Sprites_209
+  - first:
+      213: -6646453128640878473
+    second: Arcade - QBert - General Sprites_210
+  - first:
+      213: -88149583399849660
+    second: Arcade - QBert - General Sprites_211
+  - first:
+      213: 263529908148448258
+    second: Arcade - QBert - General Sprites_212
+  - first:
+      213: 5445228506434135672
+    second: Arcade - QBert - General Sprites_213
+  - first:
+      213: 8869153638354994609
+    second: Arcade - QBert - General Sprites_214
+  - first:
+      213: -2135736148747523640
+    second: Arcade - QBert - General Sprites_215
+  - first:
+      213: 5402734027006716929
+    second: Arcade - QBert - General Sprites_216
+  - first:
+      213: -8700356486630536870
+    second: Arcade - QBert - General Sprites_217
+  - first:
+      213: 4627923985842801470
+    second: Arcade - QBert - General Sprites_218
+  - first:
+      213: 7423387110856373320
+    second: Arcade - QBert - General Sprites_219
+  - first:
+      213: -8154473934546794329
+    second: Arcade - QBert - General Sprites_220
+  - first:
+      213: -6612594294065169448
+    second: Arcade - QBert - General Sprites_221
+  - first:
+      213: -3987647452695305263
+    second: Arcade - QBert - General Sprites_222
+  - first:
+      213: -2077258344307534767
+    second: Arcade - QBert - General Sprites_223
+  - first:
+      213: 1074907428341965474
+    second: Arcade - QBert - General Sprites_224
+  - first:
+      213: -7025873153829085133
+    second: Arcade - QBert - General Sprites_225
+  - first:
+      213: -1372743422613108930
+    second: Arcade - QBert - General Sprites_226
+  - first:
+      213: 8784479934501662298
+    second: Arcade - QBert - General Sprites_227
+  - first:
+      213: -58093075857434635
+    second: Arcade - QBert - General Sprites_228
+  - first:
+      213: -3519140962216683370
+    second: Arcade - QBert - General Sprites_229
+  - first:
+      213: 3481078643761312821
+    second: Arcade - QBert - General Sprites_230
+  - first:
+      213: -1500401448866342443
+    second: Arcade - QBert - General Sprites_231
+  - first:
+      213: -4329363677419505205
+    second: Arcade - QBert - General Sprites_232
+  - first:
+      213: 3309435205363004250
+    second: Arcade - QBert - General Sprites_233
+  - first:
+      213: 1735613742258281549
+    second: Arcade - QBert - General Sprites_234
+  - first:
+      213: 5702395628695829384
+    second: Arcade - QBert - General Sprites_235
+  - first:
+      213: -5463227962437100835
+    second: Arcade - QBert - General Sprites_236
+  - first:
+      213: -4437233144287243360
+    second: Arcade - QBert - General Sprites_237
+  - first:
+      213: -4543781043140664188
+    second: Arcade - QBert - General Sprites_238
+  - first:
+      213: 3406242020257034633
+    second: Arcade - QBert - General Sprites_239
+  - first:
+      213: -7326256192218702311
+    second: Arcade - QBert - General Sprites_240
+  - first:
+      213: 4875262989624414577
+    second: Arcade - QBert - General Sprites_241
+  - first:
+      213: 8323506009305311359
+    second: Arcade - QBert - General Sprites_242
+  - first:
+      213: -7072454525400841063
+    second: Arcade - QBert - General Sprites_243
+  - first:
+      213: -550418100210360006
+    second: Arcade - QBert - General Sprites_244
+  - first:
+      213: -2865344971307442171
+    second: Arcade - QBert - General Sprites_245
+  - first:
+      213: 2550950871079032242
+    second: Arcade - QBert - General Sprites_246
+  - first:
+      213: -4967728848563357966
+    second: Arcade - QBert - General Sprites_247
+  - first:
+      213: -8811385879122564616
+    second: Arcade - QBert - General Sprites_248
+  - first:
+      213: -2595915478429539938
+    second: Arcade - QBert - General Sprites_249
+  - first:
+      213: -5113011560072548170
+    second: Arcade - QBert - General Sprites_250
+  - first:
+      213: -2621672431944219814
+    second: Arcade - QBert - General Sprites_251
+  - first:
+      213: 8072274985505549360
+    second: Arcade - QBert - General Sprites_252
+  - first:
+      213: 4996754568888556373
+    second: Arcade - QBert - General Sprites_253
+  - first:
+      213: -8478220410521325593
+    second: Arcade - QBert - General Sprites_254
+  - first:
+      213: -3537591231746865412
+    second: Arcade - QBert - General Sprites_255
+  - first:
+      213: -5832419519045263598
+    second: Arcade - QBert - General Sprites_256
+  - first:
+      213: 8360524841053767973
+    second: Arcade - QBert - General Sprites_257
+  - first:
+      213: -8646374118324364415
+    second: Arcade - QBert - General Sprites_258
+  - first:
+      213: -1571904905100610172
+    second: Arcade - QBert - General Sprites_259
+  - first:
+      213: -5974017325231976736
+    second: Arcade - QBert - General Sprites_260
+  - first:
+      213: 3074635897716100850
+    second: Arcade - QBert - General Sprites_261
+  - first:
+      213: -8539048287638667637
+    second: Arcade - QBert - General Sprites_262
+  - first:
+      213: -712410929983742127
+    second: Arcade - QBert - General Sprites_263
+  - first:
+      213: 6868971430999832972
+    second: Arcade - QBert - General Sprites_264
+  - first:
+      213: -576520380676596435
+    second: Arcade - QBert - General Sprites_265
+  - first:
+      213: 2377097681472944960
+    second: Arcade - QBert - General Sprites_266
+  - first:
+      213: -1763346561007058607
+    second: Arcade - QBert - General Sprites_267
+  - first:
+      213: -4570456132466527885
+    second: Arcade - QBert - General Sprites_268
+  - first:
+      213: -2880046391954769949
+    second: Arcade - QBert - General Sprites_269
+  - first:
+      213: 4471269181307304438
+    second: Arcade - QBert - General Sprites_270
+  - first:
+      213: -5247828821336479618
+    second: Arcade - QBert - General Sprites_271
+  - first:
+      213: -8535251120477084030
+    second: Arcade - QBert - General Sprites_272
+  - first:
+      213: 4870862442836183568
+    second: Arcade - QBert - General Sprites_273
+  - first:
+      213: 2250160047525835290
+    second: Arcade - QBert - General Sprites_274
+  - first:
+      213: -7739983221661747661
+    second: Arcade - QBert - General Sprites_275
+  - first:
+      213: 2333137047945905566
+    second: Arcade - QBert - General Sprites_276
+  - first:
+      213: -604113469169186105
+    second: Arcade - QBert - General Sprites_277
+  - first:
+      213: -155255630975800866
+    second: Arcade - QBert - General Sprites_278
+  - first:
+      213: -6064386817074944920
+    second: Arcade - QBert - General Sprites_279
+  - first:
+      213: -9207679964236169433
+    second: Arcade - QBert - General Sprites_280
+  - first:
+      213: 5180789121986604786
+    second: Arcade - QBert - General Sprites_281
+  - first:
+      213: -702984707776483308
+    second: Arcade - QBert - General Sprites_282
+  - first:
+      213: 5926304161739733793
+    second: Arcade - QBert - General Sprites_283
+  - first:
+      213: 4582648398499466741
+    second: Arcade - QBert - General Sprites_284
+  - first:
+      213: 8197705933836509336
+    second: Arcade - QBert - General Sprites_285
+  - first:
+      213: 9021072151285577557
+    second: Arcade - QBert - General Sprites_286
+  - first:
+      213: -6061050002627757377
+    second: Arcade - QBert - General Sprites_287
+  - first:
+      213: -579391167874791281
+    second: Arcade - QBert - General Sprites_288
+  - first:
+      213: 5200078515363478413
+    second: Arcade - QBert - General Sprites_289
+  - first:
+      213: -1359138826369029748
+    second: Arcade - QBert - General Sprites_290
+  - first:
+      213: -205588827635705830
+    second: Arcade - QBert - General Sprites_291
+  - first:
+      213: -6722399524865140973
+    second: Arcade - QBert - General Sprites_292
+  - first:
+      213: 3657951438510565677
+    second: Arcade - QBert - General Sprites_293
+  - first:
+      213: -6379350831655040001
+    second: Arcade - QBert - General Sprites_294
+  - first:
+      213: -6469223595132164514
+    second: Arcade - QBert - General Sprites_295
+  - first:
+      213: 720088047208557868
+    second: Arcade - QBert - General Sprites_296
+  - first:
+      213: -8496395178291542566
+    second: Arcade - QBert - General Sprites_297
+  - first:
+      213: -8377963066052656594
+    second: Arcade - QBert - General Sprites_298
+  - first:
+      213: -4426193117214601836
+    second: Arcade - QBert - General Sprites_299
+  - first:
+      213: -539890898740605152
+    second: Arcade - QBert - General Sprites_300
+  - first:
+      213: -3449103617991529716
+    second: Arcade - QBert - General Sprites_301
+  - first:
+      213: 4544569309493009389
+    second: Arcade - QBert - General Sprites_302
+  - first:
+      213: -6711972091548022318
+    second: Arcade - QBert - General Sprites_303
+  - first:
+      213: -7881768608506599577
+    second: Arcade - QBert - General Sprites_304
+  - first:
+      213: -3476371902803697375
+    second: Arcade - QBert - General Sprites_305
+  - first:
+      213: 9181543280524702139
+    second: Arcade - QBert - General Sprites_306
+  - first:
+      213: 8587062370459968198
+    second: Arcade - QBert - General Sprites_307
+  - first:
+      213: 1696949278263697170
+    second: Arcade - QBert - General Sprites_308
+  - first:
+      213: 7545816962395847101
+    second: Arcade - QBert - General Sprites_309
+  - first:
+      213: -7806040215787405582
+    second: Arcade - QBert - General Sprites_310
+  - first:
+      213: -2261605744741215318
+    second: Arcade - QBert - General Sprites_311
+  - first:
+      213: 4015220968555912354
+    second: Arcade - QBert - General Sprites_312
+  - first:
+      213: 7320004028899348341
+    second: Arcade - QBert - General Sprites_313
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 368
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df32df16435bf800800000000000000
+      internalID: 647202532104486867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 368
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101cf493e915881c0800000000000000
+      internalID: -4501258087548600063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 368
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05b5def7bdc41ca0800000000000000
+      internalID: -6046982209513605874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 368
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33fbcf4690692c540800000000000000
+      internalID: 5026745101192052531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 368
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52acf8f48273abb90800000000000000
+      internalID: -7225402005889496539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_5
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 368
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb8048bf446157ef0800000000000000
+      internalID: -111158130267387716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_6
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 368
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e4c68b52c5aeca0800000000000000
+      internalID: -5986871437558002088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 376
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f98de0ac26d9f50800000000000000
+      internalID: 6889771624918720271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 376
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de64cf22ca8dc140800000000000000
+      internalID: 4741598549320691408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_9
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 376
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebf518db4362f050800000000000000
+      internalID: 5832833644797230060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 376
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7236b58fabb8a5d0800000000000000
+      internalID: -3050982385006529923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 376
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e278d5a031a12650800000000000000
+      internalID: 6206418991806182112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 376
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e727ba5f9a5aec980800000000000000
+      internalID: -8516687695921319298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_13
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 376
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f8d792acd82d080800000000000000
+      internalID: -9164106392326533316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_14
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 376
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eddd31afbfcea6ac0800000000000000
+      internalID: -3861013163540226594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_15
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 369
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b577dedf8b10f1c40800000000000000
+      internalID: 5485104765206361947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_16
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 376
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8121846501d846b40800000000000000
+      internalID: 5432622151822217752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_17
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397e37f05877a8640800000000000000
+      internalID: 5083006542814635923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_18
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 369
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9baca188ea652f0800000000000000
+      internalID: -984407568945595954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_19
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ab7f4f7cbce07990800000000000000
+      internalID: -7390146694181061726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_20
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 377
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b59d430ff5dee04e0800000000000000
+      internalID: -2013410987080361637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_21
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f6f2259854b87c0800000000000000
+      internalID: -4068081382307434652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_22
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4526057da1d173560800000000000000
+      internalID: 7293330122668532308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_23
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6beb8de6415f40fe0800000000000000
+      internalID: -1223583730630082890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_24
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19c33d4943ac6180800000000000000
+      internalID: -9120735610108917473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_25
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38148880456f3a60800000000000000
+      internalID: 7655949219395803195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_26
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 377
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4add870bb596e3dd0800000000000000
+      internalID: -2504448500247765596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_27
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6813ad7e1a045b150800000000000000
+      internalID: 5887683151980540294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_28
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d05dc7b36a0fafe0800000000000000
+      internalID: -1175709554318683943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_29
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c5ffac06ea56f510800000000000000
+      internalID: 1582552263169144260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_30
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75ce1180c3bc5800800000000000000
+      internalID: 602554089542174074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_31
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d0faa85ad60efd0800000000000000
+      internalID: -2314729650704675571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_32
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f0d05784c2f49580800000000000000
+      internalID: -8821158844214226702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_33
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9ecdebef1e299530800000000000000
+      internalID: 3862168870084005534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_34
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9641dbfdb3cf4ec0800000000000000
+      internalID: -3580427957995223397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_35
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76d7e58d007da72c0800000000000000
+      internalID: -4432994484562789017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_36
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a799b928ab64c650800000000000000
+      internalID: 6252240552695797673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_37
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4e5f2825f72cc40800000000000000
+      internalID: 5531123284725589217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_38
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26dbc3d2e4577790800000000000000
+      internalID: -7532458518561171923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_39
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc19bcf046cda89f0800000000000000
+      internalID: -465317289159585333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_40
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ac8a36435f8afd0800000000000000
+      internalID: -2330343201805120961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_41
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a1a81cf23924370800000000000000
+      internalID: 8305362496144415341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_42
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29bb067c025058230800000000000000
+      internalID: 3640321512141011858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_43
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 249a9cbe8232c3450800000000000000
+      internalID: 6069765056450111810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_44
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 369
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f3f049f84e985480800000000000000
+      internalID: -8910197826495908875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_45
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1634c58da00c710800000000000000
+      internalID: 1711379782777921979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_46
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e864b3f4ed9a0c0800000000000000
+      internalID: -4563872315485024631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_47
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72e1ffbfc2155a20800000000000000
+      internalID: 3050365006101209723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_48
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ccb8548a15c936a0800000000000000
+      internalID: -6468922672060777271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_49
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb248a49c8c2973b0800000000000000
+      internalID: -5514327286437363012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_50
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 369
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf24470eaef1f7be0800000000000000
+      internalID: -1477427059105709316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_51
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 320
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f26d41fbc3642e70800000000000000
+      internalID: 9089499675518395129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_52
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 320
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dce32cebd8a7f320800000000000000
+      internalID: 2591725773088091352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_53
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb19d3b2720149c0800000000000000
+      internalID: -3944869106932966436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_54
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 360
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baff0746e62279e0800000000000000
+      internalID: -1625193745050764621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_55
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31b1bb086317b7920800000000000000
+      internalID: 2989107256592374547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_56
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35975cf5a4aaf6d20800000000000000
+      internalID: 3274022690532718931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_57
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2bbeb606a8a3b710800000000000000
+      internalID: 1707894114734750510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_58
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05dda87a2c477720800000000000000
+      internalID: 2843825435004753167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_59
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc5111fb6d446bf0800000000000000
+      internalID: -332055346517287686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_60
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0503934234f9b140800000000000000
+      internalID: 4736084979876037903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_61
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dab716558ea807f0800000000000000
+      internalID: -646074658829387048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_62
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115c68aad6442d770800000000000000
+      internalID: 8634038673425745169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_63
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5aabb7e188307900800000000000000
+      internalID: 680105674322717279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_64
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 360
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2932735e1516b770800000000000000
+      internalID: 8626105356267960621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_65
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f39e463b3f3433e0800000000000000
+      internalID: -2074964004764216334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_66
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3c261c72c6073990800000000000000
+      internalID: -7406443629812241348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_67
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd23cf68c30b81d0800000000000000
+      internalID: -3347577738616427082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_68
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54fc846cfb30d3920800000000000000
+      internalID: 2971535451334692677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_69
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577fb663f5b4d71f0800000000000000
+      internalID: -1045596666173065355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_70
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b8c6d0b14a15f400800000000000000
+      internalID: 357220614887884985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_71
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ed47acf8fb4bf50800000000000000
+      internalID: 6896347553708957254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_72
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 360
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fba7d37186cd4a70800000000000000
+      internalID: 8812918305130523635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_73
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 352
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a78619b21507d0710800000000000000
+      internalID: 1661107331495192698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_74
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 318
+        width: 15
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 763e47e5cfd7fc490800000000000000
+      internalID: -7723816313047162009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_75
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62cbbdc0689a9c720800000000000000
+      internalID: 2867009031004470310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_76
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d99302695219a4c0800000000000000
+      internalID: -4275866196105782830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_77
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1def0896043876c90800000000000000
+      internalID: -7176623168520388911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_78
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b3511de1a588c70800000000000000
+      internalID: 8973521345939061505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_79
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea622dc428f2bdf0800000000000000
+      internalID: -165797399315191068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_80
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1dbdbd2aae48a680800000000000000
+      internalID: -8743652183721001699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_81
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd7510563604eeb30800000000000000
+      internalID: 4318459888335411165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_82
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba8b5edd4a7184f0800000000000000
+      internalID: -828246381597848904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_83
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 353
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13cf074aa3e5cfc70800000000000000
+      internalID: 9006176960794131505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_84
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115bf50f59c3f5460800000000000000
+      internalID: 7232566141260903697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_85
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95c2d047d83a28d0800000000000000
+      internalID: -2870419315338590817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_86
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6aaf0d9de8633210800000000000000
+      internalID: 1311507286246533742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_87
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c814b3fe22796ee0800000000000000
+      internalID: -1267356274145355580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_88
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a57226074837df0800000000000000
+      internalID: -183657541574108599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_89
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ea5b64228414680800000000000000
+      internalID: -8772651287088615862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_90
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 345
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69aa8fc1db774c270800000000000000
+      internalID: 8269866469877656214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_91
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 340
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208df4ccbe32a3dd0800000000000000
+      internalID: -2505650747026188286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_92
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdca41c4d8d4fd7a0800000000000000
+      internalID: -6350271680306959137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_93
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d178bcdfc38d2060800000000000000
+      internalID: 6930340330377605589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_94
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 408b6e8d9dddc6d70800000000000000
+      internalID: 9037842479942383620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_95
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08fac8ccca7ac420800000000000000
+      internalID: 2651066350621620238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_96
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 347
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: effea027228763a70800000000000000
+      internalID: 8806358210707124222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_97
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38b5e33f2a4e76210800000000000000
+      internalID: 1326280003800685443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_98
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f96c628397e04e0800000000000000
+      internalID: -2013538701312352503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_99
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c36de929310c3d00800000000000000
+      internalID: 953638566123889606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_100
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a40e72ced8b1bc0800000000000000
+      internalID: -3811296614218184150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_101
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 316
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bfa3edaecd999e40800000000000000
+      internalID: 5663731517401313209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_102
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 338
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe3b1cababb25ccf0800000000000000
+      internalID: -232731724742544401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_103
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 339
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700f37bb2a6f408b0800000000000000
+      internalID: -5186749692033896441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_104
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 339
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4408c87d086b068b0800000000000000
+      internalID: -5160924508478209980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_105
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 337
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26cb070a4e8714940800000000000000
+      internalID: 5278633161594551394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_106
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 342
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680ad985fece76500800000000000000
+      internalID: 389540405518901382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_107
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 347
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af275fd6987b21bf0800000000000000
+      internalID: -355019619725643014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_108
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 336
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4f9fa9382f586630800000000000000
+      internalID: 3920488101997158221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_109
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 345
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f76e1bea85fa03da0800000000000000
+      internalID: -5967076710843029889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_110
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 336
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d44fd2fe78d0060800000000000000
+      internalID: 6921337663676239150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_111
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 347
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8352114782e78f10800000000000000
+      internalID: 2272033607571886989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_112
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 347
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ec2b58e361de9a0800000000000000
+      internalID: -6202276654032433508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_113
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 339
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3283c908bf22ff300800000000000000
+      internalID: 287987364764858403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_114
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 337
+        width: 4
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a381761b89a7fc220800000000000000
+      internalID: 2508358313698596922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_115
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 337
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45ee54e5105567b20800000000000000
+      internalID: 3131784055247728212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_116
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 342
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1159fc222d90460800000000000000
+      internalID: 7208523725536563675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_117
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 342
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c850c2787475948c0800000000000000
+      internalID: -4014581628101982836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_118
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 329
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5dae14fac3da6d0800000000000000
+      internalID: -2977657055199177259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_119
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 329
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e094a20519649a0800000000000000
+      internalID: -6249147659437142415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_120
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 329
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a928d47863b2d07e0800000000000000
+      internalID: -1797733163052727654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_121
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 336
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d65300bb0d784260800000000000000
+      internalID: 7082047903191226071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_122
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 336
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f5871ca0534c2720800000000000000
+      internalID: 2822705080218125814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_123
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 320
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3d2a994cb701220800000000000000
+      internalID: 2454597881238311844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_124
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 312
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e592449f20b997200800000000000000
+      internalID: 178344097332078942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_125
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 329
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c8f26274e52c1ac0800000000000000
+      internalID: -3883187115598350137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_126
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 321
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4565092f99973d570800000000000000
+      internalID: 8490263424630019668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_127
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 329
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa142f36748ffb9d0800000000000000
+      internalID: -2756211461424266838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_128
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 329
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d2215f95687e880800000000000000
+      internalID: -8581742844009370305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_129
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 329
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa5aca4aa4f95240800000000000000
+      internalID: 4781121491666885282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_130
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 329
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f941cc6059e62f230800000000000000
+      internalID: 3671118232603595935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_131
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 329
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f1021a5979531b0800000000000000
+      internalID: -5677465086321483890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_132
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e239edfd0c854fe00800000000000000
+      internalID: 1077583796261262126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_133
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d145b250ec16e70800000000000000
+      internalID: 9106786443116944688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_134
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a46456014fecc80800000000000000
+      internalID: -8300428711941485961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_135
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fb6606270135c2d0800000000000000
+      internalID: -3259144848560198663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_136
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bc3606f52f11720800000000000000
+      internalID: 2815297733536238336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_137
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 321
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bb308e28a2ac3a70800000000000000
+      internalID: 8808093814448208822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_138
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebdfc99fdb3a5a50800000000000000
+      internalID: 6510582042861755363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_139
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c272e7706d66c90800000000000000
+      internalID: -7176813628498695073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_140
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13f82cbb4ef456d10800000000000000
+      internalID: 2118187043568914225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_141
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e934a1ec3075950800000000000000
+      internalID: 6437618376088198786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_142
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34059b32c344e4cd0800000000000000
+      internalID: -2572043312093900733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_143
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e8a026371787120800000000000000
+      internalID: 2411802340836937301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_144
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78e828dd440197050800000000000000
+      internalID: 5798683883176365703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_145
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c29d1c8ef3e435c0800000000000000
+      internalID: -4236510667036847422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_146
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98fc64e00657efc0800000000000000
+      internalID: -3465706826405971812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_147
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 321
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f1c7d07e92ae840800000000000000
+      internalID: 5254057987621527391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_148
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e712621d3e73e550800000000000000
+      internalID: 6188929113703716841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_149
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8875958b253077f20800000000000000
+      internalID: 3420206095826245512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_150
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b9f6bed5a7d8f4f0800000000000000
+      internalID: -794648226824783440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_151
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 442d2937082a69c80800000000000000
+      internalID: -8316280989314526652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_152
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15d11267447ee0e0800000000000000
+      internalID: -2238724114819721953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_153
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bbbc88a746d84ce0800000000000000
+      internalID: -1420650079176574024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_154
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.50594634, y: 0.48209393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d31b96ade53c470800000000000000
+      internalID: 8413672821027323164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_155
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 315
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0864b834258087cf0800000000000000
+      internalID: -254444229532891520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_156
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 312
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31c891ec72b88a40800000000000000
+      internalID: 5370738805069889852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_157
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 312
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1f830a5ee8d9b40800000000000000
+      internalID: 5448668241074909684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_158
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 315
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed7ecd33cf3c3c90800000000000000
+      internalID: -7188800797402038802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_159
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 276
+        width: 48
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7f717677c1d38b0800000000000000
+      internalID: -5170945497995151364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_160
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 272
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3489d33819b329dd0800000000000000
+      internalID: -2480854948569573309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_161
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 272
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2539297d9719260800000000000000
+      internalID: 7102592054124040870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_162
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 272
+        width: 22
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc04bcfb73838d860800000000000000
+      internalID: 7554850187006132427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_163
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 272
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d807b8c44f3331b70800000000000000
+      internalID: 8868489215571882125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_164
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 272
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24115e78e66f6dd40800000000000000
+      internalID: 5608941340523303234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_165
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 257
+        width: 44
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26f2084dddc1406c0800000000000000
+      internalID: -4178182815214456990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_166
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 288
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3940153316f2ed740800000000000000
+      internalID: 5178628716041929875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_167
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 241
+        width: 48
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e998c01486a62020800000000000000
+      internalID: 2316722144476174817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_168
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 272
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2d2adc0f4076ba0800000000000000
+      internalID: -6095898138334014776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_169
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 64
+        height: 240
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c83b34090fa44ee0800000000000000
+      internalID: -1277703941005821755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_170
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 265
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d6086839e4a3a80800000000000000
+      internalID: -8486384152302555897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_171
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 265
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72562fa460aea87e0800000000000000
+      internalID: -1762338991414024921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_172
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 265
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b330e17a2482650800000000000000
+      internalID: 6208285371860728661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_173
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 265
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e466775b76067e530800000000000000
+      internalID: 3884179202172741198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_174
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 264
+        width: 52
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c16c41ec1a258a0800000000000000
+      internalID: -6317809420763522008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_175
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 268
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552764c44e5f3df80800000000000000
+      internalID: -8082846545318874539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_176
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 267
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0035f8ccc4c20740800000000000000
+      internalID: 5116868510470189067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_177
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 265
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8f0cf8859b907d70800000000000000
+      internalID: 9038895518683238282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_178
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 227
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8a72831abd3995c0800000000000000
+      internalID: -4208264507400488310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_179
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 256
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f732b71c40a59d000800000000000000
+      internalID: 61179046418654079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_180
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 259
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3ef267efdf1b9a0800000000000000
+      internalID: -6218910341075573770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_181
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 259
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f16326862c9d9a0800000000000000
+      internalID: -6207716857773416633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_182
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 239
+        width: 79
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f49eb19e31c2be040800000000000000
+      internalID: 4677881101981313359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_183
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 257
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc72f6fc71d7e3f0800000000000000
+      internalID: -871497668223664975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_184
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 257
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe2e22a1ccc5dce0800000000000000
+      internalID: -1380972578697498885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_185
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 257
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5815f3cfc8817f2c0800000000000000
+      internalID: -4398019517297503867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_186
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 257
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9a0a40dc79dcbf0800000000000000
+      internalID: -302418693162227269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_187
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 257
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b4856dd4a63c3c0800000000000000
+      internalID: -4340508733313889385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_188
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 257
+        width: 51
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2695404c3e5a23130800000000000000
+      internalID: 3545078254358780258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_189
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 244
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2b805df627571f0800000000000000
+      internalID: -1047805513652718919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_190
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a302f821d446adf50800000000000000
+      internalID: 6906943260712706106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_191
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 244
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64f600edcd398f570800000000000000
+      internalID: 8500706873488469830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_192
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde2477cdf0463000800000000000000
+      internalID: 15271107459559131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_193
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 246
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70fb1eb528444ef0800000000000000
+      internalID: -124895562719039361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_194
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 249
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543fe7bb7e585c540800000000000000
+      internalID: 5027571789358625605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_195
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 249
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e67575d9ce075a0800000000000000
+      internalID: -6525455699540480358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_196
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 249
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a29f77ab230696540800000000000000
+      internalID: 5001634632164702506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_197
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 249
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7feda970ef8d9a40800000000000000
+      internalID: 5376611724427128703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_198
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 249
+        width: 51
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e01b6c2de4bc924a0800000000000000
+      internalID: -6617534638040108786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_199
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 243
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8651c5f1c0eb750800000000000000
+      internalID: 6322504255703181530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_200
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c289cf745505880800000000000000
+      internalID: -8624299518745629638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_201
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 245
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b4d0a04f05a19ea0800000000000000
+      internalID: -5867727354559671111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_202
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7919e0913fce0a530800000000000000
+      internalID: 3864349009125478807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_203
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d1f9e2cd4d054e0800000000000000
+      internalID: -1994860592785056397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_204
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 249
+        width: 29
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf536f0ef17a513f0800000000000000
+      internalID: -930653992622082564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_205
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 233
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a966acefccd1e70800000000000000
+      internalID: 9087645017793010265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_206
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 233
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41a9f1e505c0c810800000000000000
+      internalID: 1783642081495458122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_207
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 233
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b614e359cbadfb0e0800000000000000
+      internalID: -2251840785169366677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_208
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 232
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e43f8a8c26b13db0800000000000000
+      internalID: -4813866224262892320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_209
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 240
+        width: 48
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2a77761dc6d8f100800000000000000
+      internalID: 142099564595739181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_210
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 241
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778a31b081e03c3a0800000000000000
+      internalID: -6646453128640878473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_211
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 241
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4417a52cb64d6cef0800000000000000
+      internalID: -88149583399849660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_212
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 241
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c21e22e0f38a300800000000000000
+      internalID: 263529908148448258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_213
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 241
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87666def976519b40800000000000000
+      internalID: 5445228506434135672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_214
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 241
+        width: 51
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b543884e30951b70800000000000000
+      internalID: 8869153638354994609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_215
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 245
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c961ffc9475c52e0800000000000000
+      internalID: -2135736148747523640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_216
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10ca6aff8fd5afa40800000000000000
+      internalID: 5402734027006716929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_217
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 244
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a590f133fdf124780800000000000000
+      internalID: -8700356486630536870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_218
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b8ba76850b93040800000000000000
+      internalID: 4627923985842801470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_219
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844becc1f3b250760800000000000000
+      internalID: 7423387110856373320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_220
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 241
+        width: 31
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a80829292d75de80800000000000000
+      internalID: -8154473934546794329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_221
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 247
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db787a46885b34a0800000000000000
+      internalID: -6612594294065169448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_222
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 246
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3ea9ce4c709a8c0800000000000000
+      internalID: -3987647452695305263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_223
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 247
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15455d8aa881c23e0800000000000000
+      internalID: -2077258344307534767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_224
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 247
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a260c86c96daee00800000000000000
+      internalID: 1074907428341965474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_225
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 233
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330601d57951f7e90800000000000000
+      internalID: -7025873153829085133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_226
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 233
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e374467512903fce0800000000000000
+      internalID: -1372743422613108930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_227
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 233
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ea48055fdb8e970800000000000000
+      internalID: 8784479934501662298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_228
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 233
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f79b91c7ac913ff0800000000000000
+      internalID: -58093075857434635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_229
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 233
+        width: 51
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6985c88a0ff792fc0800000000000000
+      internalID: -3519140962216683370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_230
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 243
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534779c35964f4030800000000000000
+      internalID: 3481078643761312821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_231
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 246
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d917dbe4d08d2be0800000000000000
+      internalID: -1500401448866342443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_232
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 243
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc97eef5ca20be3c0800000000000000
+      internalID: -4329363677419505205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_233
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 243
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5375def8c97ded20800000000000000
+      internalID: 3309435205363004250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_234
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c579eb083261810800000000000000
+      internalID: 1735613742258281549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_235
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 233
+        width: 48
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88bb7299c9af22f40800000000000000
+      internalID: 5702395628695829384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_236
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 227
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda94f31d17be24b0800000000000000
+      internalID: -5463227962437100835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_237
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 229
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a35b29f6f7cb62c0800000000000000
+      internalID: -4437233144287243360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_238
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 229
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484627a173f31f0c0800000000000000
+      internalID: -4543781043140664188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_239
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 229
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 981fd640217654f20800000000000000
+      internalID: 3406242020257034633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_240
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 227
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e5c413fc8e35a90800000000000000
+      internalID: -7326256192218702311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_241
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 229
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1711c2bdbd968a340800000000000000
+      internalID: 4875262989624414577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_242
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 230
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78e87a9d98038370800000000000000
+      internalID: 8323506009305311359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_243
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 225
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9940163a41899dd90800000000000000
+      internalID: -7072454525400841063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_244
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 225
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31240377a58c58f0800000000000000
+      internalID: -550418100210360006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_245
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 225
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 500a44a0eef3c38d0800000000000000
+      internalID: -2865344971307442171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_246
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 225
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5932e3d4cc66320800000000000000
+      internalID: 2550950871079032242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_247
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 225
+        width: 51
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6bbe0bee41f0bb0800000000000000
+      internalID: -4967728848563357966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_248
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 245
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9a1084a3ba7b580800000000000000
+      internalID: -8811385879122564616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_249
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 245
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e91e44940a479fbd0800000000000000
+      internalID: -2595915478429539938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_250
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 245
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b0f865731fea09b0800000000000000
+      internalID: -5113011560072548170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_251
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 244
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53c78830d2fd9bd0800000000000000
+      internalID: -2621672431944219814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_252
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 246
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c6450a45b760070800000000000000
+      internalID: 8072274985505549360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_253
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 208
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b99647ec9085540800000000000000
+      internalID: 4996754568888556373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_254
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7efe867c47f475a80800000000000000
+      internalID: -8478220410521325593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_255
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 208
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf601378483f7eec0800000000000000
+      internalID: -3537591231746865412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_256
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f904259551f0fa0800000000000000
+      internalID: -5832419519045263598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_257
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 208
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 529c6d60c0d860470800000000000000
+      internalID: 8360524841053767973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_258
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b1522cc88e10880800000000000000
+      internalID: -8646374118324364415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_259
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 208
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485b8ce21d87f2ae0800000000000000
+      internalID: -1571904905100610172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_260
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 32
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eec487f4e6081da0800000000000000
+      internalID: -5974017325231976736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_261
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 208
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe48011f0d4baa20800000000000000
+      internalID: 3074635897716100850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_262
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 32
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8eb36ff2d43f7980800000000000000
+      internalID: -8539048287638667637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_263
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 208
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f9630a8020d16f0800000000000000
+      internalID: -712410929983742127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_264
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 32
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c893d058f1d735f50800000000000000
+      internalID: 6868971430999832972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_265
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 208
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d9fffa4c9cff7f0800000000000000
+      internalID: -576520380676596435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_266
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 32
+        width: 64
+        height: 192
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b79943fb52df020800000000000000
+      internalID: 2377097681472944960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_267
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 208
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151844735a55787e0800000000000000
+      internalID: -1763346561007058607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_268
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 371b3d2ec5a7290c0800000000000000
+      internalID: -4570456132466527885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_269
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7f3eec0150808d0800000000000000
+      internalID: -2880046391954769949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_270
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f939fe61a32d0e30800000000000000
+      internalID: 4471269181307304438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_271
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78ae2ebd77fb27b0800000000000000
+      internalID: -5247828821336479618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_272
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286653fd352bc8980800000000000000
+      internalID: -8535251120477084030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_273
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01aca07b597c89340800000000000000
+      internalID: 4870862442836183568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_274
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12bd8034ac2a3f10800000000000000
+      internalID: 2250160047525835290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_275
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3363e51a44e069490800000000000000
+      internalID: -7739983221661747661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_276
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 144
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e958e1b98c7f06020800000000000000
+      internalID: 2333137047945905566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_277
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 144
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca44222002cd97f0800000000000000
+      internalID: -604113469169186105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_278
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 144
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9ee4283db68ddf0800000000000000
+      internalID: -155255630975800866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_279
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 144
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864afa30258f6dba0800000000000000
+      internalID: -6064386817074944920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_280
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 144
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fb83e5bdfb73080800000000000000
+      internalID: -9207679964236169433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_281
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 144
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe2838e14cd5e740800000000000000
+      internalID: 5180789121986604786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_282
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 144
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4107372022f7e36f0800000000000000
+      internalID: -702984707776483308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_283
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 144
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b7a677c367e3250800000000000000
+      internalID: 5926304161739733793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_284
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 720
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fdc2134076d89f30800000000000000
+      internalID: 4582648398499466741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_285
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 14
+        width: 640
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890ef6f0d1a14c170800000000000000
+      internalID: 8197705933836509336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_286
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 244
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557bb8e6359413d70800000000000000
+      internalID: 9021072151285577557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_287
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbafd7ba223d2eba0800000000000000
+      internalID: -6061050002627757377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_288
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8803d47dc695f7f0800000000000000
+      internalID: -579391167874791281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_289
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8b7168cbd36a2840800000000000000
+      internalID: 5200078515363478413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_290
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8925dd307e532de0800000000000000
+      internalID: -1359138826369029748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_291
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a181cfeec0a952df0800000000000000
+      internalID: -205588827635705830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_292
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 317982abf3d35b2a0800000000000000
+      internalID: -6722399524865140973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_293
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d292d02e377a3c230800000000000000
+      internalID: 3657951438510565677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_294
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbcb95c73ef777a0800000000000000
+      internalID: -6379350831655040001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_295
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5662976a63b836a0800000000000000
+      internalID: -6469223595132164514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_296
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2deed483444ef900800000000000000
+      internalID: 720088047208557868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_297
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad54796e99db61a80800000000000000
+      internalID: -8496395178291542566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_298
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 208
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22c692dafe7bbb80800000000000000
+      internalID: -8377963066052656594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_299
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 176
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d05259fc00392c0800000000000000
+      internalID: -4426193117214601836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_300
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 144
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f891b861ce188f0800000000000000
+      internalID: -539890898740605152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_301
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 368
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ba91898825220d0800000000000000
+      internalID: -3449103617991529716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_302
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 352
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deb197575bd811f30800000000000000
+      internalID: 4544569309493009389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_303
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 352
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9c1fcb1f84ad2a0800000000000000
+      internalID: -6711972091548022318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_304
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 352
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767a320c5355e9290800000000000000
+      internalID: -7881768608506599577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_305
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 352
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 121ac3a4c2271cfc0800000000000000
+      internalID: -3476371902803697375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_306
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 352
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1bc8db7f46b6f70800000000000000
+      internalID: 9181543280524702139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_307
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 343
+        width: 2
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2e36fcabf5b2770800000000000000
+      internalID: 8587062370459968198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_308
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 18
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f53c4b066cc8710800000000000000
+      internalID: 1696949278263697170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_309
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 18
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9b8bf3c8028b860800000000000000
+      internalID: 7545816962395847101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_310
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 18
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fef39b28cf5ba390800000000000000
+      internalID: -7806040215787405582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_311
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 18
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa397b2ce892d90e0800000000000000
+      internalID: -2261605744741215318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_312
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac9975823ee8b730800000000000000
+      internalID: 4015220968555912354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arcade - QBert - General Sprites_313
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 256
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f49f891e0e59560800000000000000
+      internalID: 7320004028899348341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
