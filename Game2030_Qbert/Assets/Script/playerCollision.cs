@@ -19,11 +19,12 @@ public class playerCollision : MonoBehaviour
     void Update()
     {
         // turn on box BoxCollider2D 
-        if (pc.reach_destination == true) 
+        // we have reach the platform and now we need to get new destinations
+        if (pc.reach_destination == true)
         {
             bc.enabled = true;
         }
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -34,16 +35,17 @@ public class playerCollision : MonoBehaviour
             Debug.Log(" player is touch a Platform");
 
             // remove all prev destinations
+            // clear all the old  destinations
             pc.ClearAllDestination();
 
-            // get destinations from the platform we are on
+            // get new destinations from the platform we are on
             pc.set_bottom_left_platform_position = col.GetComponent<Platform>().get_bottom_left_platform_position;
             pc.set_bottom_right_platform_position = col.GetComponent<Platform>().get_bottom_right_platform_position;
             pc.set_top_left_platform_position = col.GetComponent<Platform>().get_top_left_platform_position;
             pc.set_top_right_platform_position = col.GetComponent<Platform>().get_top_right_platform_position;
 
             // turn off box BoxCollider2D 
-
+            // ->we don't want get new destinations while  moving to new platform
             bc.enabled = false;
 
         }
