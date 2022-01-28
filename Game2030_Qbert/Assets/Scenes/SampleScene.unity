@@ -2025,16 +2025,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b69ef9c272b1fef4c9b61cc8693889ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player_direction: 4
+  reach_destination: 0
+  picked_destination: 0
+  jump_time: 1
+  start_position: {x: 0, y: 0}
   top_left_platform_position: {fileID: 0}
   top_right_platform_position: {fileID: 0}
   bottom_left_platform_position: {fileID: 0}
   bottom_right_platform_position: {fileID: 0}
-  speed: 1
-  player_direction: 4
-  reach_destination: 0
-  picked_destination: 0
-  jump_time: 0.3
-  start_position: {x: 0, y: 0}
 --- !u!61 &911193016
 BoxCollider2D:
   m_ObjectHideFlags: 0
