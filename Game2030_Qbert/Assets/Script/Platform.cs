@@ -7,9 +7,27 @@ public class Platform : MonoBehaviour
     #region Global Var
     [Header("Platform")]
 
+    [SerializeField] bool is_first_platform;
+    public bool get_is_first_platform // the Name property
+    {
+        get => is_first_platform;
+    }
+    public bool set_is_first_platform // the Name property
+    {
+        set => is_first_platform = false;
+    }
     [SerializeField]  bool is_inner_platform;
 
-    [SerializeField] bool has_been_step_on;
+    [SerializeField] private bool has_been_step_on = false;
+
+    public bool set_has_been_step_on // the Name property
+    {
+        set => has_been_step_on = value;
+    }
+    public bool get_has_been_step_on // the Name property
+    {
+        get => has_been_step_on ;
+    }
 
     [SerializeField] Transform our_position;
 
@@ -40,6 +58,12 @@ public class Platform : MonoBehaviour
         get => bottom_right_platform_position;
     }
 
+    [SerializeField] Sprite inner_platform_sprite_on;
+
+    [SerializeField] Sprite platform_sprite_on;
+
+    [SerializeField] SpriteRenderer spriterenderer;
+
     #endregion
 
     // Start is called before the first frame update
@@ -53,4 +77,33 @@ public class Platform : MonoBehaviour
     {
         
     }
+
+
+
+
+    public void PlayerOnPlatformChange() 
+    {
+        if (is_inner_platform && has_been_step_on) 
+        {
+            if (spriterenderer != null)
+            {
+                spriterenderer.sprite = inner_platform_sprite_on;
+            }
+        }
+
+        if (!is_inner_platform && has_been_step_on && !is_first_platform)
+        {
+            if (spriterenderer != null)
+            {
+                spriterenderer.sprite = platform_sprite_on;
+            }
+        }
+        
+
+    }
+
+
 }
+
+
+

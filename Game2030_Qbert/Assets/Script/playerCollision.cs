@@ -44,10 +44,32 @@ public class playerCollision : MonoBehaviour
             pc.set_top_left_platform_position = col.GetComponent<Platform>().get_top_left_platform_position;
             pc.set_top_right_platform_position = col.GetComponent<Platform>().get_top_right_platform_position;
 
+
+            //col.GetComponent<Platform>().PlayerOnFirstPlatformChange();
+
             // turn off box BoxCollider2D 
             // ->we don't want get new destinations while  moving to new platform
             bc.enabled = false;
 
+            // platform change 
+            // only first platform  will not change 
+            // first platform  on second time you step on it
+
+            if (!col.GetComponent<Platform>().get_has_been_step_on && !col.GetComponent<Platform>().get_is_first_platform) 
+            {
+                col.GetComponent<Platform>().set_has_been_step_on = true;
+                col.GetComponent<Platform>().PlayerOnPlatformChange();
+               // Debug.Log(" platform change");
+            }
+
+            if (col.GetComponent<Platform>().get_is_first_platform)
+            {
+                col.GetComponent<Platform>().set_is_first_platform = false;
+            }
+
         }
     }
+
+
+
 }

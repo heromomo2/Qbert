@@ -104,6 +104,9 @@ MonoBehaviour:
   top_right_platform_position: {fileID: 0}
   bottom_left_platform_position: {fileID: 0}
   bottom_right_platform_position: {fileID: 0}
+  inner_platform_sprite_on: {fileID: -6379350831655040001, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
+  platform_sprite_on: {fileID: -6469223595132164514, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
+  spriterenderer: {fileID: 7737374387965192899}
 --- !u!61 &5344270333310220423
 BoxCollider2D:
   m_ObjectHideFlags: 0
