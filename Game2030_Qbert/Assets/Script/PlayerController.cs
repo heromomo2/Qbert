@@ -52,7 +52,9 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
+    #region Animation variables
 
+    #endregion
 
     void Start()
     {
