@@ -6,6 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     #region public global variables
 
+    [SerializeField] AnimationCurve curve_start_to_mid;
+    [SerializeField] AnimationCurve curve_mid_to_end;
+
     [SerializeField] direction player_direction = direction.Kno_direction;
 
     public bool reach_destination = false;
@@ -127,8 +130,10 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 my_vector_2 = new Vector2(start_position.x , start_position.y);
         Vector2 td_vector_2 = new Vector2( target_destination.position.x, target_destination.position.y);
+
         Vector3 temp_mid = target_destination.position;
-        temp_mid.y += 6.0f;
+  
+        temp_mid.y += 0.5f;
 
 
         timer += Time.deltaTime;
@@ -141,12 +146,15 @@ public class PlayerController : MonoBehaviour
             timer = 0;
         }
 
-        if (ratio <= 1)
+        if (ratio < 1)
         {
-           
 
-           this.gameObject.transform.position = Bezier( ratio , start_position, temp_mid, target_destination.position);
+
+
+            this.gameObject.transform.position = Bezier( ratio , start_position, temp_mid, target_destination.position);
+
             
+
         }
         // when we get to our new location
         else 
@@ -180,12 +188,21 @@ public class PlayerController : MonoBehaviour
     {
         ratio = Mathf.Clamp01(ratio);
 
-        Vector2 start_to_mid = Vector3.Lerp(start,mid,ratio);
-        Vector2 mid_to_end = Vector3.Lerp(mid,end, ratio);
+
+        Vector2 start_to_mid = Vector3.Lerp(start,mid, curve_start_to_mid.Evaluate(ratio));
+
+
+        Vector2 mid_to_end = Vector3.Lerp(mid, end, curve_mid_to_end.Evaluate(ratio));
 
         return Vector3.Lerp(start_to_mid, mid_to_end, ratio);
     }
 
+    public static float Spring(float start, float end, float value)
+    {
+        value = Mathf.Clamp01(value);
+        value = (Mathf.Sin(value * Mathf.PI * (0.2f + 2.5f * value * value * value)) * Mathf.Pow(1f - value, 2.2f) + value) * (1f + (1.2f * (1f - value)));
+        return start + (end - start) * value;
+    }
 
     private void PlayerPressedAKey() 
     {
