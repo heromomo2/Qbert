@@ -55,17 +55,28 @@ public class playerCollision : MonoBehaviour
             // only first platform  will not change 
             // first platform  on second time you step on it
 
-            if (!col.GetComponent<Platform>().get_has_been_step_on && !col.GetComponent<Platform>().get_is_first_platform) 
+            if (!col.GetComponent<Platform>().get_has_been_step_on && !col.GetComponent<Platform>().get_is_first_platform)
             {
                 col.GetComponent<Platform>().set_has_been_step_on = true;
                 col.GetComponent<Platform>().PlayerOnPlatformChange();
-               // Debug.Log(" platform change");
+                // Debug.Log(" platform change");
             }
 
             if (col.GetComponent<Platform>().get_is_first_platform)
             {
                 col.GetComponent<Platform>().set_is_first_platform = false;
             }
+
+        }
+
+        if (col.gameObject.CompareTag("Elevator"))
+        {
+            Debug.Log("player is touch a Elevator");
+            // remove all prev destinations
+            // clear all the old  destinations
+            pc.ClearAllDestination();
+
+            col.GetComponent<Elevator>().PlayerOnElevator(pc.gameObject);
 
         }
     }

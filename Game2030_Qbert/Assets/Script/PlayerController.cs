@@ -204,6 +204,7 @@ public class PlayerController : MonoBehaviour
         return start + (end - start) * value;
     }
 
+    
     private void PlayerPressedAKey() 
     {
         // player movement key and pick a direction
