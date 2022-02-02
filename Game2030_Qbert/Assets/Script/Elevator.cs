@@ -5,19 +5,17 @@ using UnityEngine;
 public class Elevator : MonoBehaviour
 {
     #region Globla var
-    [SerializeField] bool is_player_on_elevator;
-    [SerializeField] bool reach_top_pyramid;
-    [SerializeField] Transform cirect_transform;
-    [SerializeField] Transform first_platform_position;
+    [SerializeField] elevator_states current_state = elevator_states.Kwaiting_for_player;
+    [SerializeField] Transform cirect_transform;// the object that will parnent the player
+    [SerializeField] Transform first_platform_position;// our tagert destination
 
-  
     public float travel_time;
-    public float drop_time;
+    [SerializeField] AnimationCurve curve_t;
     #endregion
 
     #region Prviate var
     private float timer = 0;
-    [SerializeField] GameObject player_child;
+    private GameObject player_child;
     private Vector3 top_of_pyramid_vector_3;
     #endregion
 
@@ -30,13 +28,13 @@ public class Elevator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (is_player_on_elevator && !reach_top_pyramid) 
+        if (current_state == elevator_states.Kmoving_to_top) 
         {
             MoveElevator();
         }
-        else if (!is_player_on_elevator && reach_top_pyramid)
+        else if (current_state == elevator_states.Kat_the_top)
         {
-           DropPlayerDownToFirstPlatform();
+           RemovePlayerFromElevator();
         }
     }
 
@@ -46,13 +44,12 @@ public class Elevator : MonoBehaviour
         if ( player.tag == "Player")
         {
             player.transform.parent = cirect_transform.parent;
-            
-            is_player_on_elevator = true;
-            reach_top_pyramid = false;
 
             player_child = player;
 
             top_of_pyramid_vector_3 = new Vector3 (first_platform_position.position.x, (first_platform_position.position.y + 1.5f), first_platform_position.position.z);
+
+            current_state = elevator_states.Kmoving_to_top;
         }
 
     }
@@ -62,39 +59,35 @@ public class Elevator : MonoBehaviour
         timer += Time.deltaTime;
 
         float ratio = timer / travel_time;
-        ratio = Mathf.Clamp01(ratio);
 
+        ratio = Mathf.Clamp01(ratio);
 
 
         if (ratio < 1)
         {
-            this.gameObject.transform.position = Vector3.Lerp(this.gameObject.transform.position, top_of_pyramid_vector_3 , ratio);
+            this.gameObject.transform.position = Vector3.Lerp(this.gameObject.transform.position, top_of_pyramid_vector_3 ,curve_t.Evaluate (ratio));
         }
-        else
+        else 
         {
             Debug.Log("We at top of pyramid and elevator");
-            is_player_on_elevator = false;
-            reach_top_pyramid = true;
 
+            current_state = elevator_states.Kat_the_top;
+            
         }
 
     }
 
-
-    void DropPlayerDownToFirstPlatform()
+    
+    void RemovePlayerFromElevator()
     {
-        timer += Time.deltaTime;
-
-        float ratio = timer / drop_time;
-
         player_child.transform.parent = null;
+
+        player_child.GetComponent<PlayerController>().set_is_drop_from_elevator = true;
 
         Destroy(this.gameObject);
 
-        player_child.transform.position = Vector3.Lerp(player_child.transform.position, first_platform_position.position, ratio);
+        
 
-        Debug.Log("Destroy the Elevator");
-        
-        
+        Debug.Log("Destroy the Elevator");  
     }
 }

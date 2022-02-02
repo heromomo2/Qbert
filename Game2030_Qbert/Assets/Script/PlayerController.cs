@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] AnimationCurve curve_start_to_mid;
     [SerializeField] AnimationCurve curve_mid_to_end;
+    [SerializeField] AnimationCurve curve_fall;
 
     [SerializeField] direction player_direction = direction.Kno_direction;
 
@@ -18,12 +19,20 @@ public class PlayerController : MonoBehaviour
 
     public float jump_time = 1;
 
+    public float fall_time = 1;
+
     public Vector2 start_position;
     #endregion
 
     #region Private Global variables
     private float timer = 0;
-
+    private float timer2 = 0;
+    private bool is_drop_from_elevator = false;
+    private bool is_allow_to_move = true;
+    public bool set_is_drop_from_elevator // the Name property
+    {
+        set => is_drop_from_elevator = value;
+    }
     #endregion
 
     #region Destination/Setter
@@ -121,26 +130,37 @@ public class PlayerController : MonoBehaviour
                 break;
         };
 
+        if (is_drop_from_elevator) 
+        {
+            //start_position = this.gameObject.transform.position;
 
+            Vector2 start_position_vector_2 = new Vector2( this.gameObject.transform.position.x, this.gameObject.transform.position.y);
+            Vector2 first_platform_position_vector_2 = new Vector2(-0.02f, 2.55f);
+
+            PlayerDropFromElevator(start_position_vector_2, first_platform_position_vector_2);
+        }
        
     }
 
     // Start is called before the first frame update
+    #region PlayermovementAndPlatforms
     void PlayerMovement(Transform target_destination) 
     {
-        Vector2 my_vector_2 = new Vector2(start_position.x , start_position.y);
-        Vector2 td_vector_2 = new Vector2( target_destination.position.x, target_destination.position.y);
+        Vector2 start_position_vector_2 = new Vector2(start_position.x , start_position.y);
+        Vector2 target_position_vector_2 = new Vector2( target_destination.position.x, target_destination.position.y);
 
-        Vector3 temp_mid = target_destination.position;
+        Vector3 mid_position_vector_3 = target_destination.position;
   
-        temp_mid.y += 0.5f;
+        mid_position_vector_3.y += 0.5f;
 
 
+        // timer is increase
         timer += Time.deltaTime;
 
         float ratio = timer / jump_time;
 
-        // reset it
+        // reset timer one it's bigger than jump time
+
         if (timer >= jump_time)
         {
             timer = 0;
@@ -148,13 +168,7 @@ public class PlayerController : MonoBehaviour
 
         if (ratio < 1)
         {
-
-
-
-            this.gameObject.transform.position = Bezier( ratio , start_position, temp_mid, target_destination.position);
-
-            
-
+            this.gameObject.transform.position = Bezier( ratio , start_position, mid_position_vector_3, target_destination.position);
         }
         // when we get to our new location
         else 
@@ -165,10 +179,7 @@ public class PlayerController : MonoBehaviour
 
             reach_destination = true;
 
-            
-
             Debug.Log(" ratio is at 1");
-
         }
         //Debug.Log("MoveThePlayer is been all call");
     }
@@ -208,20 +219,18 @@ public class PlayerController : MonoBehaviour
     private void PlayerPressedAKey() 
     {
         // player movement key and pick a direction
-        if (Input.GetKeyDown(KeyCode.Keypad7) && /*picked_destination == false && */player_direction == direction.Kno_direction)
+        if (Input.GetKeyDown(KeyCode.Keypad7) && player_direction == direction.Kno_direction && is_allow_to_move)
         {
             Debug.Log("Move top-left-> 7");
 
             if (top_left_platform_position != null)
             {
-                player_direction = direction.Ktop_left;
-
-                /*picked_destination = true;*/
+                player_direction = direction.Ktop_left;              
 
                 start_position = this.gameObject.transform.position;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad9) && /* picked_destination == false && */player_direction == direction.Kno_direction)
+        else if (Input.GetKeyDown(KeyCode.Keypad9) && player_direction == direction.Kno_direction && is_allow_to_move)
         {
             Debug.Log(" Move top-right-> 9");
 
@@ -229,12 +238,10 @@ public class PlayerController : MonoBehaviour
             {
                 player_direction = direction.Ktop_right;
 
-               // picked_destination = true;
-
                 start_position = this.gameObject.transform.position;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad1) && /*picked_destination == false && */player_direction == direction.Kno_direction)
+        else if (Input.GetKeyDown(KeyCode.Keypad1) && player_direction == direction.Kno_direction && is_allow_to_move)
         {
             Debug.Log("Move bottom-left-> 1");
 
@@ -242,12 +249,10 @@ public class PlayerController : MonoBehaviour
             {
                 player_direction = direction.Kbottom_left;
 
-              //  picked_destination = true;
-
                 start_position = this.gameObject.transform.position;
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad3) && /*picked_destination == false && */player_direction == direction.Kno_direction)
+        else if (Input.GetKeyDown(KeyCode.Keypad3) && player_direction == direction.Kno_direction && is_allow_to_move)
         {
             Debug.Log("Move bottom-right-> 3");
 
@@ -255,15 +260,46 @@ public class PlayerController : MonoBehaviour
             {
                 player_direction = direction.Kbottom_right;
 
-                //picked_destination = true;
-
                 start_position = this.gameObject.transform.position;
             }
         }
     }
+#endregion
 
+    public void PlayerDropFromElevator( Vector2 start, Vector2 end) 
+    {
+        
 
-    
+        float ratio = timer2 / fall_time;
+
+        timer2 += Time.deltaTime;
+
+        ratio = Mathf.Clamp01(ratio);
+
+        //reset timer one it's bigger than fall time
+
+        if (timer2 >= fall_time)
+        {
+            timer2 = 0;
+        }
+
+        Debug.Log("ratio:->" + ratio);
+        if (ratio <= 1)
+        {
+            
+            this.gameObject.transform.position = Vector3.Lerp(start, end, curve_fall.Evaluate(  ratio));
+            //is_allow_to_move = false;
+        }
+        else 
+        {
+           this.gameObject.transform.position = end;
+
+            //start_position = this.gameObject.transform.position;
+            player_direction = direction.Kno_direction;
+            is_drop_from_elevator = false;
+            is_allow_to_move = true;
+        }
+    }
 }
 
 #region Enums
@@ -274,5 +310,13 @@ public enum direction
     Ktop_right,
     Ktop_left,
     Kno_direction
+}
+
+
+public enum elevator_states
+{
+    Kwaiting_for_player,
+    Kmoving_to_top,
+    Kat_the_top,
 }
 #endregion

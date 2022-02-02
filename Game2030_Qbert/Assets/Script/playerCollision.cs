@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerCollision : MonoBehaviour
+public class PlayerCollision : MonoBehaviour
 {
 
     [SerializeField] private BoxCollider2D bc;
@@ -29,6 +29,7 @@ public class playerCollision : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        // Player and Platform Interaction
         if (col.gameObject.CompareTag("Platform"))
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
@@ -69,6 +70,7 @@ public class playerCollision : MonoBehaviour
 
         }
 
+        // Player and Elevator Interaction
         if (col.gameObject.CompareTag("Elevator"))
         {
             Debug.Log("player is touch a Elevator");
