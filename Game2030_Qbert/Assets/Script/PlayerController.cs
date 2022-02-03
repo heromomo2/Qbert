@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AnimationCurve curve_mid_to_end;
     [SerializeField] AnimationCurve curve_fall;
 
-    [SerializeField] direction player_direction = direction.Kno_direction;
+    [SerializeField] public direction player_direction = direction.Kno_direction;
 
     public bool reach_destination = false;
 
@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float fall_time = 1;
 
     public Vector2 start_position;
+    public Vector2 tagert_position;
     #endregion
 
     #region Private Global variables
@@ -29,10 +30,7 @@ public class PlayerController : MonoBehaviour
     private float timer2 = 0;
     private bool is_drop_from_elevator = false;
     private bool is_allow_to_move = true;
-    public bool set_is_drop_from_elevator // the Name property
-    {
-        set => is_drop_from_elevator = value;
-    }
+  
     #endregion
 
     #region Destination/Setter
@@ -122,11 +120,16 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case direction.Kno_direction:
-                if (reach_destination /*&& picked_destination */ )
+                if (reach_destination )
                 {
-                    //Debug.Log("error: I didn't reach our destination and kno_direction");
                     reach_destination = false;
                 }
+                break;
+            case direction.Kfall_from_elavator_start:
+               
+                 start_position = this.gameObject.transform.position;
+                 tagert_position = new Vector2(-0.02f, 2.55f);
+                is_drop_from_elevator = true;
                 break;
         };
 
@@ -134,10 +137,12 @@ public class PlayerController : MonoBehaviour
         {
             //start_position = this.gameObject.transform.position;
 
-            Vector2 start_position_vector_2 = new Vector2( this.gameObject.transform.position.x, this.gameObject.transform.position.y);
-            Vector2 first_platform_position_vector_2 = new Vector2(-0.02f, 2.55f);
+            //  Vector2 start_position_vector_2 = new Vector2( this.gameObject.transform.position.x, this.gameObject.transform.position.y);
+            //   Vector2 first_platform_position_vector_2 = new Vector2(-0.02f, 2.55f);
 
-            PlayerDropFromElevator(start_position_vector_2, first_platform_position_vector_2);
+            player_direction = direction.Kfall_from_elavator_action;
+            PlayerDropFromElevator(start_position, tagert_position);
+           
         }
        
     }
@@ -276,15 +281,10 @@ public class PlayerController : MonoBehaviour
 
         ratio = Mathf.Clamp01(ratio);
 
-        //reset timer one it's bigger than fall time
+       
 
-        if (timer2 >= fall_time)
-        {
-            timer2 = 0;
-        }
-
-        Debug.Log("ratio:->" + ratio);
-        if (ratio <= 1)
+        Debug.Log(" fall ratio :->" + ratio);
+        if (ratio < 1)
         {
             
             this.gameObject.transform.position = Vector3.Lerp(start, end, curve_fall.Evaluate(  ratio));
@@ -294,10 +294,16 @@ public class PlayerController : MonoBehaviour
         {
            this.gameObject.transform.position = end;
 
-            //start_position = this.gameObject.transform.position;
+       
             player_direction = direction.Kno_direction;
             is_drop_from_elevator = false;
             is_allow_to_move = true;
+
+            //reset timer one it's bigger than fall time
+            if (timer2 >= fall_time)
+            {
+                timer2 = 0;
+            }
         }
     }
 }
@@ -309,14 +315,18 @@ public enum direction
     Kbottom_left,
     Ktop_right,
     Ktop_left,
-    Kno_direction
+    Kno_direction,
+    Kfall_from_elavator_start,
+    Kfall_from_elavator_action,
+    Kland
 }
 
 
 public enum elevator_states
 {
     Kwaiting_for_player,
-    Kmoving_to_top,
+    Kstartmoving_to_top,
+    Kin_action_moving_to_top,
     Kat_the_top,
 }
 #endregion

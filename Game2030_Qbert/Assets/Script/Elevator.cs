@@ -17,6 +17,7 @@ public class Elevator : MonoBehaviour
     private float timer = 0;
     private GameObject player_child;
     private Vector3 top_of_pyramid_vector_3;
+    private Vector3 elevator_start_position_vectotor_3;
     #endregion
 
     // Start is called before the first frame update
@@ -28,7 +29,13 @@ public class Elevator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (current_state == elevator_states.Kmoving_to_top) 
+        if (current_state == elevator_states.Kstartmoving_to_top) 
+        {
+            elevator_start_position_vectotor_3 = this.gameObject.transform.position;
+            top_of_pyramid_vector_3 = new Vector3(first_platform_position.position.x, (first_platform_position.position.y + 1.5f), first_platform_position.position.z);
+            current_state = elevator_states.Kin_action_moving_to_top;
+        }
+        else if (current_state == elevator_states.Kin_action_moving_to_top)
         {
             MoveElevator();
         }
@@ -47,9 +54,8 @@ public class Elevator : MonoBehaviour
 
             player_child = player;
 
-            top_of_pyramid_vector_3 = new Vector3 (first_platform_position.position.x, (first_platform_position.position.y + 1.5f), first_platform_position.position.z);
 
-            current_state = elevator_states.Kmoving_to_top;
+            current_state = elevator_states.Kstartmoving_to_top;
         }
 
     }
@@ -65,7 +71,7 @@ public class Elevator : MonoBehaviour
 
         if (ratio < 1)
         {
-            this.gameObject.transform.position = Vector3.Lerp(this.gameObject.transform.position, top_of_pyramid_vector_3 ,curve_t.Evaluate (ratio));
+            this.gameObject.transform.position = Vector3.Lerp(elevator_start_position_vectotor_3, top_of_pyramid_vector_3 ,curve_t.Evaluate (ratio));
         }
         else 
         {
@@ -82,11 +88,10 @@ public class Elevator : MonoBehaviour
     {
         player_child.transform.parent = null;
 
-        player_child.GetComponent<PlayerController>().set_is_drop_from_elevator = true;
+        player_child.GetComponent<PlayerController>().player_direction = direction.Kfall_from_elavator_start;
 
         Destroy(this.gameObject);
-
-        
+ 
 
         Debug.Log("Destroy the Elevator");  
     }
