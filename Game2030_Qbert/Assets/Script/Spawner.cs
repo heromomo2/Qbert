@@ -5,19 +5,24 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    #region Enemy type
+    #region Enemy type and Spawm point
     [SerializeField] GameObject enemy_ball;
     [SerializeField] GameObject enemy_snake;
+    [SerializeField]  List<Transform> spawnpoints;
+    [SerializeField] List<GameObject>  list_enemies;
     #endregion
+
+    #region Global
     public float spawnTime = 5f;
     public float spawnDelay = 3f;
-    #region
-
+    public bool  is_there_a_snake = false;
+    public bool  is_there_enemies = false;
     #endregion
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", spawnDelay, spawnTime);
+     // spawnpoints = new List<Transform>();
+      InvokeRepeating("SpawnEnemy", spawnDelay, spawnTime);
     }
 
     // Update is called once per frame
@@ -28,20 +33,58 @@ public class Spawner : MonoBehaviour
         {
             CancelInvoke(); 
         }
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            InvokeRepeating("SpawnEnemy", spawnDelay, spawnTime);
+        }
     }
 
     void SpawnEnemy()
     {
         // Instantiate a random enemy.
-        int random_number = Random.Range(1, 5);
+        int random_number = Random.Range(1, 10);
 
-        if (random_number < 7) 
+        if (random_number <= 5) 
         {
-            Instantiate(enemy_ball, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            if (spawnpoints[0] != null)
+            {
+                if (is_there_a_snake)
+                {
+                    if (enemy_ball != null)
+                    {
+                        Instantiate(enemy_ball, spawnpoints[0].position, spawnpoints[0].rotation);
+                    }
+                }
+                else
+                {
+                    if (enemy_snake != null)
+                    {
+                        Instantiate(enemy_snake, spawnpoints[0].position, spawnpoints[0].rotation);
+                        is_there_a_snake = true;
+                    }
+                }
+            }
         }
         else
         {
-            Instantiate(enemy_snake, this.gameObject.transform.position, this.gameObject.transform.rotation);
+            if (spawnpoints[1] != null)
+            {
+                if (is_there_a_snake)
+                {
+                    if (enemy_ball != null)
+                    {
+                        Instantiate(enemy_ball, spawnpoints[1].position, spawnpoints[1].rotation);
+                    }
+                }
+                else
+                {
+                    if (enemy_snake != null)
+                    {
+                        Instantiate(enemy_snake, spawnpoints[1].position, spawnpoints[1].rotation);
+                        is_there_a_snake = true;
+                    }
+                } 
+            }
         }
 
     }
