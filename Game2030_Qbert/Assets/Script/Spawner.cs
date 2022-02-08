@@ -6,10 +6,12 @@ public class Spawner : MonoBehaviour
 {
     // Start is called before the first frame update
     #region Enemy type and Spawm point
-    [SerializeField] GameObject enemy_ball;
+    [SerializeField] GameObject red_ball;
+    [SerializeField] GameObject green_ball;
     [SerializeField] GameObject enemy_snake;
     [SerializeField]  List<Transform> spawnpoints;
-    [SerializeField] List<GameObject>  list_enemies;
+    [SerializeField] List<Transform>  Platforms;
+    [SerializeField] List<GameObject> list_enemies;
     #endregion
 
     #region Global
@@ -48,42 +50,23 @@ public class Spawner : MonoBehaviour
         {
             if (spawnpoints[0] != null)
             {
-                if (is_there_a_snake)
+                if (green_ball != null) 
                 {
-                    if (enemy_ball != null)
-                    {
-                        Instantiate(enemy_ball, spawnpoints[0].position, spawnpoints[0].rotation);
-                    }
+                    Instantiate(green_ball, spawnpoints[0].position, spawnpoints[0].rotation);
+                    this.green_ball.GetComponent<Movement>().landPostion(Platforms[0], spawnpoints[0]);
                 }
-                else
-                {
-                    if (enemy_snake != null)
-                    {
-                        Instantiate(enemy_snake, spawnpoints[0].position, spawnpoints[0].rotation);
-                        is_there_a_snake = true;
-                    }
-                }
+               
             }
         }
         else
         {
             if (spawnpoints[1] != null)
             {
-                if (is_there_a_snake)
+                if (green_ball != null)
                 {
-                    if (enemy_ball != null)
-                    {
-                        Instantiate(enemy_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                    }
-                }
-                else
-                {
-                    if (enemy_snake != null)
-                    {
-                        Instantiate(enemy_snake, spawnpoints[1].position, spawnpoints[1].rotation);
-                        is_there_a_snake = true;
-                    }
-                } 
+                    Instantiate(green_ball, spawnpoints[1].position, spawnpoints[1].rotation);
+                    this.green_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
+                }       
             }
         }
 

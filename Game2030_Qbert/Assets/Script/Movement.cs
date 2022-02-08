@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+  
+
     #region Direction
-    public enum Direction 
+    public enum Direction
     {
         Kbottom_right,
         Kbottom_left,
@@ -45,7 +47,7 @@ public class Movement : MonoBehaviour
 
     public Transform set_top_right_platform_position// the Name property
     {
-        set =>  top_right_platform_position = value;
+        set => top_right_platform_position = value;
     }
 
     public bool reach_destination = false;
@@ -72,58 +74,59 @@ public class Movement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
 
+
         switch (current_direction)
         {
             case Direction.Kbottom_right:
-            // code block
                 if (!reach_destination)
                 {
-                MovementOnPlatform();
-                 }
-               
-             break;
-             case Direction.Kbottom_left:
-                // code block
-                if (!reach_destination)
-                {
-                MovementOnPlatform();
+                    MovementOnPlatform();
                 }
-              
-            break;
-             case Direction.Ktop_left:
-            // code block
-            if (!reach_destination)
-            {
-                MovementOnPlatform();
-            }
-            
-            break;
-            case Direction.Ktop_right:
-            // code block
-            if (!reach_destination)
-            {
-                MovementOnPlatform();
-            }
-            break;
-             case Direction.Kno_direction:
+                break;
+
+            case Direction.Kbottom_left:
                 // code block
+                if (!reach_destination)
+                {
+                    MovementOnPlatform();
+                }
+                break;
+            case Direction.Ktop_left:
+                if (!reach_destination)
+                {
+                    MovementOnPlatform();
+                }
+                break;
+
+            case Direction.Ktop_right:
+                // code block
+                if (!reach_destination)
+                {
+                    MovementOnPlatform();
+                }
+                break;
+
+            case Direction.Kno_direction:
                 if (reach_destination)
                 {
                     reach_destination = false;
                 }
                 break;
-         }
+
+            case Direction.Kfall_action:
+                FallingMovement(start_position, tagert_position);
+                break;
+        }
 
 
-
-     }
+    }
 
     public bool CanWeMoveThere(Direction d)
     {
@@ -131,6 +134,7 @@ public class Movement : MonoBehaviour
         {
             if (top_left_platform_position != null)
             {
+               
                 current_direction = Direction.Ktop_left;
                 start_position = this.gameObject.transform.position;
                 tagert_position = new Vector2(top_left_platform_position.position.x, top_left_platform_position.position.y);
@@ -147,6 +151,7 @@ public class Movement : MonoBehaviour
         {
             if (top_right_platform_position != null)
             {
+               
                 current_direction = Direction.Ktop_right;
                 start_position = this.gameObject.transform.position;
                 tagert_position = new Vector2(top_right_platform_position.position.x, top_right_platform_position.position.y);
@@ -163,6 +168,8 @@ public class Movement : MonoBehaviour
         {
             if (bottom_right_platform_position != null)
             {
+                
+
                 current_direction = Direction.Kbottom_right;
                 start_position = this.gameObject.transform.position;
                 tagert_position = new Vector2(bottom_right_platform_position.position.x, bottom_right_platform_position.position.y);
@@ -179,11 +186,13 @@ public class Movement : MonoBehaviour
         {
             if (bottom_left_platform_position != null)
             {
+               
+
                 current_direction = Direction.Kbottom_left;
                 start_position = this.gameObject.transform.position;
                 tagert_position = new Vector2(bottom_left_platform_position.position.x, bottom_left_platform_position.position.y);
 
-                ClearAllDestination();
+               ClearAllDestination();
                 return true;
             }
             else
@@ -194,6 +203,15 @@ public class Movement : MonoBehaviour
         return false;
     }
 
+    public void landPostion(Transform targert_land, Transform spawn_start_positon)
+    {
+        
+        start_position = spawn_start_positon.position;
+        tagert_position = targert_land.position;
+        current_direction = Direction.Kfall_action;
+        reach_destination = false;
+
+    }
 
     void MovementOnPlatform()
     {
@@ -220,13 +238,13 @@ public class Movement : MonoBehaviour
         else
         {
             this.gameObject.transform.position = target_position_vector_2;
-            
+
             reach_destination = true;
             current_direction = Direction.Kno_direction;
-            
 
 
-                // reset timer one it's bigger than jump time
+
+            // reset timer one it's bigger than jump time
             if (jump_timer >= jump_time)
             {
                 jump_timer = 0;
@@ -236,15 +254,15 @@ public class Movement : MonoBehaviour
 
 
     }
-        /// <summary>
-        ///  arc / mulit lerp
-        /// </summary>
-        /// <param name="ratio"></param>
-        /// <param name="start"></param>
-        /// <param name="mid"></param>
-        /// <param name="end"></param>
-        /// <returns></returns>
-    
+    /// <summary>
+    ///  arc / mulit lerp
+    /// </summary>
+    /// <param name="ratio"></param>
+    /// <param name="start"></param>
+    /// <param name="mid"></param>
+    /// <param name="end"></param>
+    /// <returns></returns>
+
     Vector3 Bezier(float ratio, Vector2 start, Vector2 mid, Vector2 end)
     {
         ratio = Mathf.Clamp01(ratio);
@@ -263,12 +281,13 @@ public class Movement : MonoBehaviour
     /// </summary>
     /// <param name="start"></param>
     /// <param name="end"></param>
-    public void FallingMovement(Vector2 start, Vector2 end, bool is_falling)
+    public void FallingMovement(Vector2 start, Vector2 end)
     {
+        fall_timer += Time.deltaTime;
 
         float ratio = fall_timer / fall_time;
 
-        fall_timer += Time.deltaTime;
+        
 
         ratio = Mathf.Clamp01(ratio);
 
@@ -283,10 +302,10 @@ public class Movement : MonoBehaviour
 
             current_direction = Direction.Kno_direction;
 
-            if (fall_timer >= fall_time)
-            {
-                fall_timer = 0;
-            }
+            //if (fall_timer >= fall_time)
+            //{
+            //    fall_timer = 0;
+            //}
 
         }
     }
@@ -301,4 +320,5 @@ public class Movement : MonoBehaviour
     }
 
 
+  
 }

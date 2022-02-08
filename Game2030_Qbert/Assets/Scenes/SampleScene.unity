@@ -1003,6 +1003,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1926139013}
     m_Modifications:
+    - target: {fileID: 508373286248085027, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1153893264365978625, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
       propertyPath: m_Name
       value: spawnpoint1
@@ -1013,11 +1017,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2966511852606492056, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.934
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 2966511852606492056, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.467
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 2966511852606492056, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3333,19 +3337,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 688360118492560877, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: curve_start_to_mid.m_Curve.Array.data[0].inSlope
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688360118492560877, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: curve_start_to_mid.m_Curve.Array.data[1].inSlope
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 688360118492560877, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: curve_start_to_mid.m_Curve.Array.data[0].outSlope
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 688360118492560877, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
+      propertyPath: curve_start_to_mid.m_Curve.Array.data[1].inWeight
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688360118492560877, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: curve_start_to_mid.m_Curve.Array.data[1].outSlope
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 688360118492560877, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: curve_mid_to_end.m_Curve.Array.data[0].tangentMode
@@ -3356,12 +3364,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688360118492560877, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
+      propertyPath: curve_start_to_mid.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 688360118492560877, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: curve_start_to_mid.m_Curve.Array.data[0].tangentMode
-      value: 34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 688360118492560877, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: curve_start_to_mid.m_Curve.Array.data[1].tangentMode
-      value: 34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3868941642865368744, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: m_RootOrder
@@ -3373,7 +3385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3868941642865368744, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.73
+      value: 0.31
       objectReference: {fileID: 0}
     - target: {fileID: 3868941642865368744, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4561,21 +4573,25 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926139011}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02747895c5a361a4486e97fe9211468a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy_ball: {fileID: 0}
+  red_ball: {fileID: 0}
+  green_ball: {fileID: 7148204694809843448, guid: 506999641818b6e4a8ada68afc9b819b, type: 3}
   enemy_snake: {fileID: 0}
   spawnpoints:
-  - {fileID: 334142102}
   - {fileID: 3719768917504075176}
+  - {fileID: 334142102}
+  Platforms:
+  - {fileID: 86537050}
+  - {fileID: 554685887}
   list_enemies: []
-  spawnTime: 0
-  spawnDelay: 0
-  is_there_a_snake: 1
-  is_there_enemies: 1
+  spawnTime: 10
+  spawnDelay: 5
+  is_there_a_snake: 0
+  is_there_enemies: 0
 --- !u!4 &1926139013
 Transform:
   m_ObjectHideFlags: 0
@@ -4716,6 +4732,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1926139013}
     m_Modifications:
+    - target: {fileID: 508373286248085027, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1153893264365978625, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
       propertyPath: m_Name
       value: spawnpoint2
@@ -4726,11 +4746,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2966511852606492056, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.687
+      value: -0.91
       objectReference: {fileID: 0}
     - target: {fileID: 2966511852606492056, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.458
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 2966511852606492056, guid: ae524fa570133494bafb4a7cc7236eb8, type: 3}
       propertyPath: m_LocalPosition.z
