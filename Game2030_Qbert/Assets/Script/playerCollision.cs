@@ -33,7 +33,7 @@ public class PlayerCollision : MonoBehaviour
         if (col.gameObject.CompareTag("Platform"))
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
-            Debug.Log(" player is touch a Platform");
+           // Debug.Log(" player is touch a Platform");
 
             // remove all prev destinations
             // clear all the old  destinations

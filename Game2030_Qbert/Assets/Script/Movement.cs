@@ -49,6 +49,11 @@ public class Movement : MonoBehaviour
     }
 
     public bool reach_destination = false;
+
+    public bool get_reach_destination// the Name property
+    {
+        get => reach_destination;
+    }
     #endregion
 
 
@@ -82,10 +87,7 @@ public class Movement : MonoBehaviour
                 {
                 MovementOnPlatform();
                  }
-                else
-                {
-                reach_destination = false;
-                }
+               
              break;
              case Direction.Kbottom_left:
                 // code block
@@ -93,10 +95,7 @@ public class Movement : MonoBehaviour
                 {
                 MovementOnPlatform();
                 }
-              else
-                {
-                reach_destination = false;
-             }
+              
             break;
              case Direction.Ktop_left:
             // code block
@@ -104,10 +103,7 @@ public class Movement : MonoBehaviour
             {
                 MovementOnPlatform();
             }
-             else
-            {
-                reach_destination = false;
-            }
+            
             break;
             case Direction.Ktop_right:
             // code block
@@ -115,18 +111,14 @@ public class Movement : MonoBehaviour
             {
                 MovementOnPlatform();
             }
-            else
-            {
-                reach_destination = false;
-            }
             break;
              case Direction.Kno_direction:
-            // code block
-            if (reach_destination)
-            {
-                reach_destination = false;
-            }
-            break;
+                // code block
+                if (reach_destination)
+                {
+                    reach_destination = false;
+                }
+                break;
          }
 
 
@@ -143,6 +135,7 @@ public class Movement : MonoBehaviour
                 start_position = this.gameObject.transform.position;
                 tagert_position = new Vector2(top_left_platform_position.position.x, top_left_platform_position.position.y);
 
+                ClearAllDestination();
                 return true;
             }
             else
@@ -157,6 +150,8 @@ public class Movement : MonoBehaviour
                 current_direction = Direction.Ktop_right;
                 start_position = this.gameObject.transform.position;
                 tagert_position = new Vector2(top_right_platform_position.position.x, top_right_platform_position.position.y);
+
+                ClearAllDestination();
                 return true;
             }
             else
@@ -172,6 +167,7 @@ public class Movement : MonoBehaviour
                 start_position = this.gameObject.transform.position;
                 tagert_position = new Vector2(bottom_right_platform_position.position.x, bottom_right_platform_position.position.y);
 
+                ClearAllDestination();
                 return true;
             }
             else
@@ -186,6 +182,8 @@ public class Movement : MonoBehaviour
                 current_direction = Direction.Kbottom_left;
                 start_position = this.gameObject.transform.position;
                 tagert_position = new Vector2(bottom_left_platform_position.position.x, bottom_left_platform_position.position.y);
+
+                ClearAllDestination();
                 return true;
             }
             else
@@ -204,7 +202,7 @@ public class Movement : MonoBehaviour
 
         Vector3 mid_position_vector_3 = target_position_vector_2;
 
-        mid_position_vector_3.y += 0.5f;
+        mid_position_vector_3.y += 0.7f;
 
 
         // timer is increase
@@ -212,7 +210,7 @@ public class Movement : MonoBehaviour
 
         float ratio = jump_timer / jump_time;
 
-
+        ratio = Mathf.Clamp01(ratio);
 
         if (ratio < 1)
         {
@@ -222,10 +220,13 @@ public class Movement : MonoBehaviour
         else
         {
             this.gameObject.transform.position = target_position_vector_2;
-
+            
+            reach_destination = true;
             current_direction = Direction.Kno_direction;
+            
 
-            // reset timer one it's bigger than jump time
+
+                // reset timer one it's bigger than jump time
             if (jump_timer >= jump_time)
             {
                 jump_timer = 0;
@@ -234,7 +235,7 @@ public class Movement : MonoBehaviour
         }
 
 
-
+    }
         /// <summary>
         ///  arc / mulit lerp
         /// </summary>
@@ -243,7 +244,7 @@ public class Movement : MonoBehaviour
         /// <param name="mid"></param>
         /// <param name="end"></param>
         /// <returns></returns>
-    }
+    
     Vector3 Bezier(float ratio, Vector2 start, Vector2 mid, Vector2 end)
     {
         ratio = Mathf.Clamp01(ratio);
@@ -296,6 +297,7 @@ public class Movement : MonoBehaviour
         top_right_platform_position = null;
         bottom_left_platform_position = null;
         bottom_right_platform_position = null;
+
     }
 
 

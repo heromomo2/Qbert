@@ -5,25 +5,20 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     #region Global var
-    [SerializeField] BallDecision bd;
-
+    
     [SerializeField] Movement general_movement;
 
-    [SerializeField]  bool is_already_moving;
+    [SerializeField]  bool is_already_moving = false;
 
     [SerializeField] bool is_falling;
-    #endregion
-    #region Collidsion
-    [SerializeField] private CircleCollider2D Cc;
-    [SerializeField] private Rigidbody2D rb;
+
+    [SerializeField] float delaytimer = 0;
+
+    [SerializeField] float delaytime = 0;
+
     #endregion
 
-    #region Destination/Setter
-    //[SerializeField] Transform bottom_left_platform_position;
-   
 
-    //[SerializeField] Transform bottom_right_platform_position;
-    #endregion
 
 
     // Start is called before the first frame update
@@ -39,47 +34,35 @@ public class Ball : MonoBehaviour
         {
             BallDecisionToMove();
         }
+
+        if (general_movement.get_reach_destination) 
+        {
+            is_already_moving = false;
+        }
+         
+        
+        
        
     }
     void BallDecisionToMove() 
     {
-        int random_number = Random.Range(1,2);
+        int random_number = Random.Range(1,10);
 
         // check where we can move
         // we have option
-          switch (random_number)
-          {
-                case 1:
-                // code block
-                is_already_moving = general_movement.CanWeMoveThere(Movement.Direction.Kbottom_left);
-                break;
-                case 2:
-                // code block
-               is_already_moving = general_movement.CanWeMoveThere(Movement.Direction.Kbottom_right);
-                break;
-          }
-        
+        if (random_number <= 5)
+        {
+            is_already_moving = general_movement.CanWeMoveThere(Movement.Direction.Kbottom_left);
+
+        }
+        else 
+        {
+            is_already_moving = general_movement.CanWeMoveThere(Movement.Direction.Kbottom_right);
+        }
+       
+
     }
     
 
 
-   
-
-    
-    #region Collision functions
-    void OnTriggerEnter2D(Collider2D col)
-    {
-    
-    }
-
-
-    #endregion
 }
-#region Enums
-public enum BallDecision
-{
-    Kbottom_right,
-    Kbottom_left,
-    Kno_movement
-}
-#endregion
