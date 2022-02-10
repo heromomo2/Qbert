@@ -102,8 +102,7 @@ MonoBehaviour:
   general_movement: {fileID: 2840360952971362600}
   is_already_moving: 0
   is_falling: 0
-  delaytimer: 0
-  delaytime: 0
+  delaytime: 0.7
 --- !u!114 &2840360952971362600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,9 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e076bdb4432df4ca3fd714ab2a4dde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_direction: 4
-  start_position: {x: 0, y: 0}
-  tagert_position: {x: 0, y: 0}
+  current_direction: 6
+  start_position: {x: 1.03, y: 4.7}
+  tagert_position: {x: 0.47255343, y: 1.7185143}
   bottom_left_platform_position: {fileID: 0}
   bottom_right_platform_position: {fileID: 0}
   top_left_platform_position: {fileID: 0}
@@ -250,5 +249,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circle_collider_2d: {fileID: 2840360952971362607}
-  rb: {fileID: 2840360952971362606}
+  rigid_body_2d: {fileID: 0}
   movement_script: {fileID: 2840360952971362600}

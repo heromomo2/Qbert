@@ -6,15 +6,12 @@ public class Ball : MonoBehaviour
 {
     #region Global var
     
-    [SerializeField] Movement general_movement;
+    [SerializeField] GerenalMovement general_movement;
 
     [SerializeField]  bool is_already_moving = false;
 
     [SerializeField] bool is_falling;
 
-    [SerializeField] float delaytimer = 0;
-
-    [SerializeField] float delaytime = 0;
 
     #endregion
 
@@ -24,25 +21,23 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!is_already_moving )
+        if (!is_already_moving)
         {
             BallDecisionToMove();
         }
 
-        if (general_movement.get_reach_destination) 
+        if (general_movement.get_reach_destination)
         {
             is_already_moving = false;
         }
-         
-        
-        
-       
+
+
     }
     void BallDecisionToMove() 
     {
@@ -52,17 +47,17 @@ public class Ball : MonoBehaviour
         // we have option
         if (random_number <= 50)
         {
-            is_already_moving = general_movement.CanWeMoveThere(Movement.Direction.Kbottom_left);
+            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
 
         }
         else 
         {
-            is_already_moving = general_movement.CanWeMoveThere(Movement.Direction.Kbottom_right);
+            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
         }
        
 
     }
-    
 
+   
 
 }

@@ -56,7 +56,7 @@ public class Spawner : MonoBehaviour
                     if (green_ball != null)
                     {
                         Instantiate(green_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                        this.green_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
+                        this.green_ball.GetComponent<GerenalMovement>().landPostion(Platforms[1], spawnpoints[1]);
                     }
                 }
                 else
@@ -64,7 +64,7 @@ public class Spawner : MonoBehaviour
                     if (red_ball != null)
                     {
                         Instantiate(red_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                        this.red_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
+                        this.red_ball.GetComponent<GerenalMovement>().landPostion(Platforms[1], spawnpoints[1]);
                     }
                 }
 
@@ -79,7 +79,7 @@ public class Spawner : MonoBehaviour
                     if (green_ball != null)
                     {
                         Instantiate(green_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                        this.green_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
+                        this.green_ball.GetComponent<GerenalMovement>().landPostion(Platforms[1], spawnpoints[1]);
                     }
                 }
                 else
@@ -87,7 +87,7 @@ public class Spawner : MonoBehaviour
                     if (red_ball != null)
                     {
                         Instantiate(red_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                        this.red_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
+                        this.red_ball.GetComponent<GerenalMovement>().landPostion(Platforms[1], spawnpoints[1]);
                     }
                 }
             }

@@ -8,7 +8,7 @@ public class snake : MonoBehaviour
 
     [SerializeField] Sprite snake_sprite;
 
-    [SerializeField] Movement general_movement;
+    [SerializeField] GerenalMovement general_movement;
 
     [SerializeField] bool is_already_moving = false;
 
@@ -49,12 +49,12 @@ public class snake : MonoBehaviour
         // we have option
         if (random_number <= 50)
         {
-            is_already_moving = general_movement.CanWeMoveThere(Movement.Direction.Kbottom_left);
+            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
 
         }
         else
         {
-            is_already_moving = general_movement.CanWeMoveThere(Movement.Direction.Kbottom_right);
+            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
         }
 
     }
