@@ -45,28 +45,51 @@ public class Spawner : MonoBehaviour
     {
         // Instantiate a random enemy.
         int random_number = Random.Range(1, 10);
+        int random_number_spawn_entity = Random.Range(1, 50);
 
         if (random_number <= 5) 
         {
             if (spawnpoints[0] != null)
             {
-                if (green_ball != null) 
+                if (random_number_spawn_entity <= 20)
                 {
-                    Instantiate(green_ball, spawnpoints[0].position, spawnpoints[0].rotation);
-                    this.green_ball.GetComponent<Movement>().landPostion(Platforms[0], spawnpoints[0]);
+                    if (green_ball != null)
+                    {
+                        Instantiate(green_ball, spawnpoints[1].position, spawnpoints[1].rotation);
+                        this.green_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
+                    }
                 }
-               
+                else
+                {
+                    if (red_ball != null)
+                    {
+                        Instantiate(red_ball, spawnpoints[1].position, spawnpoints[1].rotation);
+                        this.red_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
+                    }
+                }
+
             }
         }
         else
         {
             if (spawnpoints[1] != null)
             {
-                if (green_ball != null)
+                if (random_number_spawn_entity <= 20)
                 {
-                    Instantiate(green_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                    this.green_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
-                }       
+                    if (green_ball != null)
+                    {
+                        Instantiate(green_ball, spawnpoints[1].position, spawnpoints[1].rotation);
+                        this.green_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
+                    }
+                }
+                else
+                {
+                    if (red_ball != null)
+                    {
+                        Instantiate(red_ball, spawnpoints[1].position, spawnpoints[1].rotation);
+                        this.red_ball.GetComponent<Movement>().landPostion(Platforms[1], spawnpoints[1]);
+                    }
+                }
             }
         }
 

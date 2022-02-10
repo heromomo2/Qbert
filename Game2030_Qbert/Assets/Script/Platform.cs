@@ -16,6 +16,16 @@ public class Platform : MonoBehaviour
     {
         set => is_first_platform = false;
     }
+
+    [SerializeField] bool is_last_platform;
+    public bool get_is_last_platform // the Name property
+    {
+        get => is_last_platform;
+    }
+    public bool set_is_last_platform // the Name property
+    {
+        set => is_last_platform = false;
+    }
     [SerializeField]  bool is_inner_platform;
 
     [SerializeField] private bool has_been_step_on = false;
@@ -29,7 +39,6 @@ public class Platform : MonoBehaviour
         get => has_been_step_on ;
     }
 
-    [SerializeField] Transform our_position;
 
     [SerializeField] Transform top_left_platform_position;
 

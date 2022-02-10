@@ -2107,9 +2107,9 @@ TextureImporter:
       name: Arcade - QBert - General Sprites_51
       rect:
         serializedVersion: 2
-        x: 2
+        x: 16
         y: 320
-        width: 30
+        width: 17
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

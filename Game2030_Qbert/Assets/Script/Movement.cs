@@ -302,10 +302,10 @@ public class Movement : MonoBehaviour
 
             current_direction = Direction.Kno_direction;
 
-            //if (fall_timer >= fall_time)
-            //{
-            //    fall_timer = 0;
-            //}
+            if (fall_timer >= fall_time)
+            {
+                fall_timer = 0;
+            }
 
         }
     }

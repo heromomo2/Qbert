@@ -28,12 +28,14 @@ public class Collsion : MonoBehaviour
         // Player and Platform Interaction
         if (col.gameObject.CompareTag("Platform"))
         {
+
+            
             //If the GameObject's name matches the one you suggest, output this message in the console
 
 
             // remove all prev destinations
             // clear all the old  destinations
-           // movement_script.ClearAllDestination();
+            // movement_script.ClearAllDestination();
 
             // get new destinations from the platform we are on
             movement_script.set_bottom_left_platform_position = col.GetComponent<Platform>().get_bottom_left_platform_position;
@@ -41,6 +43,7 @@ public class Collsion : MonoBehaviour
             movement_script.set_top_left_platform_position = col.GetComponent<Platform>().get_top_left_platform_position;
             movement_script.set_top_right_platform_position = col.GetComponent<Platform>().get_top_right_platform_position;
 
+            
 
             //col.GetComponent<Platform>().PlayerOnFirstPlatformChange();
 
@@ -49,7 +52,20 @@ public class Collsion : MonoBehaviour
             circle_collider_2d.enabled = false;
 
             Debug.Log("Collsion script is working(you are hit the platform)");
-           
+
+            if (this.gameObject.tag == "Snake")
+            {
+                if (col.gameObject.GetComponent<Platform>().get_is_last_platform)
+                {
+                    this.gameObject.GetComponent<snake>().are_we_at_bottom = true;
+                }
+            }
+
+        }
+
+        if (col.gameObject.CompareTag("DeathPlatform")) 
+        {
+            Destroy(this.gameObject);
         }
     }
 }

@@ -46,11 +46,11 @@ public class Ball : MonoBehaviour
     }
     void BallDecisionToMove() 
     {
-        int random_number = Random.Range(1,10);
+        int random_number = Random.Range(1,100);
 
         // check where we can move
         // we have option
-        if (random_number <= 5)
+        if (random_number <= 50)
         {
             is_already_moving = general_movement.CanWeMoveThere(Movement.Direction.Kbottom_left);
 
