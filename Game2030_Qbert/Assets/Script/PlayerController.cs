@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
 
     public Vector2 start_position;
     public Vector2 tagert_position;
+
+    [SerializeField] Platform current_Platform;
     #endregion
 
     #region Private Global variables
@@ -185,6 +187,12 @@ public class PlayerController : MonoBehaviour
             reach_destination = true;
 
             Debug.Log(" ratio is at 1");
+
+            if (current_Platform != null)
+            {
+                current_Platform.set_is_player_current_this_platform = false;
+            }
+
         }
         //Debug.Log("MoveThePlayer is been all call");
     }
@@ -199,6 +207,14 @@ public class PlayerController : MonoBehaviour
         bottom_right_platform_position = null;
     }
 
+    public void ClearPlatformData()
+    {
+        current_Platform = null;
+    }
+    public void  GetCurrentPlatform (Platform current)
+    {
+        current_Platform = current;
+    }
 
     public Vector3 Bezier(float ratio, Vector2 start, Vector2 mid, Vector2 end)
     {
@@ -233,6 +249,7 @@ public class PlayerController : MonoBehaviour
                 player_direction = direction.Ktop_left;              
 
                 start_position = this.gameObject.transform.position;
+
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad9) && player_direction == direction.Kno_direction && is_allow_to_move)
@@ -244,6 +261,7 @@ public class PlayerController : MonoBehaviour
                 player_direction = direction.Ktop_right;
 
                 start_position = this.gameObject.transform.position;
+
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) && player_direction == direction.Kno_direction && is_allow_to_move)
@@ -255,6 +273,7 @@ public class PlayerController : MonoBehaviour
                 player_direction = direction.Kbottom_left;
 
                 start_position = this.gameObject.transform.position;
+
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad3) && player_direction == direction.Kno_direction && is_allow_to_move)
@@ -266,6 +285,7 @@ public class PlayerController : MonoBehaviour
                 player_direction = direction.Kbottom_right;
 
                 start_position = this.gameObject.transform.position;
+
             }
         }
     }

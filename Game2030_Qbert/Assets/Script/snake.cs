@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class snake : MonoBehaviour
 {
+    #region Global
     [SerializeField] Sprite Ball_sprite;
 
     [SerializeField] Sprite snake_sprite;
@@ -14,6 +15,20 @@ public class snake : MonoBehaviour
 
     public bool are_we_at_bottom = false;
 
+    [SerializeField] List<Platform> platforms;
+
+    [SerializeField] Transform  player;
+
+    [SerializeField] float current_platform_colum_id;
+
+    public float set_current_platform_colum_id() 
+    {
+        set => current_platform_colum_id = values;
+    }
+    #endregion
+
+
+    // public int G, h, f;
 
 
     // Start is called before the first frame update
@@ -56,6 +71,21 @@ public class snake : MonoBehaviour
         {
             is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
         }
+
+    }
+
+    void e()
+    {
+        Platform temp_platform;
+
+        for (int i =0; i < platforms.Count; i++) 
+        {
+           if(platforms[i].get_is_player_current_this_platform) 
+           {
+                temp_platform = platforms[i];
+           }
+        }
+
 
     }
 }

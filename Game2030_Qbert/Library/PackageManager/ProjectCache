@@ -5,27 +5,27 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637785167852624345
-    m_Hash: 3533921098
+      ticks: 637804762761896762
+    m_Hash: 1963389025
   m_LockFileStatus:
     m_FilePath: C:/Users/Owner/Documents/GitHub/Qbert/Game2030_Qbert/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637785168341350978
-    m_Hash: 2154246561
+      ticks: 637804763171102889
+    m_Hash: 3265909920
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
-    - packageId: com.unity.2d.animation@5.0.10
+    - packageId: com.unity.2d.animation@5.1.0
       testable: 0
       isDirectDependency: 1
-      version: 5.0.10
+      version: 5.1.0
       source: 1
-      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.2d.animation@5.0.10
+      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.2d.animation@5.1.0
       assetPath: Packages/com.unity.2d.animation
       name: com.unity.2d.animation
       displayName: 2D Animation
@@ -82,6 +82,7 @@ m_PackageAssets:
         - 3.2.13
         - 3.2.14
         - 3.2.15
+        - 3.2.16
         - 4.0.0
         - 4.0.1
         - 4.1.0
@@ -120,13 +121,13 @@ m_PackageAssets:
         - 7.0.3
         - 8.0.0-pre.3
         - 8.0.0-pre.4
+        - 8.0.0
         compatible:
-        - 5.0.10
         - 5.1.0
-        verified: 5.0.10
+        verified: 5.1.0
       dependencies:
       - name: com.unity.2d.common
-        version: 4.0.4
+        version: 4.1.0
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.2d.sprite
@@ -137,7 +138,7 @@ m_PackageAssets:
         version: 1.0.0
       resolvedDependencies:
       - name: com.unity.2d.common
-        version: 4.0.4
+        version: 4.1.0
       - name: com.unity.2d.sprite
         version: 1.0.0
       - name: com.unity.modules.uielements
@@ -169,13 +170,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637750142350000000
+      datePublishedTicks: 637781310880000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 341b7316671d7e6703a7627f67c5fab262c4f1ac
+        revision: e1ff2896b994f5eb1cc6bec519c643b3e2cd32ec
         path: 
     - packageId: com.unity.2d.pixel-perfect@4.0.1
       testable: 0
@@ -252,12 +253,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/2d.git
         revision: 7d7470f4ca0ea8353d4c9640b3b6ae9d1ebd9c1d
         path: 
-    - packageId: com.unity.2d.psdimporter@4.1.3
+    - packageId: com.unity.2d.psdimporter@4.2.0
       testable: 0
       isDirectDependency: 1
-      version: 4.1.3
+      version: 4.2.0
       source: 1
-      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.2d.psdimporter@4.1.3
+      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.2d.psdimporter@4.2.0
       assetPath: Packages/com.unity.2d.psdimporter
       name: com.unity.2d.psdimporter
       displayName: 2D PSD Importer
@@ -326,20 +327,20 @@ m_PackageAssets:
         - 6.0.2
         - 7.0.0-pre.3
         - 7.0.0-pre.4
+        - 7.0.0
         compatible:
-        - 4.1.3
         - 4.2.0
-        verified: 4.1.3
+        verified: 4.2.0
       dependencies:
       - name: com.unity.2d.common
-        version: 4.0.4
+        version: 4.1.0
       - name: com.unity.2d.animation
-        version: 5.0.10
+        version: 5.1.0
       - name: com.unity.2d.sprite
         version: 1.0.0
       resolvedDependencies:
       - name: com.unity.2d.common
-        version: 4.0.4
+        version: 4.1.0
       - name: com.unity.2d.sprite
         version: 1.0.0
       - name: com.unity.modules.uielements
@@ -353,7 +354,7 @@ m_PackageAssets:
       - name: com.unity.modules.uielementsnative
         version: 1.0.0
       - name: com.unity.2d.animation
-        version: 5.0.10
+        version: 5.1.0
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.modules.animation
@@ -374,13 +375,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637750142410000000
+      datePublishedTicks: 637781310920000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 341b7316671d7e6703a7627f67c5fab262c4f1ac
+        revision: e1ff2896b994f5eb1cc6bec519c643b3e2cd32ec
         path: 
     - packageId: com.unity.2d.sprite@1.0.0
       testable: 0
@@ -433,12 +434,12 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
-    - packageId: com.unity.2d.spriteshape@5.1.7
+    - packageId: com.unity.2d.spriteshape@5.2.0
       testable: 0
       isDirectDependency: 1
-      version: 5.1.7
+      version: 5.2.0
       source: 1
-      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.2d.spriteshape@5.1.7
+      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.2d.spriteshape@5.2.0
       assetPath: Packages/com.unity.2d.spriteshape
       name: com.unity.2d.spriteshape
       displayName: 2D SpriteShape
@@ -522,15 +523,15 @@ m_PackageAssets:
         - 7.0.3
         - 8.0.0-pre.4
         - 8.0.0-pre.5
+        - 8.0.0
         compatible:
-        - 5.1.7
         - 5.2.0
-        verified: 5.1.7
+        verified: 5.2.0
       dependencies:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.2d.common
-        version: 4.0.4
+        version: 4.1.0
       - name: com.unity.2d.path
         version: 4.0.2
       - name: com.unity.modules.physics2d
@@ -539,7 +540,7 @@ m_PackageAssets:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.2d.common
-        version: 4.0.4
+        version: 4.1.0
       - name: com.unity.2d.sprite
         version: 1.0.0
       - name: com.unity.modules.uielements
@@ -575,13 +576,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637750142490000000
+      datePublishedTicks: 637781310960000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 341b7316671d7e6703a7627f67c5fab262c4f1ac
+        revision: e1ff2896b994f5eb1cc6bec519c643b3e2cd32ec
         path: 
     - packageId: com.unity.2d.tilemap@1.0.0
       testable: 0
@@ -687,10 +688,12 @@ m_PackageAssets:
         - 1.14.4
         - 1.14.7
         - 1.14.9
+        - 1.14.12
         - 1.15.1
         - 1.15.4
         - 1.15.7
         - 1.15.9
+        - 1.15.12
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -704,6 +707,7 @@ m_PackageAssets:
         compatible:
         - 1.15.7
         - 1.15.9
+        - 1.15.12
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -714,7 +718,7 @@ m_PackageAssets:
         - 2.1.0-preview.3
         - 2.1.0-preview.5
         - 2.1.0-preview.6
-        verified: 1.15.9
+        verified: 1.15.12
       dependencies:
       - name: com.unity.nuget.newtonsoft-json
         version: 2.0.0
@@ -810,6 +814,7 @@ m_PackageAssets:
         - 3.0.7
         - 3.0.9
         - 3.0.10
+        - 3.0.12
         compatible:
         - 1.0.2
         - 1.0.6
@@ -838,6 +843,7 @@ m_PackageAssets:
         - 3.0.7
         - 3.0.9
         - 3.0.10
+        - 3.0.12
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -872,12 +878,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.rider.git
         revision: abb44f053e9a41d2e00e149e32a19bcec76e98b4
         path: 
-    - packageId: com.unity.ide.visualstudio@2.0.12
+    - packageId: com.unity.ide.visualstudio@2.0.14
       testable: 0
       isDirectDependency: 1
-      version: 2.0.12
+      version: 2.0.14
       source: 1
-      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.ide.visualstudio@2.0.12
+      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.ide.visualstudio@2.0.14
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
       displayName: Visual Studio Editor
@@ -955,13 +961,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637720564750000000
+      datePublishedTicks: 637782923640000000
       documentationUrl: 
-      hasRepository: 1
+      hasRepository: 0
       repository:
-        type: git
-        url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-        revision: 8d436ff053b9c59677b5e9799208143553cd02d9
+        type: 
+        url: 
+        revision: 
         path: 
     - packageId: com.unity.ide.vscode@1.2.4
       testable: 0
@@ -997,6 +1003,7 @@ m_PackageAssets:
         - 1.2.2
         - 1.2.3
         - 1.2.4
+        - 1.2.5
         compatible:
         - 1.0.2
         - 1.0.3
@@ -1010,7 +1017,8 @@ m_PackageAssets:
         - 1.2.2
         - 1.2.3
         - 1.2.4
-        verified: 1.2.4
+        - 1.2.5
+        verified: 1.2.5
       dependencies: []
       resolvedDependencies: []
       keywords: []
@@ -1086,12 +1094,16 @@ m_PackageAssets:
         - 1.1.27
         - 1.1.29
         - 1.1.30
+        - 1.1.31
         - 2.0.1-pre.12
+        - 2.0.1-pre.18
         compatible:
         - 1.1.29
         - 1.1.30
+        - 1.1.31
         - 2.0.1-pre.12
-        verified: 1.1.30
+        - 2.0.1-pre.18
+        verified: 1.1.31
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -1380,7 +1392,9 @@ m_PackageAssets:
         - 1.6.1
         - 1.6.2
         - 1.6.3
+        - 1.6.4
         - 1.7.0-pre.1
+        - 1.7.0-pre.2
         compatible:
         - 1.4.8
         - 1.5.0-pre.2
@@ -1404,7 +1418,9 @@ m_PackageAssets:
         - 1.6.1
         - 1.6.2
         - 1.6.3
+        - 1.6.4
         - 1.7.0-pre.1
+        - 1.7.0-pre.2
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -3470,12 +3486,12 @@ m_PackageAssets:
         url: git@github.com:Unity-Technologies/Unity.Mathematics.git
         revision: 0a3dfafaf606098ea681de4c4be60f3aac63b773
         path: 
-    - packageId: com.unity.2d.common@4.0.4
+    - packageId: com.unity.2d.common@4.1.0
       testable: 0
       isDirectDependency: 0
-      version: 4.0.4
+      version: 4.1.0
       source: 1
-      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.2d.common@4.0.4
+      resolvedPath: C:\Users\Owner\Documents\GitHub\Qbert\Game2030_Qbert\Library\PackageCache\com.unity.2d.common@4.1.0
       assetPath: Packages/com.unity.2d.common
       name: com.unity.2d.common
       displayName: 2D Common
@@ -3491,10 +3507,10 @@ m_PackageAssets:
       errors: []
       versions:
         all:
-        - 4.0.4
+        - 4.1.0
         compatible:
-        - 4.0.4
-        verified: 4.0.4
+        - 4.1.0
+        verified: 4.1.0
       dependencies:
       - name: com.unity.2d.sprite
         version: 1.0.0
@@ -3533,7 +3549,7 @@ m_PackageAssets:
       repository:
         type: git
         url: https://github.cds.internal.unity3d.com/unity/2d.git
-        revision: 341b7316671d7e6703a7627f67c5fab262c4f1ac
+        revision: e1ff2896b994f5eb1cc6bec519c643b3e2cd32ec
         path: 
     - packageId: com.unity.2d.path@4.0.2
       testable: 0
@@ -3588,4 +3604,4 @@ m_PackageAssets:
   m_LocalPackages:
     m_LocalFileStatus: []
 m_ProjectPath: C:/Users/Owner/Documents/GitHub/Qbert/Game2030_Qbert/Packages
-m_EditorVersion: 2020.3.26f1 (7298b473bc1a)
+m_EditorVersion: 2020.3.28f1 (f5400f52e03f)

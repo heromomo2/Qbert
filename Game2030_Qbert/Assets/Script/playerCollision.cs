@@ -68,6 +68,8 @@ public class PlayerCollision : MonoBehaviour
                 col.GetComponent<Platform>().set_is_first_platform = false;
             }
 
+            col.gameObject.GetComponent<Platform>().set_is_player_current_this_platform = true;
+            pc.GetCurrentPlatform(col.gameObject.GetComponent<Platform>());
         }
 
         // Player and Elevator Interaction
@@ -78,11 +80,10 @@ public class PlayerCollision : MonoBehaviour
             // clear all the old  destinations
             pc.ClearAllDestination();
 
-            col.GetComponent<Elevator>().PlayerOnElevator(pc.gameObject);
+           /// col.GetComponent<Elevator>().PlayerOnElevator(pc.gameObject);
 
         }
     }
 
-
-
+   
 }

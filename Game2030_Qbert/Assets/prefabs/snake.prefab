@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4794185887925427042
+--- !u!1 &6681056640630504568
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,13 +8,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 602168663065327812}
-  - component: {fileID: 7501878209454896982}
-  - component: {fileID: 5507193465008098646}
-  - component: {fileID: 2814399200367506777}
-  - component: {fileID: 8474801551493856068}
-  - component: {fileID: 4895122195090105386}
-  - component: {fileID: 7146162653191168104}
+  - component: {fileID: 6681056640630504546}
+  - component: {fileID: 6681056640630504573}
+  - component: {fileID: 6681056640630504572}
+  - component: {fileID: 6681056640630504575}
+  - component: {fileID: 6681056640630504574}
+  - component: {fileID: 6681056640630504569}
+  - component: {fileID: 6681056640630504547}
   m_Layer: 0
   m_Name: snake
   m_TagString: Snake
@@ -22,27 +22,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &602168663065327812
+--- !u!4 &6681056640630504546
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794185887925427042}
+  m_GameObject: {fileID: 6681056640630504568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.072759, y: -1.7326128, z: 0}
+  m_LocalPosition: {x: 0.43, y: 1.63, z: 0}
   m_LocalScale: {x: 3.2724, y: 3.2724, z: 3.2724}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7501878209454896982
+--- !u!212 &6681056640630504573
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794185887925427042}
+  m_GameObject: {fileID: 6681056640630504568}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -87,13 +87,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &5507193465008098646
+--- !u!58 &6681056640630504572
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794185887925427042}
+  m_GameObject: {fileID: 6681056640630504568}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -103,14 +103,14 @@ CircleCollider2D:
   m_Offset: {x: -0.004951945, y: -0.0055639567}
   serializedVersion: 2
   m_Radius: 0.07001628
---- !u!50 &2814399200367506777
+--- !u!50 &6681056640630504575
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794185887925427042}
+  m_GameObject: {fileID: 6681056640630504568}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -124,19 +124,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8474801551493856068
+--- !u!114 &6681056640630504574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794185887925427042}
+  m_GameObject: {fileID: 6681056640630504568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64e076bdb4432df4ca3fd714ab2a4dde, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e9932d72b392ad4891d058eb0fab8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current_direction: 0
+  Ball_sprite: {fileID: -7881768608506599577, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
+  snake_sprite: {fileID: 9089499675518395129, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
+  general_movement: {fileID: 6681056640630504547}
+  is_already_moving: 0
+  are_we_at_bottom: 0
+  Platforms: []
+--- !u!114 &6681056640630504569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681056640630504568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b2acf7ae6360b44aa2bf1b4a2d0a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circle_collider_2d: {fileID: 6681056640630504572}
+  rigid_body_2d: {fileID: 6681056640630504575}
+  movement_script: {fileID: 6681056640630504547}
+--- !u!114 &6681056640630504547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6681056640630504568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4ec23a4fb9d79f4a852e315b76ce0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current_direction: 4
   start_position: {x: 0, y: 0}
   tagert_position: {x: 0, y: 0}
   bottom_left_platform_position: {fileID: 0}
@@ -146,55 +179,77 @@ MonoBehaviour:
   reach_destination: 0
   curve_start_to_mid:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   curve_mid_to_end:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  jump_time: 1.7
+  jump_timer: 0
   curve_fall:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jump_time: 1
-  fall_time: 1
-  jump_timer: 0
+  fall_time: 1.5
   fall_timer: 0
---- !u!114 &4895122195090105386
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794185887925427042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e9932d72b392ad4891d058eb0fab8c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ball_sprite: {fileID: 0}
-  snake_sprite: {fileID: 0}
-  general_movement: {fileID: 0}
-  is_already_moving: 0
-  are_we_at_bottom: 0
---- !u!114 &7146162653191168104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4794185887925427042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8b2acf7ae6360b44aa2bf1b4a2d0a5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circle_collider_2d: {fileID: 5507193465008098646}
-  rigid_body_2d: {fileID: 2814399200367506777}
-  movement_script: {fileID: 8474801551493856068}

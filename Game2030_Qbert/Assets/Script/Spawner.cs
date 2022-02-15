@@ -6,8 +6,8 @@ public class Spawner : MonoBehaviour
 {
     // Start is called before the first frame update
     #region Enemy type and Spawm point
-    [SerializeField] GameObject red_ball;
-    [SerializeField] GameObject green_ball;
+    [SerializeField] GerenalMovement red_ball;
+    [SerializeField] GerenalMovement green_ball;
     [SerializeField] GameObject enemy_snake;
     [SerializeField]  List<Transform> spawnpoints;
     [SerializeField] List<Transform>  Platforms;
@@ -55,16 +55,16 @@ public class Spawner : MonoBehaviour
                 {
                     if (green_ball != null)
                     {
-                        Instantiate(green_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                        this.green_ball.GetComponent<GerenalMovement>().landPostion(Platforms[1], spawnpoints[1]);
+                        GerenalMovement current_movement = Instantiate(green_ball, spawnpoints[0].position, spawnpoints[0].rotation);
+                        current_movement.landPostion(Platforms[0], spawnpoints[0]);
                     }
                 }
                 else
                 {
                     if (red_ball != null)
                     {
-                        Instantiate(red_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                        this.red_ball.GetComponent<GerenalMovement>().landPostion(Platforms[1], spawnpoints[1]);
+                        GerenalMovement current_movement = Instantiate(red_ball, spawnpoints[0].position, spawnpoints[0].rotation);
+                        current_movement.landPostion(Platforms[0], spawnpoints[0]);
                     }
                 }
 
@@ -78,16 +78,16 @@ public class Spawner : MonoBehaviour
                 {
                     if (green_ball != null)
                     {
-                        Instantiate(green_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                        this.green_ball.GetComponent<GerenalMovement>().landPostion(Platforms[1], spawnpoints[1]);
+                        GerenalMovement current_movement = Instantiate(green_ball, spawnpoints[1].position, spawnpoints[1].rotation);
+                        current_movement.landPostion(Platforms[1], spawnpoints[1]);
                     }
                 }
                 else
                 {
                     if (red_ball != null)
                     {
-                        Instantiate(red_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                        this.red_ball.GetComponent<GerenalMovement>().landPostion(Platforms[1], spawnpoints[1]);
+                        GerenalMovement current_movement = Instantiate(red_ball, spawnpoints[1].position, spawnpoints[1].rotation);
+                         current_movement.landPostion(Platforms[1], spawnpoints[1]);
                     }
                 }
             }

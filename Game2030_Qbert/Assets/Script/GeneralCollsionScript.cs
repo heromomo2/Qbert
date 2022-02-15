@@ -50,6 +50,7 @@ public class GeneralCollsionScript : MonoBehaviour
                 {
                     this.gameObject.GetComponent<snake>().are_we_at_bottom = true;
                 }
+
             }
 
         }
