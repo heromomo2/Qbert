@@ -29,11 +29,19 @@ public class GerenalMovement : MonoBehaviour
     {
         set => bottom_left_platform_position = value;
     }
+    public Transform get_bottom_left_platform_position // the Name property
+    {
+        get => bottom_left_platform_position;
+    }
 
     [SerializeField] Transform bottom_right_platform_position;
     public Transform set_bottom_right_platform_position // the Name property
     {
         set => bottom_right_platform_position = value;
+    }
+    public Transform get_bottom_right_platform_position // the Name property
+    {
+        get => bottom_right_platform_position ;
     }
 
     [SerializeField] Transform top_left_platform_position;
@@ -41,13 +49,20 @@ public class GerenalMovement : MonoBehaviour
     {
         set => top_left_platform_position = value;
     }
-
+    public Transform get_top_left_platform_position// the Name property
+    {
+        get => top_left_platform_position ;
+    }
 
     [SerializeField] Transform top_right_platform_position;
 
     public Transform set_top_right_platform_position// the Name property
     {
         set => top_right_platform_position = value;
+    }
+    public Transform get_top_right_platform_position// the Name property
+    {
+        get => top_right_platform_position ;
     }
 
     public bool reach_destination = false;

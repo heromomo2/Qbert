@@ -5893,6 +5893,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6681056640630504547, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
+      propertyPath: jump_time
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681056640630504547, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
+      propertyPath: curve_mid_to_end.m_Curve.Array.data[1].value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681056640630504547, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
+      propertyPath: curve_mid_to_end.m_Curve.Array.data[0].inSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681056640630504547, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
+      propertyPath: curve_mid_to_end.m_Curve.Array.data[1].inSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681056640630504547, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
+      propertyPath: curve_mid_to_end.m_Curve.Array.data[0].outSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681056640630504547, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
+      propertyPath: curve_mid_to_end.m_Curve.Array.data[1].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681056640630504547, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
+      propertyPath: curve_mid_to_end.m_Curve.Array.data[1].outSlope
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681056640630504547, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
+      propertyPath: curve_mid_to_end.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6681056640630504547, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
+      propertyPath: curve_mid_to_end.m_Curve.Array.data[1].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
     - target: {fileID: 6681056640630504568, guid: 9d6b5927e2555bf43bdd307a7c7c1b07, type: 3}
       propertyPath: m_Name
       value: snake

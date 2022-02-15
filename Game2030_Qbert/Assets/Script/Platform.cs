@@ -64,7 +64,7 @@ public class Platform : MonoBehaviour
 
     [SerializeField] float Colum_id_number;
 
-    public float get_Colum_id_number// the Name property
+    public float get_colum_id_number// the Name property
     {
         get => Colum_id_number;
     }

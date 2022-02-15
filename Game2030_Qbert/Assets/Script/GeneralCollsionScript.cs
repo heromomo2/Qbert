@@ -46,6 +46,7 @@ public class GeneralCollsionScript : MonoBehaviour
             // this is being use to stop the snake at the bottom of pyramid
             if (this.gameObject.tag == "Snake")
             {
+                this.gameObject.GetComponent<snake>().set_current_platform_colum_id = col.gameObject.GetComponent<Platform>().get_colum_id_number;
                 if (col.gameObject.GetComponent<Platform>().get_is_last_platform)
                 {
                     this.gameObject.GetComponent<snake>().are_we_at_bottom = true;

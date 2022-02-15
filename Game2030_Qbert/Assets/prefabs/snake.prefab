@@ -141,7 +141,9 @@ MonoBehaviour:
   general_movement: {fileID: 6681056640630504547}
   is_already_moving: 0
   are_we_at_bottom: 0
-  Platforms: []
+  platforms: []
+  player: {fileID: 0}
+  current_platform_colum_id: 0
 --- !u!114 &6681056640630504569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,18 +185,18 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
@@ -207,20 +209,20 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
+      value: 1.0023575
+      inSlope: 0.55589664
+      outSlope: 0.55589664
+      tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.084775925
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
