@@ -80,7 +80,7 @@ public class PlayerCollision : MonoBehaviour
             // clear all the old  destinations
             pc.ClearAllDestination();
 
-           /// col.GetComponent<Elevator>().PlayerOnElevator(pc.gameObject);
+           col.GetComponent<Elevator>().PlayerOnElevator(pc.gameObject);
 
         }
     }

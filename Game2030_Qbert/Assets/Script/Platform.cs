@@ -78,12 +78,20 @@ public class Platform : MonoBehaviour
     {
         get => top_left_platform_position;  
     }
+    public Transform set_top_left_platform_position // the Name property
+    {
+        set => top_left_platform_position = value;
+    }
 
     [SerializeField] Transform top_right_platform_position;
 
     public Transform get_top_right_platform_position // the Name property
     {
         get => top_right_platform_position;
+    }
+    public Transform set_top_right_platform_position // the Name property
+    {
+        set => top_right_platform_position = value;
     }
 
     [SerializeField] Transform bottom_left_platform_position;
@@ -99,7 +107,18 @@ public class Platform : MonoBehaviour
         get => bottom_right_platform_position;
     }
 
- 
+    [Header("Death Direction")]
+    [SerializeField] Transform top_left_death_platform_position;
+    public Transform get_top_left_death_platform_position // the Name property
+    {
+        get => top_left_death_platform_position;
+    }
+
+    [SerializeField] Transform top_right_death_platform_position;
+    public Transform get_top_right_death_platform_position // the Name property
+    {
+        get => top_right_death_platform_position;
+    }
 
     #endregion
 

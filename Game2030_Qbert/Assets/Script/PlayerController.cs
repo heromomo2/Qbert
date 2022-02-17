@@ -130,7 +130,7 @@ public class PlayerController : MonoBehaviour
             case direction.Kfall_from_elavator_start:
                
                  start_position = this.gameObject.transform.position;
-                 tagert_position = new Vector2(-0.02f, 2.55f);
+                 tagert_position = new Vector2(-0.062f, 2.4f);
                 is_drop_from_elevator = true;
                 break;
         };
