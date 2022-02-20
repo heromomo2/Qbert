@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7660899558443931969}
   - component: {fileID: 8143590361913224464}
   - component: {fileID: 4126143873993651886}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Elevator
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -97,8 +97,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 880b001e8db7ffc42ad63d33e89dabfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  is_player_on_elevator: 0
-  reach_top_pyramid: 0
+  current_state: 0
+  our_circle_transform: {fileID: 0}
+  first_platform_position: {fileID: 0}
+  adjecent_Platform_circle: {fileID: 0}
+  travel_time: 0
+  curve_t:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!70 &4126143873993651886
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -125,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4863010070563530571}
   - component: {fileID: 8218104178246594599}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Elevator_Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

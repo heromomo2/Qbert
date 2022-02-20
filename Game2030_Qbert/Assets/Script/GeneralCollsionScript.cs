@@ -61,7 +61,22 @@ public class GeneralCollsionScript : MonoBehaviour
         // this is being use to destory anything that fall off the pyramid
         if (col.gameObject.CompareTag("DeathPlatform")) 
         {
-            Destroy(this.gameObject);
+          //  Destroy(this.gameObject);
+        }
+
+        if (col.gameObject.CompareTag("redirection") )
+        {
+            if (this.gameObject.CompareTag ("Snake")) 
+            {
+                if (this.gameObject.GetComponent<snake>().get_has_coily_jump_off) 
+                {
+                    this.gameObject.GetComponent<snake>().CoilyOffThePyramid();
+                    this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0; 
+                    this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+                    this.gameObject.GetComponent<GerenalMovement>().landPostion( col.GetComponent<RedirectionPlatform>().target, col.GetComponent<RedirectionPlatform>().start);
+
+                }
+            }
         }
     }
 }

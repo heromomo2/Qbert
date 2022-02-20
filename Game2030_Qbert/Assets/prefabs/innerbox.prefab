@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6706204970062279509}
   - component: {fileID: 2478429354186161023}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1267340084245845830}
   - component: {fileID: -5702357543015771062}
   - component: {fileID: 1173762837331363573}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: innerbox
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -180,16 +180,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_first_platform: 0
+  is_last_platform: 0
   is_inner_platform: 1
   has_been_step_on: 0
-  our_position: {fileID: 0}
+  is_player_current_this_platform: 0
+  inner_platform_sprite_on: {fileID: -6379350831655040001, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
+  platform_sprite_on: {fileID: -6469223595132164514, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
+  spriterenderer: {fileID: 1267340084245845830}
+  Colum_id_number: 0
   top_left_platform_position: {fileID: 0}
   top_right_platform_position: {fileID: 0}
   bottom_left_platform_position: {fileID: 0}
   bottom_right_platform_position: {fileID: 0}
-  inner_platform_sprite_on: {fileID: -6379350831655040001, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
-  platform_sprite_on: {fileID: -6469223595132164514, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
-  spriterenderer: {fileID: 1267340084245845830}
+  top_left_death_platform_position: {fileID: 0}
+  top_right_death_platform_position: {fileID: 0}
 --- !u!61 &1173762837331363573
 BoxCollider2D:
   m_ObjectHideFlags: 0

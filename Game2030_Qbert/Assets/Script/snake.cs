@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class snake : MonoBehaviour
@@ -38,10 +39,30 @@ public class snake : MonoBehaviour
          our_current_platform = platform;
     }
 
+    [SerializeField] bool has_coily_jump_off = false;
+    public bool get_has_coily_jump_off
+    {
+        get => has_coily_jump_off;
+    }
+
+    private Action<bool> coily_event = null;
+
     #endregion
 
 
+    public event Action<bool> On_coily_event
+    {
+        add
+        {
+            coily_event -= value;
+            coily_event += value;
+        }
 
+        remove
+        {
+            coily_event -= value;
+        }
+    }
 
 
     // Start is called before the first frame update
@@ -53,6 +74,11 @@ public class snake : MonoBehaviour
             {
                elevator.On_elevator_event += ElevatorEventListener;
             }
+        }
+
+        if (coily_event != null)
+        {
+            coily_event(true);
         }
     }
 
@@ -81,12 +107,17 @@ public class snake : MonoBehaviour
             Snakebehave();
         }
 
-       
+        if (this.gameObject.transform.position.y <= -3.00f)
+        {
+            Destroy(this.gameObject);
+            
+        }
+      
     }
 
     void BallDecisionToMove()
     {
-        int random_number = Random.Range(1, 100);
+        int random_number = UnityEngine.Random.Range(1, 100);
 
         // check where we can move
         // we have option
@@ -100,6 +131,17 @@ public class snake : MonoBehaviour
             is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
         }
 
+    }
+
+    public void CoilyOffThePyramid()
+    {
+        if (coily_event != null)
+        {
+            coily_event(false);
+
+            Debug.LogWarning("CoilyOffThePyramid");
+        }
+      
     }
 
     private void ElevatorEventListener(bool is_the_player_on_elvator, Transform target)
@@ -150,15 +192,17 @@ public class snake : MonoBehaviour
             {
                 // Destroy(this.gameObject);
 
-                if (general_movement.get_top_right_platform_position.gameObject.tag == "DeathPlatform")
+                if (general_movement.get_top_right_platform_position.gameObject.tag == "redirection")
                 {
                     is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
                     is_coily_in_death_mode = false;
+                    has_coily_jump_off = true;
                 }
-                else if (general_movement.get_top_left_platform_position.gameObject.tag == "DeathPlatform")
+                else if (general_movement.get_top_left_platform_position.gameObject.tag == "redirection")
                 {
                     is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
                     is_coily_in_death_mode = false;
+                    has_coily_jump_off = true;
                 }
             }
             else
@@ -217,7 +261,7 @@ public class snake : MonoBehaviour
                 else if (player_current_platform.get_colum_id_number == current_platform_colum_id)
                 {
                     /// this random_number is use when there way path to the player and it does matter which way to
-                    int random_nubmer = Random.Range(1, 10);
+                    int random_nubmer = UnityEngine.Random.Range(1, 10);
 
                     /// at the bottom and on same level as player
                     /// we want move up
@@ -322,5 +366,6 @@ public class snake : MonoBehaviour
     }
 
 
+  
 
 }

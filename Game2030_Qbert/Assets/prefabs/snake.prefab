@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6681056640630504574}
   - component: {fileID: 6681056640630504569}
   - component: {fileID: 6681056640630504547}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: snake
   m_TagString: Snake
   m_Icon: {fileID: 0}
@@ -144,6 +144,11 @@ MonoBehaviour:
   platforms: []
   player: {fileID: 0}
   current_platform_colum_id: 0
+  bottom_colum_id: 6
+  elevators_event_received: []
+  is_coily_in_death_mode: 0
+  our_current_platform: {fileID: 0}
+  has_coily_jump_off: 0
 --- !u!114 &6681056640630504569
 MonoBehaviour:
   m_ObjectHideFlags: 0

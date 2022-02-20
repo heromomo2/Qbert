@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
 
     [SerializeField] bool is_falling;
 
-
+    [SerializeField] snake coily_event_received = null;
     #endregion
 
 
@@ -37,7 +37,21 @@ public class Ball : MonoBehaviour
             is_already_moving = false;
         }
 
+        if (this.gameObject.transform.position.y <= -3.00f) 
+        {
+            Destroy(this.gameObject);
+        }
 
+        if (coily_event_received == null) 
+        {
+            GameObject temp_snake;
+            temp_snake = GameObject.FindGameObjectWithTag("Snake");
+            if (temp_snake != null)
+            {
+                coily_event_received = temp_snake.GetComponent<snake>();
+                coily_event_received.On_coily_event += CoilyEventListener;
+            }
+        }
     }
     void BallDecisionToMove() 
     {
@@ -58,6 +72,25 @@ public class Ball : MonoBehaviour
 
     }
 
-   
+    private void OnDestroy()
+    {
+        if (coily_event_received != null)
+        {
+            coily_event_received.On_coily_event -= CoilyEventListener;
+        }
 
+    }
+    private void CoilyEventListener(bool does_coily_exist)
+    {
+        if (does_coily_exist)
+        {
+           // do notthing
+        }
+        else
+        {
+            ///
+            Destroy(this.gameObject);
+        }
+
+    }
 }

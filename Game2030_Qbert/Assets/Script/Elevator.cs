@@ -95,7 +95,6 @@ public class Elevator : MonoBehaviour
                 elevator_event(true, adjecent_Platform_circle);
                 adjecent_Platform_circle.GetComponentInParent<Platform>().set_is_player_current_this_platform = true;
 
-                
             }
         }
 

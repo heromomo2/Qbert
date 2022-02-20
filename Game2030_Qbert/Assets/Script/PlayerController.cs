@@ -303,7 +303,7 @@ public class PlayerController : MonoBehaviour
 
        
 
-        Debug.Log(" fall ratio :->" + ratio);
+      //  Debug.Log(" fall ratio :->" + ratio);
         if (ratio < 1)
         {
             
