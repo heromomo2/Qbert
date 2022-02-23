@@ -15,28 +15,29 @@ public class snake : MonoBehaviour
     [SerializeField] bool is_already_moving = false;
 
     public bool are_we_at_bottom = false;
+    public bool did_we_hatch = false;
 
     [SerializeField] List<Platform> platforms;
 
-    [SerializeField] Transform  player;
+    [SerializeField] Transform player;
 
     [SerializeField] float current_platform_colum_id;
 
-    [SerializeField] float  bottom_colum_id = 6;
-    public float set_current_platform_colum_id 
+    [SerializeField] float bottom_colum_id = 6;
+    public float set_current_platform_colum_id
     {
         set => current_platform_colum_id = value;
     }
 
-    [SerializeField]  List<Elevator> elevators_event_received = null ;
+    [SerializeField] List<Elevator> elevators_event_received = null;
 
     [SerializeField] bool is_coily_in_death_mode = false;
 
-    [SerializeField] private Platform  our_current_platform = null;
+    [SerializeField] private Platform our_current_platform = null;
 
     public void set_our_current_platform(Platform platform)
     {
-         our_current_platform = platform;
+        our_current_platform = platform;
     }
 
     [SerializeField] bool has_coily_jump_off = false;
@@ -68,13 +69,13 @@ public class snake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (elevators_event_received != null)
-        {
-            foreach (Elevator elevator in elevators_event_received)
-            {
-               elevator.On_elevator_event += ElevatorEventListener;
-            }
-        }
+        //if (elevators_event_received != null)
+        //{
+        //    foreach (Elevator elevator in elevators_event_received)
+        //    {
+        //        elevator.On_elevator_event += ElevatorEventListener;
+        //    }
+        //}
 
         if (coily_event != null)
         {
@@ -95,14 +96,15 @@ public class snake : MonoBehaviour
             is_already_moving = false;
         }
 
-        if (are_we_at_bottom) 
+        if (are_we_at_bottom && !did_we_hatch)
         {
             this.gameObject.GetComponent<SpriteRenderer>().sprite = snake_sprite;
+            did_we_hatch = true;
         }
 
-      
 
-        if (!is_already_moving && are_we_at_bottom ) 
+
+        if (!is_already_moving && are_we_at_bottom && !has_coily_jump_off)
         {
             Snakebehave();
         }
@@ -110,9 +112,9 @@ public class snake : MonoBehaviour
         if (this.gameObject.transform.position.y <= -3.00f)
         {
             Destroy(this.gameObject);
-            
+
         }
-      
+
     }
 
     void BallDecisionToMove()
@@ -141,7 +143,7 @@ public class snake : MonoBehaviour
 
             Debug.LogWarning("CoilyOffThePyramid");
         }
-      
+
     }
 
     private void ElevatorEventListener(bool is_the_player_on_elvator, Transform target)
@@ -152,13 +154,17 @@ public class snake : MonoBehaviour
             player = target;
             is_coily_in_death_mode = true;
         }
-        else 
+        else
         {
             /// switch back to the player
-            player = target;
-            is_coily_in_death_mode = false;
+            if (!has_coily_jump_off)
+            {
+                player = target;
+
+                is_coily_in_death_mode = false; 
+            }
         }
-       
+
     }
     private void OnDestroy()
     {
@@ -176,12 +182,12 @@ public class snake : MonoBehaviour
     {
         Platform player_current_platform = null;
 
-        for (int i =0; i < platforms.Count; i++) 
+        for (int i = 0; i < platforms.Count; i++)
         {
-           if(platforms[i].get_is_player_current_this_platform) 
-           {
+            if (platforms[i].get_is_player_current_this_platform)
+            {
                 player_current_platform = platforms[i];
-           }
+            }
         }
 
 
@@ -190,7 +196,7 @@ public class snake : MonoBehaviour
         {
             if (is_coily_in_death_mode && our_current_platform.get_is_player_current_this_platform)
             {
-                // Destroy(this.gameObject);
+            
 
                 if (general_movement.get_top_right_platform_position.gameObject.tag == "redirection")
                 {
@@ -366,6 +372,22 @@ public class snake : MonoBehaviour
     }
 
 
-  
+
+   public void GetPlayerPosition(Transform m_player)
+   {
+        player = m_player;
+   }
+
+    public void GetPlatforms(Platform m_platform)
+    {
+        platforms.Add(m_platform);
+    }
+
+    public void GetElevator(Elevator m_elevator)
+    {
+        elevators_event_received.Add(m_elevator);
+
+        m_elevator.On_elevator_event += ElevatorEventListener;
+    }
 
 }
