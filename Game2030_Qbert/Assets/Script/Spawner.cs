@@ -98,6 +98,9 @@ public class Spawner : MonoBehaviour
                             coily_event_received.GetElevator(m_elevator);
                         }
 
+                        current_movement.fall_timer = 0;
+                        current_movement.landPostion(land_Platforms[0], current_movement.transform);
+
                         is_there_a_snake = true;
 
                     }
@@ -130,7 +133,7 @@ public class Spawner : MonoBehaviour
                     if (enemy_snake != null)
                     {
                         GerenalMovement current_movement = Instantiate(enemy_snake, spawnpoints[1].position, spawnpoints[1].rotation);
-                        current_movement.landPostion(land_Platforms[1], spawnpoints[1]);
+                       
 
                         coily_event_received = current_movement.GetComponent<snake>();
 
@@ -147,6 +150,9 @@ public class Spawner : MonoBehaviour
                             coily_event_received.GetElevator(m_elevator);
                         }
 
+                        current_movement.fall_timer = 0;
+
+                        current_movement.landPostion(land_Platforms[1], current_movement.transform);
 
                         is_there_a_snake = true;
 

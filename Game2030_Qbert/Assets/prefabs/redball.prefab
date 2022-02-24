@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2840360952971362606}
   - component: {fileID: 2840360952971362605}
   - component: {fileID: 6740160110374800321}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: redball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -102,6 +102,7 @@ MonoBehaviour:
   general_movement: {fileID: 6740160110374800321}
   is_already_moving: 0
   is_falling: 0
+  coily_event_received: {fileID: 0}
 --- !u!58 &2840360952971362607
 CircleCollider2D:
   m_ObjectHideFlags: 0

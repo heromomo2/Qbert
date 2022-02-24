@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8512550857054289439}
   - component: {fileID: 2309506840668074547}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: deathPlatformCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1214875498559399976}
   - component: {fileID: 6410130335230652516}
   - component: {fileID: 3141924187074773525}
-  m_Layer: 12
+  m_Layer: 0
   m_Name: deathPlatform
   m_TagString: DeathPlatform
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}

@@ -111,7 +111,7 @@ public class snake : MonoBehaviour
 
         if (this.gameObject.transform.position.y <= -3.00f)
         {
-            Destroy(this.gameObject);
+           Destroy(this.gameObject);
 
         }
 
@@ -196,20 +196,28 @@ public class snake : MonoBehaviour
         {
             if (is_coily_in_death_mode && our_current_platform.get_is_player_current_this_platform)
             {
-            
 
-                if (general_movement.get_top_right_platform_position.gameObject.tag == "redirection")
+
+                if (general_movement.get_top_right_platform_position != null)
                 {
-                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
-                    is_coily_in_death_mode = false;
-                    has_coily_jump_off = true;
+                    if (general_movement.get_top_right_platform_position.gameObject.tag == "redirection")
+                    {
+
+                        is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
+                        is_coily_in_death_mode = false;
+                        has_coily_jump_off = true; 
+                    }
                 }
-                else if (general_movement.get_top_left_platform_position.gameObject.tag == "redirection")
+                else if (general_movement.get_top_left_platform_position != null)
                 {
-                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
-                    is_coily_in_death_mode = false;
-                    has_coily_jump_off = true;
+                    if (general_movement.get_top_left_platform_position.gameObject.tag == "redirection")
+                    {
+                        is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
+                        is_coily_in_death_mode = false;
+                        has_coily_jump_off = true;
+                    }
                 }
+               
             }
             else
             {

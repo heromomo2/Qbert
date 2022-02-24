@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2331328132567985718}
   - component: {fileID: 899877334292693704}
   - component: {fileID: 507552164348397960}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -102,6 +102,7 @@ MonoBehaviour:
   general_movement: {fileID: 507552164348397960}
   is_already_moving: 0
   is_falling: 0
+  coily_event_received: {fileID: 0}
 --- !u!50 &3927923100191785228
 Rigidbody2D:
   serializedVersion: 4

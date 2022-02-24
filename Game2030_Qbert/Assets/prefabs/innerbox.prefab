@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6706204970062279509}
   - component: {fileID: 2478429354186161023}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1267340084245845830}
   - component: {fileID: -5702357543015771062}
   - component: {fileID: 1173762837331363573}
-  m_Layer: 11
+  m_Layer: 0
   m_Name: innerbox
   m_TagString: Platform
   m_Icon: {fileID: 0}

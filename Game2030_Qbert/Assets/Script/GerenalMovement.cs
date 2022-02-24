@@ -88,7 +88,7 @@ public class GerenalMovement : MonoBehaviour
 
     [Header("Falling")]
     #region Falling var
-    [SerializeField] AnimationCurve curve_fall;
+    public AnimationCurve curve_fall;
 
     public float fall_time = 1;
 
@@ -276,17 +276,17 @@ public class GerenalMovement : MonoBehaviour
     }
     
 
-    Vector3 Bezier(float ratio, Vector2 start, Vector2 mid, Vector2 end)
+    Vector3 Bezier(float jump_ratio, Vector2 start, Vector2 mid, Vector2 end)
     {
-        ratio = Mathf.Clamp01(ratio);
+        jump_ratio = Mathf.Clamp01(jump_ratio);
 
 
-        Vector2 start_to_mid = Vector3.Lerp(start, mid, curve_start_to_mid.Evaluate(ratio));
+        Vector2 start_to_mid = Vector3.Lerp(start, mid, curve_start_to_mid.Evaluate(jump_ratio));
 
 
-        Vector2 mid_to_end = Vector3.Lerp(mid, end, curve_mid_to_end.Evaluate(ratio));
+        Vector2 mid_to_end = Vector3.Lerp(mid, end, curve_mid_to_end.Evaluate(jump_ratio));
 
-        return Vector3.Lerp(start_to_mid, mid_to_end, ratio);
+        return Vector3.Lerp(start_to_mid, mid_to_end, jump_ratio);
     }
 
 
@@ -312,20 +312,22 @@ public class GerenalMovement : MonoBehaviour
         reach_destination = false;
     }
 
-    void FallingMovement(Vector2 start, Vector2 end)
+    public virtual void FallingMovement(Vector2 start, Vector2 end)
     {
         fall_timer += Time.deltaTime;
 
-        float ratio = fall_timer / fall_time;
+        fall_timer = Mathf.Clamp(fall_timer, 0, fall_time);
+
+        float fall_ratio = fall_timer / fall_time;
 
 
+        fall_ratio = Mathf.Clamp01(fall_ratio);
 
-        ratio = Mathf.Clamp01(ratio);
+        this.gameObject.GetComponent<Collider2D>().enabled = false;
 
-        if (ratio < 1)
+        if (fall_ratio < 1)
         {
-
-            this.gameObject.transform.position = Vector3.Lerp(start, end, curve_fall.Evaluate(ratio));
+            this.gameObject.transform.position = Vector3.Lerp(start, end, curve_fall.Evaluate(fall_ratio));
         }
         else
         {
@@ -333,10 +335,9 @@ public class GerenalMovement : MonoBehaviour
 
             current_direction = Direction.Kno_direction;
 
-            if (fall_timer >= fall_time)
-            {
-                fall_timer = 0;
-            }
+            this.gameObject.GetComponent<Collider2D>().enabled = true;
+
+            fall_timer = 0;
 
         }
     }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7660899558443931969}
   - component: {fileID: 8143590361913224464}
   - component: {fileID: 4126143873993651886}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Elevator
   m_TagString: Elevator
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4863010070563530571}
   - component: {fileID: 8218104178246594599}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Elevator_Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
