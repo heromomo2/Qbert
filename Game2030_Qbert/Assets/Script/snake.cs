@@ -198,24 +198,25 @@ public class snake : MonoBehaviour
             {
 
 
-                if (general_movement.get_top_right_platform_position != null)
+                if (general_movement.get_top_right_platform_position != null
+                    && general_movement.get_top_right_platform_position.gameObject.tag == "redirection")
                 {
-                    if (general_movement.get_top_right_platform_position.gameObject.tag == "redirection")
-                    {
+                   
 
                         is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
                         is_coily_in_death_mode = false;
-                        has_coily_jump_off = true; 
-                    }
+                        has_coily_jump_off = true;
+                   
+                 
                 }
-                else if (general_movement.get_top_left_platform_position != null)
+                else if (general_movement.get_top_left_platform_position != null &&
+                    general_movement.get_top_left_platform_position.gameObject.tag == "redirection")
                 {
-                    if (general_movement.get_top_left_platform_position.gameObject.tag == "redirection")
-                    {
+                    
                         is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
                         is_coily_in_death_mode = false;
                         has_coily_jump_off = true;
-                    }
+                    
                 }
                
             }
