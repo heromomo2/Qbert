@@ -223,7 +223,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jump_time: 1.7
+  jump_time: 1.1
   jump_timer: 0
   curve_fall:
     serializedVersion: 2
@@ -249,5 +249,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  fall_time: 1.3
+  fall_time: 1
   fall_timer: 0

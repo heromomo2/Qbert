@@ -111,7 +111,7 @@ public class snake : MonoBehaviour
 
         if (this.gameObject.transform.position.y <= -3.00f)
         {
-           Destroy(this.gameObject);
+            Destroy(this.gameObject);
 
         }
 
@@ -161,7 +161,7 @@ public class snake : MonoBehaviour
             {
                 player = target;
 
-                is_coily_in_death_mode = false; 
+                is_coily_in_death_mode = false;
             }
         }
 
@@ -201,24 +201,24 @@ public class snake : MonoBehaviour
                 if (general_movement.get_top_right_platform_position != null
                     && general_movement.get_top_right_platform_position.gameObject.tag == "redirection")
                 {
-                   
 
-                        is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
-                        is_coily_in_death_mode = false;
-                        has_coily_jump_off = true;
-                   
-                 
+
+                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
+                    is_coily_in_death_mode = false;
+                    has_coily_jump_off = true;
+
+
                 }
                 else if (general_movement.get_top_left_platform_position != null &&
                     general_movement.get_top_left_platform_position.gameObject.tag == "redirection")
                 {
-                    
-                        is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
-                        is_coily_in_death_mode = false;
-                        has_coily_jump_off = true;
-                    
+
+                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
+                    is_coily_in_death_mode = false;
+                    has_coily_jump_off = true;
+
                 }
-               
+
             }
             else
             {
@@ -280,7 +280,7 @@ public class snake : MonoBehaviour
 
                     /// at the bottom and on same level as player
                     /// we want move up
-                    if (current_platform_colum_id == bottom_colum_id)
+                    if (current_platform_colum_id == bottom_colum_id && !our_current_platform.get_is_player_current_this_platform)
                     {
                         if (general_movement.get_top_left_platform_position == null && general_movement.get_top_right_platform_position != null)
                         {
@@ -304,7 +304,7 @@ public class snake : MonoBehaviour
                             }
                         }
                     }// all possible directions are give to snake
-                    else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position != null && general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null)
+                    else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position != null && general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null && !our_current_platform.get_is_player_current_this_platform)
                     {
                         // checking which one is closer to the player(left or right)
                         // than randmon numer that  decide top or botton
@@ -382,10 +382,10 @@ public class snake : MonoBehaviour
 
 
 
-   public void GetPlayerPosition(Transform m_player)
-   {
+    public void GetPlayerPosition(Transform m_player)
+    {
         player = m_player;
-   }
+    }
 
     public void GetPlatforms(Platform m_platform)
     {

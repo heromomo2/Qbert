@@ -268,7 +268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) player score
+  m_Text: '7)
 
 '
 --- !u!222 &5290311
@@ -389,7 +389,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) player score
+  m_Text: '5)
 
 '
 --- !u!222 &186645747
@@ -569,7 +569,7 @@ GameObject:
   - component: {fileID: 394793012}
   - component: {fileID: 394793011}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: LeaderBoardButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,7 +638,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 394793012}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1811119434}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: LeaderBoardButtonOnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &394793012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,7 +759,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) player score
+  m_Text: '4)
 
 '
 --- !u!222 &515648060
@@ -811,7 +823,7 @@ GameObject:
   - component: {fileID: 563640449}
   - component: {fileID: 563640448}
   m_Layer: 5
-  m_Name: Button
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,7 +892,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 563640449}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1811119434}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: MainMenuButtonOnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &563640449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,7 +1096,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) player score
+  m_Text: '8)
 
 '
 --- !u!222 &752894782
@@ -1171,7 +1195,7 @@ GameObject:
   - component: {fileID: 816750985}
   - component: {fileID: 816750984}
   m_Layer: 5
-  m_Name: Button
+  m_Name: StartGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1240,7 +1264,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 816750985}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1811119434}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: StartGameButtonOnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &816750985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1446,7 +1482,7 @@ GameObject:
   - component: {fileID: 952423057}
   - component: {fileID: 952423056}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1515,7 +1551,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 952423057}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1811119434}
+        m_TargetAssemblyTypeName: GameStateManager, Assembly-CSharp
+        m_MethodName: QuitButtonOnPress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &952423057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1885,7 +1933,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) player score
+  m_Text: '10)
 
 '
 --- !u!222 &1309808007
@@ -1908,13 +1956,14 @@ GameObject:
   - component: {fileID: 1385472486}
   - component: {fileID: 1385472485}
   - component: {fileID: 1385472484}
+  - component: {fileID: 1385472488}
   m_Layer: 5
   m_Name: LeaderBoardCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1385472484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,6 +2048,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1385472488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385472483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b790c5a5890409f4ea5b2a2ec6b67dd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main_menu_button: {fileID: 563640446}
+  Texts:
+  - {fileID: 1851842554}
+  - {fileID: 2127546012}
+  - {fileID: 1674497779}
+  - {fileID: 515648059}
+  - {fileID: 186645746}
+  - {fileID: 1514534306}
+  - {fileID: 5290310}
+  - {fileID: 752894781}
+  - {fileID: 1487678234}
+  - {fileID: 1309808006}
 --- !u!1 &1447095488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2196,7 +2269,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) player score
+  m_Text: '9)
 
 '
 --- !u!222 &1487678235
@@ -2435,7 +2508,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) player score
+  m_Text: '6)
 
 '
 --- !u!222 &1514534307
@@ -2592,7 +2665,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) player score
+  m_Text: '3)
 
 '
 --- !u!222 &1674497780
@@ -2603,6 +2676,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674497777}
   m_CullTransparentMesh: 1
+--- !u!1 &1811119433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1811119435}
+  - component: {fileID: 1811119434}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1811119434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811119433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e40697c4a4b854dbdfaaea7e2e5e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main_menu: {fileID: 1867186798}
+  leader_board: {fileID: 1385472483}
+  pause_menu: {fileID: 0}
+--- !u!4 &1811119435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811119433}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 622.63873, y: 328.15024, z: -373.19827}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1836693567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,7 +2867,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) Player score
+  m_Text: '1)
 
 '
 --- !u!222 &1851842555
@@ -2772,6 +2891,7 @@ GameObject:
   - component: {fileID: 1867186801}
   - component: {fileID: 1867186800}
   - component: {fileID: 1867186799}
+  - component: {fileID: 1867186804}
   m_Layer: 5
   m_Name: MainMenuCanvas
   m_TagString: Untagged
@@ -2908,6 +3028,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1867186804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867186798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc03947424516a34cb4403810e5054f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  start_game_button: {fileID: 0}
+  leader_board_button: {fileID: 0}
+  Quit_button: {fileID: 0}
 --- !u!1 &1941604851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3133,6 +3268,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991196896}
   m_CullTransparentMesh: 1
+--- !u!1 &2007085751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2007085753}
+  - component: {fileID: 2007085752}
+  m_Layer: 0
+  m_Name: Gamedata
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2007085752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007085751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bcff531857cf848b32cae937bda5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2007085753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2007085751}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 707.49896, y: 327.30893, z: -2.421194}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2025849250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3428,7 +3606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1) player score
+  m_Text: '2)
 
 '
 --- !u!222 &2127546013
