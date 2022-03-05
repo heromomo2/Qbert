@@ -15,7 +15,11 @@ public class Ball : MonoBehaviour
     [SerializeField] snake coily_event_received = null;
     #endregion
 
+    #region Animation stuff
 
+    public Animator ball_animator;
+    public float delay_before_pick_move = 3.5f;
+    #endregion
 
 
     // Start is called before the first frame update
@@ -35,6 +39,10 @@ public class Ball : MonoBehaviour
         if (general_movement.get_reach_destination)
         {
             is_already_moving = false;
+            if (ball_animator != null)
+            {
+                ball_animator.SetBool("Is_green_ball_jumping", false);
+            }
         }
 
         if (this.gameObject.transform.position.y <= -3.00f) 
@@ -62,11 +70,18 @@ public class Ball : MonoBehaviour
         if (random_number <= 50)
         {
             is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
-
+            if (ball_animator != null)
+            {
+                ball_animator.SetBool("Is_green_ball_jumping", true);
+            }
         }
         else 
         {
             is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
+            if (ball_animator != null)
+            {
+                ball_animator.SetBool("Is_green_ball_jumping", true); 
+            }
         }
        
 
@@ -92,5 +107,11 @@ public class Ball : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+    }
+
+    private IEnumerator WaitBeforeMoving(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        
     }
 }

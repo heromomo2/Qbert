@@ -146,7 +146,12 @@ public class PlayerController : MonoBehaviour
             PlayerDropFromElevator(start_position, tagert_position);
            
         }
-       
+
+        if (this.gameObject.transform.position.y <= -3.00f)
+        {
+            Destroy(this.gameObject);
+
+        }
     }
 
     // Start is called before the first frame update

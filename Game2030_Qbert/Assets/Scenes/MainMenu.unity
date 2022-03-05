@@ -3040,9 +3040,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc03947424516a34cb4403810e5054f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start_game_button: {fileID: 0}
-  leader_board_button: {fileID: 0}
-  Quit_button: {fileID: 0}
+  start_game_button: {fileID: 816750982}
+  leader_board_button: {fileID: 394793009}
+  Quit_button: {fileID: 952423054}
 --- !u!1 &1941604851
 GameObject:
   m_ObjectHideFlags: 0

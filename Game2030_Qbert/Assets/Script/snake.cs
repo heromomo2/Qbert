@@ -223,7 +223,7 @@ public class snake : MonoBehaviour
             else
             {
                 // if the player is above us
-                if (player_current_platform.get_colum_id_number < current_platform_colum_id)
+                if (player_current_platform.get_colum_id_number < current_platform_colum_id && !our_current_platform.get_is_player_current_this_platform)
                 {
                     if (general_movement.get_top_left_platform_position == null && general_movement.get_top_right_platform_position != null)
                     {
@@ -247,7 +247,7 @@ public class snake : MonoBehaviour
                         }
                     }
                 }// if the player is below us
-                else if (player_current_platform.get_colum_id_number > current_platform_colum_id)
+                else if (player_current_platform.get_colum_id_number > current_platform_colum_id && !our_current_platform.get_is_player_current_this_platform)
                 {
 
                     if (general_movement.get_bottom_left_platform_position == null && general_movement.get_bottom_right_platform_position != null)
@@ -273,14 +273,14 @@ public class snake : MonoBehaviour
                     }
 
                 } // if player is on the same row/level as us
-                else if (player_current_platform.get_colum_id_number == current_platform_colum_id)
+                else if (player_current_platform.get_colum_id_number == current_platform_colum_id && !our_current_platform.get_is_player_current_this_platform)
                 {
                     /// this random_number is use when there way path to the player and it does matter which way to
                     int random_nubmer = UnityEngine.Random.Range(1, 10);
 
                     /// at the bottom and on same level as player
                     /// we want move up
-                    if (current_platform_colum_id == bottom_colum_id && !our_current_platform.get_is_player_current_this_platform)
+                    if (current_platform_colum_id == bottom_colum_id && !our_current_platform.get_is_player_current_this_platform && !our_current_platform.get_is_player_current_this_platform)
                     {
                         if (general_movement.get_top_left_platform_position == null && general_movement.get_top_right_platform_position != null)
                         {

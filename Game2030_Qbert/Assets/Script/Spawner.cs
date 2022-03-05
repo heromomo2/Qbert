@@ -60,14 +60,14 @@ public class Spawner : MonoBehaviour
     void SpawnEnemy()
     {
         // Instantiate a random enemy.
-        int random_number = Random.Range(1, 10);
-        int random_number_spawn_entity = Random.Range(1, 50);
+        int random_number_which_spawer = Random.Range(1, 10);
+        int random_number_spawn_entity = Random.Range(1, 100);
 
-        if (random_number <= 5) 
+        if (random_number_which_spawer <= 5) 
         {
             if (spawnpoints[0] != null)
             {
-                if (random_number_spawn_entity <= 20)
+                if (random_number_spawn_entity <= 25)
                 {
                     if (green_ball != null)
                     {
@@ -75,44 +75,48 @@ public class Spawner : MonoBehaviour
                         current_movement.landPostion(land_Platforms[0], spawnpoints[0]);
                     }
                 }
-                else if (random_number_spawn_entity >= 21 && random_number_spawn_entity <= 50 && !is_there_a_snake) 
-                {
-                    if (enemy_snake != null)
-                    {
-                        GerenalMovement current_movement = Instantiate(enemy_snake, spawnpoints[0].position, spawnpoints[0].rotation);
-                        current_movement.landPostion(land_Platforms[0], spawnpoints[0]);
-
-                        coily_event_received = current_movement.GetComponent<snake>();
-
-                        coily_event_received.On_coily_event += CoilyEventListener;
-
-                        coily_event_received.GetPlayerPosition(player);
-                        
-                        foreach(Platform m_platfrom in Platforms) 
-                        {
-                            coily_event_received.GetPlatforms(m_platfrom);
-                        }
-
-                        foreach (Elevator m_elevator in elevators)
-                        {
-                            coily_event_received.GetElevator(m_elevator);
-                        }
-
-                        current_movement.fall_timer = 0;
-                        current_movement.landPostion(land_Platforms[0], current_movement.transform);
-
-                        is_there_a_snake = true;
-
-                    }
-                }
                 else 
                 {
-                    if (red_ball != null)
+                    if (! is_there_a_snake)
                     {
-                        GerenalMovement current_movement = Instantiate(red_ball, spawnpoints[0].position, spawnpoints[0].rotation);
-                        current_movement.landPostion(land_Platforms[0], spawnpoints[0]);
+                        if (enemy_snake != null)
+                        {
+                            GerenalMovement current_movement = Instantiate(enemy_snake, spawnpoints[0].position, spawnpoints[0].rotation);
+                            current_movement.landPostion(land_Platforms[0], spawnpoints[0]);
+
+                            coily_event_received = current_movement.GetComponent<snake>();
+
+                            coily_event_received.On_coily_event += CoilyEventListener;
+
+                            coily_event_received.GetPlayerPosition(player);
+
+                            foreach (Platform m_platfrom in Platforms)
+                            {
+                                coily_event_received.GetPlatforms(m_platfrom);
+                            }
+
+                            foreach (Elevator m_elevator in elevators)
+                            {
+                                coily_event_received.GetElevator(m_elevator);
+                            }
+
+                            current_movement.fall_timer = 0;
+                            current_movement.landPostion(land_Platforms[0], current_movement.transform);
+
+                            is_there_a_snake = true;
+
+                        } 
+                    }
+                    else
+                    {
+                        if (red_ball != null)
+                        {
+                            GerenalMovement current_movement = Instantiate(red_ball, spawnpoints[0].position, spawnpoints[0].rotation);
+                            current_movement.landPostion(land_Platforms[0], spawnpoints[0]);
+                        }
                     }
                 }
+                
 
             }
         }
@@ -120,7 +124,7 @@ public class Spawner : MonoBehaviour
         {
             if (spawnpoints[1] != null)
             {
-                if (random_number_spawn_entity <= 20)
+                if (random_number_spawn_entity <= 25)
                 {
                     if (green_ball != null)
                     {
@@ -128,44 +132,48 @@ public class Spawner : MonoBehaviour
                         current_movement.landPostion(land_Platforms[1], spawnpoints[1]);
                     }
                 }
-                else if (random_number_spawn_entity >= 21 && random_number_spawn_entity <= 50 && !is_there_a_snake)
-                {
-                    if (enemy_snake != null)
-                    {
-                        GerenalMovement current_movement = Instantiate(enemy_snake, spawnpoints[1].position, spawnpoints[1].rotation);
-                       
-
-                        coily_event_received = current_movement.GetComponent<snake>();
-
-                        coily_event_received.On_coily_event += CoilyEventListener;
-
-                        coily_event_received.GetPlayerPosition(player);
-
-                        foreach (Platform m_platfrom in Platforms)
-                        {
-                            coily_event_received.GetPlatforms(m_platfrom);
-                        }
-                        foreach (Elevator m_elevator in elevators)
-                        {
-                            coily_event_received.GetElevator(m_elevator);
-                        }
-
-                        current_movement.fall_timer = 0;
-
-                        current_movement.landPostion(land_Platforms[1], current_movement.transform);
-
-                        is_there_a_snake = true;
-
-                    }
-                }
                 else
                 {
-                    if (red_ball != null)
+                    if (!is_there_a_snake)
                     {
-                        GerenalMovement current_movement = Instantiate(red_ball, spawnpoints[1].position, spawnpoints[1].rotation);
-                         current_movement.landPostion(land_Platforms[1], spawnpoints[1]);
+                        if (enemy_snake != null)
+                        {
+                            GerenalMovement current_movement = Instantiate(enemy_snake, spawnpoints[1].position, spawnpoints[1].rotation);
+
+
+                            coily_event_received = current_movement.GetComponent<snake>();
+
+                            coily_event_received.On_coily_event += CoilyEventListener;
+
+                            coily_event_received.GetPlayerPosition(player);
+
+                            foreach (Platform m_platfrom in Platforms)
+                            {
+                                coily_event_received.GetPlatforms(m_platfrom);
+                            }
+                            foreach (Elevator m_elevator in elevators)
+                            {
+                                coily_event_received.GetElevator(m_elevator);
+                            }
+
+                            current_movement.fall_timer = 0;
+
+                            current_movement.landPostion(land_Platforms[1], current_movement.transform);
+
+                            is_there_a_snake = true;
+
+                        }
+                    }
+                    else
+                    {
+                        if (red_ball != null)
+                        {
+                            GerenalMovement current_movement = Instantiate(red_ball, spawnpoints[1].position, spawnpoints[1].rotation);
+                            current_movement.landPostion(land_Platforms[1], spawnpoints[1]);
+                        }
                     }
                 }
+               
             }
         }
 
