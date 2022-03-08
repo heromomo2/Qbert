@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7660899558443931969}
   - component: {fileID: 8143590361913224464}
   - component: {fileID: 4126143873993651886}
+  - component: {fileID: 1719007114023639777}
   m_Layer: 0
   m_Name: Elevator
   m_TagString: Elevator
@@ -143,6 +144,25 @@ CapsuleCollider2D:
   m_Offset: {x: 0.001113452, y: 0}
   m_Size: {x: 0.16222689, y: 0.16222689}
   m_Direction: 0
+--- !u!95 &1719007114023639777
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8521511112489787990}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 60600393d04ed534889299e97c898fbf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8870776285331494884
 GameObject:
   m_ObjectHideFlags: 0

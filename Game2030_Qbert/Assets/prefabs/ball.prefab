@@ -105,8 +105,9 @@ MonoBehaviour:
   is_falling: 0
   coily_event_received: {fileID: 0}
   name_sound_effect: GreenBallJumpSound
-  ball_animator: {fileID: 0}
-  delay_before_pick_move: 3.5
+  ball_animator: {fileID: 1497424794504369224}
+  delay_before_pick_move: 0.3
+  name_Anim_bool: Is_green_ball_jumping
 --- !u!50 &3927923100191785228
 Rigidbody2D:
   serializedVersion: 4
@@ -227,7 +228,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jump_time: 1
+  jump_time: 0.5
   jump_timer: 0
   curve_fall:
     serializedVersion: 2

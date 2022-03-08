@@ -21,6 +21,7 @@ public class Ball : MonoBehaviour
 
     public Animator ball_animator;
     public float delay_before_pick_move = 3.5f;
+    public string name_Anim_bool;
     #endregion
 
 
@@ -40,12 +41,13 @@ public class Ball : MonoBehaviour
 
         if (general_movement.get_reach_destination)
         {
-            is_already_moving = false;
+           
             if (ball_animator != null)
             {
-                ball_animator.SetBool("Is_green_ball_jumping", false);
+                ball_animator.SetBool(name_Anim_bool, false);
+                
             }
-            
+            is_already_moving = false;
         }
 
         if (this.gameObject.transform.position.y <= -3.00f) 
@@ -70,31 +72,41 @@ public class Ball : MonoBehaviour
 
         // check where we can move
         // we have option
-        if (random_number <= 50)
+
+        float temp_delay_before_pick_move = delay_before_pick_move;
+
+        delay_before_pick_move -= Time.deltaTime;
+        if (delay_before_pick_move < 0)
         {
-            if (general_movement.get_bottom_left_platform_position != null)
+            if (random_number <= 50)
             {
-                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
-                if (ball_animator != null)
+                if (general_movement.get_bottom_left_platform_position != null)
                 {
-                    ball_animator.SetBool("Is_green_ball_jumping", true);
-                } 
+                    if (ball_animator != null)
+                    {
+                        ball_animator.SetBool(name_Anim_bool, true);
+                        delay_before_pick_move = 0.3f;
+                    }
+                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
+                    
+                }
+            }
+            else
+            {
+                if (general_movement.get_bottom_right_platform_position != null)
+                {
+                    if (ball_animator != null)
+                    {
+                        ball_animator.SetBool(name_Anim_bool, true);
+                        delay_before_pick_move = 0.3f;
+                    }
+                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
+                    
+                }
             }
         }
-        else 
-        {
-            if (general_movement.get_bottom_right_platform_position != null)
-            {
-                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
-                if (ball_animator != null)
-                {
-                    ball_animator.SetBool("Is_green_ball_jumping", true);
-                } 
-            }
-        }
-       
 
     }
 

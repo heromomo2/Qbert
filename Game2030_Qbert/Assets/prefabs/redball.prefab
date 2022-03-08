@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2840360952971362606}
   - component: {fileID: 2840360952971362605}
   - component: {fileID: 6740160110374800321}
+  - component: {fileID: 8668005923428209731}
   m_Layer: 0
   m_Name: redball
   m_TagString: Ball
@@ -104,8 +105,9 @@ MonoBehaviour:
   is_falling: 0
   coily_event_received: {fileID: 0}
   name_sound_effect: RedBallJumpSound
-  ball_animator: {fileID: 0}
-  delay_before_pick_move: 3.5
+  ball_animator: {fileID: 8668005923428209731}
+  delay_before_pick_move: 0
+  name_Anim_bool: is_red_ball_jumping
 --- !u!58 &2840360952971362607
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -226,7 +228,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jump_time: 1
+  jump_time: 0.5
   jump_timer: 0
   curve_fall:
     serializedVersion: 2
@@ -254,3 +256,22 @@ MonoBehaviour:
     m_RotationOrder: 4
   fall_time: 1
   fall_timer: 0
+--- !u!95 &8668005923428209731
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2840360952971362604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c0e64dd199b6844597c95b50d97a06b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
