@@ -55,7 +55,7 @@ public class GameStateManager : MonoBehaviour
     public void StartGameButtonOnPress()
     {
         LoadScene("Game");
-       
+        
     }
     public void LeaderBoardButtonOnPress()
     {
@@ -137,16 +137,20 @@ public class GameStateManager : MonoBehaviour
             case GameStates.MainMenu:
                 main_menu.SetActive(true);
                 leader_board.SetActive(false);
+                SoundManager.Instance.PlayMusic();
                 break;
             case GameStates.LeaderBoard:
                 main_menu.SetActive(false);
                 leader_board.SetActive(true);
+                SoundManager.Instance.StopMusic();
                 break;
             case GameStates.Pause:
                 pause_menu.SetActive(true);
+                SoundManager.Instance.PlayMusic();
                 break;
             case GameStates.Gamemode:
                 pause_menu.SetActive(false);
+                SoundManager.Instance.StopMusic();
                 break;
         }
     }

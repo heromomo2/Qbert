@@ -6153,7 +6153,7 @@ MonoBehaviour:
   - {fileID: 1086198265}
   coily_event_received: {fileID: 0}
   spawn_delay_coily_time: 17
-  spawn_delay: 4
+  spawn_delay: 5
   is_there_a_snake: 0
   is_there_enemies: 0
 --- !u!4 &1926139013

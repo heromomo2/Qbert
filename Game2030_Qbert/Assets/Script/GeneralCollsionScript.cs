@@ -74,6 +74,7 @@ public class GeneralCollsionScript : MonoBehaviour
                     this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                     this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
                     this.gameObject.GetComponent<GerenalMovement>().landPostion(col.GetComponent<RedirectionPlatform>().target, col.GetComponent<RedirectionPlatform>().start);
+                    SoundManager.Instance.PlaySoundEffect("Coilydeathsound");
                     Destroy(col.gameObject);
 
                 }

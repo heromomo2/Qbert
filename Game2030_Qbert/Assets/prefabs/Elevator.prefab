@@ -126,6 +126,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  name_sound_effect: Elevatorsound
 --- !u!70 &4126143873993651886
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

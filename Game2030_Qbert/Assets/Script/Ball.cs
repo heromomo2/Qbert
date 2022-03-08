@@ -13,6 +13,8 @@ public class Ball : MonoBehaviour
     [SerializeField] bool is_falling;
 
     [SerializeField] snake coily_event_received = null;
+
+    public string name_sound_effect;
     #endregion
 
     #region Animation stuff
@@ -43,6 +45,7 @@ public class Ball : MonoBehaviour
             {
                 ball_animator.SetBool("Is_green_ball_jumping", false);
             }
+            
         }
 
         if (this.gameObject.transform.position.y <= -3.00f) 
@@ -69,18 +72,26 @@ public class Ball : MonoBehaviour
         // we have option
         if (random_number <= 50)
         {
-            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
-            if (ball_animator != null)
+            if (general_movement.get_bottom_left_platform_position != null)
             {
-                ball_animator.SetBool("Is_green_ball_jumping", true);
+                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
+                if (ball_animator != null)
+                {
+                    ball_animator.SetBool("Is_green_ball_jumping", true);
+                } 
             }
         }
         else 
         {
-            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
-            if (ball_animator != null)
+            if (general_movement.get_bottom_right_platform_position != null)
             {
-                ball_animator.SetBool("Is_green_ball_jumping", true); 
+                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
+                if (ball_animator != null)
+                {
+                    ball_animator.SetBool("Is_green_ball_jumping", true);
+                } 
             }
         }
        

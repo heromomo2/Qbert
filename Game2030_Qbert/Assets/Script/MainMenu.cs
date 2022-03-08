@@ -35,6 +35,8 @@ public class MainMenu : MonoBehaviour
        {
             GameStateManager.Instance.main_menu = this.gameObject;
        }
+
+        GameStateManager.Instance.ChangeGameState(1);
     }
 
     

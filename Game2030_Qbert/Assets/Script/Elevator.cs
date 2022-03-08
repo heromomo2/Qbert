@@ -40,7 +40,7 @@ public class Elevator : MonoBehaviour
         }
     }
 
-
+    public string name_sound_effect;
 
     // Start is called before the first frame update
     void Start()
@@ -88,7 +88,7 @@ public class Elevator : MonoBehaviour
 
 
             current_state = elevator_states.Kstartmoving_to_top;
-
+            
 
             if (elevator_event != null)
             {
@@ -96,6 +96,7 @@ public class Elevator : MonoBehaviour
                 adjecent_Platform_circle.GetComponentInParent<Platform>().set_is_player_current_this_platform = true;
 
             }
+            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
         }
 
     }

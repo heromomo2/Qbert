@@ -254,6 +254,7 @@ public class PlayerController : MonoBehaviour
                 player_direction = direction.Ktop_left;              
 
                 start_position = this.gameObject.transform.position;
+                SoundManager.Instance.PlaySoundEffect("Qbertjump");
 
             }
         }
@@ -266,6 +267,7 @@ public class PlayerController : MonoBehaviour
                 player_direction = direction.Ktop_right;
 
                 start_position = this.gameObject.transform.position;
+                SoundManager.Instance.PlaySoundEffect("Qbertjump");
 
             }
         }
@@ -278,7 +280,7 @@ public class PlayerController : MonoBehaviour
                 player_direction = direction.Kbottom_left;
 
                 start_position = this.gameObject.transform.position;
-
+                SoundManager.Instance.PlaySoundEffect("Qbertjump");
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad3) && player_direction == direction.Kno_direction && is_allow_to_move)
@@ -290,7 +292,7 @@ public class PlayerController : MonoBehaviour
                 player_direction = direction.Kbottom_right;
 
                 start_position = this.gameObject.transform.position;
-
+                SoundManager.Instance.PlaySoundEffect("Qbertjump");
             }
         }
     }

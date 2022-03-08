@@ -103,6 +103,9 @@ MonoBehaviour:
   is_already_moving: 0
   is_falling: 0
   coily_event_received: {fileID: 0}
+  name_sound_effect: RedBallJumpSound
+  ball_animator: {fileID: 0}
+  delay_before_pick_move: 3.5
 --- !u!58 &2840360952971362607
 CircleCollider2D:
   m_ObjectHideFlags: 0
