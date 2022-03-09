@@ -67,7 +67,7 @@ public class Spawner : MonoBehaviour
         {
             if (spawnpoints[0] != null)
             {
-                if (random_number_spawn_entity <= 50)
+                if (random_number_spawn_entity <= 99)
                 {
                     if (green_ball != null)
                     {
@@ -124,7 +124,7 @@ public class Spawner : MonoBehaviour
         {
             if (spawnpoints[1] != null)
             {
-                if (random_number_spawn_entity <= 50)
+                if (random_number_spawn_entity <= 99)
                 {
                     if (green_ball != null)
                     {

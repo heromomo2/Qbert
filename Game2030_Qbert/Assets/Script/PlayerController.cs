@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
     private float timer2 = 0;
     private bool is_drop_from_elevator = false;
     private bool is_allow_to_move = true;
-  
+
     #endregion
 
     #region Destination/Setter
@@ -65,12 +65,15 @@ public class PlayerController : MonoBehaviour
     #endregion
 
     #region Animation variables
+    [SerializeField] private Animator player_anim;
+    [SerializeField] float horizontal_value;
+    [SerializeField] bool facing_right = true;
 
     #endregion
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -88,6 +91,8 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    // player_anim.SetTrigger("landed");
+
                     reach_destination = false;
                 }
                 break;
@@ -98,6 +103,8 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    // player_anim.SetTrigger("landed");
+
                     reach_destination = false;
                 }
                 break;
@@ -106,8 +113,10 @@ public class PlayerController : MonoBehaviour
                 {
                     PlayerMovement(bottom_left_platform_position);
                 }
-                else 
+                else
                 {
+                    // player_anim.SetTrigger("landed");
+
                     reach_destination = false;
                 }
                 break;
@@ -118,24 +127,27 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    // player_anim.SetTrigger("landed");
+
                     reach_destination = false;
                 }
                 break;
             case direction.Kno_direction:
-                if (reach_destination )
+                if (reach_destination)
                 {
+                    player_anim.SetTrigger("landed");
                     reach_destination = false;
                 }
                 break;
             case direction.Kfall_from_elavator_start:
-               
-                 start_position = this.gameObject.transform.position;
-                 tagert_position = new Vector2(-0.062f, 2.4f);
+
+                start_position = this.gameObject.transform.position;
+                tagert_position = new Vector2(-0.062f, 2.4f);
                 is_drop_from_elevator = true;
                 break;
         };
 
-        if (is_drop_from_elevator) 
+        if (is_drop_from_elevator)
         {
             //start_position = this.gameObject.transform.position;
 
@@ -144,7 +156,7 @@ public class PlayerController : MonoBehaviour
 
             player_direction = direction.Kfall_from_elavator_action;
             PlayerDropFromElevator(start_position, tagert_position);
-           
+
         }
 
         if (this.gameObject.transform.position.y <= -3.00f)
@@ -156,13 +168,13 @@ public class PlayerController : MonoBehaviour
 
     // Start is called before the first frame update
     #region PlayermovementAndPlatforms
-    void PlayerMovement(Transform target_destination) 
+    void PlayerMovement(Transform target_destination)
     {
-        Vector2 start_position_vector_2 = new Vector2(start_position.x , start_position.y);
-        Vector2 target_position_vector_2 = new Vector2( target_destination.position.x, target_destination.position.y);
+        Vector2 start_position_vector_2 = new Vector2(start_position.x, start_position.y);
+        Vector2 target_position_vector_2 = new Vector2(target_destination.position.x, target_destination.position.y);
 
         Vector3 mid_position_vector_3 = target_destination.position;
-  
+
         mid_position_vector_3.y += 0.5f;
 
 
@@ -180,12 +192,12 @@ public class PlayerController : MonoBehaviour
 
         if (ratio < 1)
         {
-            this.gameObject.transform.position = Bezier( ratio , start_position, mid_position_vector_3, target_destination.position);
+            this.gameObject.transform.position = Bezier(ratio, start_position, mid_position_vector_3, target_destination.position);
         }
         // when we get to our new location
-        else 
+        else
         {
-           this.gameObject.transform.position = target_destination.position;
+            this.gameObject.transform.position = target_destination.position;
 
             player_direction = direction.Kno_direction;
 
@@ -204,7 +216,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    public void ClearAllDestination() 
+    public void ClearAllDestination()
     {
         top_left_platform_position = null;
         top_right_platform_position = null;
@@ -216,7 +228,7 @@ public class PlayerController : MonoBehaviour
     {
         current_Platform = null;
     }
-    public void  GetCurrentPlatform (Platform current)
+    public void GetCurrentPlatform(Platform current)
     {
         current_Platform = current;
     }
@@ -226,7 +238,7 @@ public class PlayerController : MonoBehaviour
         ratio = Mathf.Clamp01(ratio);
 
 
-        Vector2 start_to_mid = Vector3.Lerp(start,mid, curve_start_to_mid.Evaluate(ratio));
+        Vector2 start_to_mid = Vector3.Lerp(start, mid, curve_start_to_mid.Evaluate(ratio));
 
 
         Vector2 mid_to_end = Vector3.Lerp(mid, end, curve_mid_to_end.Evaluate(ratio));
@@ -241,8 +253,8 @@ public class PlayerController : MonoBehaviour
         return start + (end - start) * value;
     }
 
-    
-    private void PlayerPressedAKey() 
+
+    private void PlayerPressedAKey()
     {
         // player movement key and pick a direction
         if (Input.GetKeyDown(KeyCode.Keypad7) && player_direction == direction.Kno_direction && is_allow_to_move)
@@ -251,10 +263,17 @@ public class PlayerController : MonoBehaviour
 
             if (top_left_platform_position != null)
             {
-                player_direction = direction.Ktop_left;              
+                player_direction = direction.Ktop_left;
 
                 start_position = this.gameObject.transform.position;
                 SoundManager.Instance.PlaySoundEffect("Qbertjump");
+
+                player_anim.SetTrigger("jumpBack");
+
+                if (!facing_right)
+                {
+                    ProperFilp();
+                }
 
             }
         }
@@ -269,6 +288,12 @@ public class PlayerController : MonoBehaviour
                 start_position = this.gameObject.transform.position;
                 SoundManager.Instance.PlaySoundEffect("Qbertjump");
 
+                player_anim.SetTrigger("jumpBack");
+                if (facing_right)
+                {
+                    ProperFilp();
+                }
+
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad1) && player_direction == direction.Kno_direction && is_allow_to_move)
@@ -281,6 +306,12 @@ public class PlayerController : MonoBehaviour
 
                 start_position = this.gameObject.transform.position;
                 SoundManager.Instance.PlaySoundEffect("Qbertjump");
+
+                player_anim.SetTrigger("jumpFront");
+                if (!facing_right) 
+                {
+                    ProperFilp();
+                }
             }
         }
         else if (Input.GetKeyDown(KeyCode.Keypad3) && player_direction == direction.Kno_direction && is_allow_to_move)
@@ -293,14 +324,21 @@ public class PlayerController : MonoBehaviour
 
                 start_position = this.gameObject.transform.position;
                 SoundManager.Instance.PlaySoundEffect("Qbertjump");
+
+                player_anim.SetTrigger("jumpFront");
+
+                if (facing_right) 
+                {
+                    ProperFilp(); 
+                }
             }
         }
     }
-#endregion
+    #endregion
 
-    public void PlayerDropFromElevator( Vector2 start, Vector2 end) 
+    public void PlayerDropFromElevator(Vector2 start, Vector2 end)
     {
-        
+
 
         float ratio = timer2 / fall_time;
 
@@ -308,20 +346,20 @@ public class PlayerController : MonoBehaviour
 
         ratio = Mathf.Clamp01(ratio);
 
-       
 
-      //  Debug.Log(" fall ratio :->" + ratio);
+
+        //  Debug.Log(" fall ratio :->" + ratio);
         if (ratio < 1)
         {
-            
-            this.gameObject.transform.position = Vector3.Lerp(start, end, curve_fall.Evaluate(  ratio));
-            //is_allow_to_move = false;
-        }
-        else 
-        {
-           this.gameObject.transform.position = end;
 
-       
+            this.gameObject.transform.position = Vector3.Lerp(start, end, curve_fall.Evaluate(ratio));
+
+        }
+        else
+        {
+            this.gameObject.transform.position = end;
+
+
             player_direction = direction.Kno_direction;
             is_drop_from_elevator = false;
             is_allow_to_move = true;
@@ -333,6 +371,17 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+
+    void ProperFilp()
+    {
+        if (!facing_right || facing_right)
+        {
+            facing_right = !facing_right;
+            transform.Rotate(new Vector3(0, 180, 0));
+        }
+    }
+
 }
 
 #region Enums
