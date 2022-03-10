@@ -6,9 +6,6 @@ using UnityEngine;
 public class snake : MonoBehaviour
 {
     #region Global
-    [SerializeField] Sprite Ball_sprite;
-
-    [SerializeField] Sprite snake_sprite;
 
     [SerializeField] GerenalMovement general_movement;
 
@@ -67,17 +64,18 @@ public class snake : MonoBehaviour
         }
     }
 
+    #region Animator
+    [SerializeField] Animator coily_animator;
+
+    public float delay_before_ball_pick_move = 3.5f;
+    public float delay_before_snake_pick_move = 3.5f;
+    [SerializeField] bool facing_right = true;
+    #endregion
 
     // Start is called before the first frame update
     void Start()
     {
-        //if (elevators_event_received != null)
-        //{
-        //    foreach (Elevator elevator in elevators_event_received)
-        //    {
-        //        elevator.On_elevator_event += ElevatorEventListener;
-        //    }
-        //}
+        
 
         if (coily_event != null)
         {
@@ -95,15 +93,34 @@ public class snake : MonoBehaviour
 
         if (general_movement.get_reach_destination)
         {
-            is_already_moving = false;
+            if (coily_animator != null)
+            {
+                if (!are_we_at_bottom)
+                {
+                    coily_animator.SetBool("is_ball_jump", false);
+                    //delay_before_ball_pick_move = 0.2f;
+                }
+                else
+                {
+                    coily_animator.SetTrigger("landed");
+                   // delay_before_snake_pick_move = 0.5f;
+                }
+
+            }
+
+            if (!are_we_at_bottom)
+            {
+                delay_before_ball_pick_move = 0.2f;
+            }
+            else
+            {
+                delay_before_snake_pick_move = 0.5f;
+            }
             
+
+            is_already_moving = false; 
         }
 
-        if (are_we_at_bottom && !did_we_hatch)
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = snake_sprite;
-            did_we_hatch = true;
-        }
 
 
 
@@ -126,23 +143,36 @@ public class snake : MonoBehaviour
 
         // check where we can move
         // we have option
-        if (random_number <= 50)
-        {
-            if (general_movement.get_bottom_left_platform_position != null) 
-            {
-                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
-                SoundManager.Instance.PlaySoundEffect(name_sound_effect1);
-            }
-        }
-        else
-        {
-            if (general_movement.get_bottom_right_platform_position != null)
-            {
-                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
-                SoundManager.Instance.PlaySoundEffect(name_sound_effect1);
-            }
-        }
+        delay_before_ball_pick_move -= Time.deltaTime;
 
+        if (delay_before_ball_pick_move < 0)
+        {
+            if (random_number <= 50)
+            {
+                if (general_movement.get_bottom_left_platform_position != null)
+                {
+                    if (coily_animator != null)
+                    {
+                        coily_animator.SetBool("is_ball_jump", true);
+                    }
+                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
+                    SoundManager.Instance.PlaySoundEffect(name_sound_effect1);
+                }
+            }
+            else
+            {
+                
+                if (general_movement.get_bottom_right_platform_position != null)
+                {
+                    if (coily_animator != null)
+                    {
+                        coily_animator.SetBool("is_ball_jump", true);
+                    }
+                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
+                    SoundManager.Instance.PlaySoundEffect(name_sound_effect1);
+                }
+            }
+        }
     }
 
     public void CoilyOffThePyramid()
@@ -200,120 +230,89 @@ public class snake : MonoBehaviour
             }
         }
 
+        delay_before_snake_pick_move -= Time.deltaTime;
 
-
-        if (player_current_platform != null)
+        if (delay_before_snake_pick_move < 0)
         {
-            if (is_coily_in_death_mode && our_current_platform.get_is_player_current_this_platform)
+            if (player_current_platform != null)
             {
-
-
-                if (general_movement.get_top_right_platform_position != null
-                    && general_movement.get_top_right_platform_position.gameObject.tag == "redirection")
+                if (is_coily_in_death_mode && our_current_platform.get_is_player_current_this_platform)
                 {
 
 
-                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
-                    is_coily_in_death_mode = false;
-                    has_coily_jump_off = true;
-
-                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                }
-                else if (general_movement.get_top_left_platform_position != null &&
-                    general_movement.get_top_left_platform_position.gameObject.tag == "redirection")
-                {
-
-                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
-                    is_coily_in_death_mode = false;
-                    has_coily_jump_off = true;
-
-                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                }
-
-            }
-            else
-            {
-                // if the player is above us
-                if (player_current_platform.get_colum_id_number < current_platform_colum_id && !our_current_platform.get_is_player_current_this_platform)
-                {
-                    if (general_movement.get_top_left_platform_position == null && general_movement.get_top_right_platform_position != null)
+                    if (general_movement.get_top_right_platform_position != null
+                        && general_movement.get_top_right_platform_position.gameObject.tag == "redirection")
                     {
+
                         is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
+                        is_coily_in_death_mode = false;
+                        has_coily_jump_off = true;
+
+                        if (coily_animator != null)
+                        {
+                            coily_animator.SetTrigger("jumpback");
+
+                            if (!facing_right)
+                            {
+                                ProperFilp();
+                            }
+                        }
 
                         SoundManager.Instance.PlaySoundEffect(name_sound_effect);
                     }
-                    else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position == null)
+                    else if (general_movement.get_top_left_platform_position != null &&
+                        general_movement.get_top_left_platform_position.gameObject.tag == "redirection")
                     {
+
                         is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
+                        is_coily_in_death_mode = false;
+                        has_coily_jump_off = true;
+
+                        if (coily_animator != null)
+                        {
+                            coily_animator.SetTrigger("jumpback");
+                           
+                        }
+                        if (facing_right)
+                        {
+                            ProperFilp();
+                        }
                         SoundManager.Instance.PlaySoundEffect(name_sound_effect);
                     }
-                    else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position != null)
-                    {
-                        if (Vector3.Distance(general_movement.get_top_right_platform_position.position, player.position) <
-                            Vector3.Distance(general_movement.get_top_left_platform_position.position, player.position))
-                        {
 
-                            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
-
-                            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                        }
-                        else
-                        {
-                            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
-
-                            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                        }
-                    }
-                }// if the player is below us
-                else if (player_current_platform.get_colum_id_number > current_platform_colum_id && !our_current_platform.get_is_player_current_this_platform)
+                }
+                else
                 {
-
-                    if (general_movement.get_bottom_left_platform_position == null && general_movement.get_bottom_right_platform_position != null)
-                    {
-                        is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
-                        SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                    }
-                    else if (general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position == null)
-                    {
-                        is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
-                        SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                    }
-                    else if (general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null)
-                    {
-                        if (Vector3.Distance(general_movement.get_bottom_right_platform_position.position, player.position) <
-                            Vector3.Distance(general_movement.get_bottom_left_platform_position.position, player.position))
-                        {
-
-                            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
-                            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                        }
-                        else
-                        {
-                            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
-                            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                        }
-                    }
-
-                } // if player is on the same row/level as us
-                else if (player_current_platform.get_colum_id_number == current_platform_colum_id && !our_current_platform.get_is_player_current_this_platform)
-                {
-                    /// this random_number is use when there way path to the player and it does matter which way to
-                    int random_nubmer = UnityEngine.Random.Range(1, 10);
-
-                    /// at the bottom and on same level as player
-                    /// we want move up
-                    if (current_platform_colum_id == bottom_colum_id && !our_current_platform.get_is_player_current_this_platform && !our_current_platform.get_is_player_current_this_platform)
+                    // if the player is above us
+                    if (player_current_platform.get_colum_id_number < current_platform_colum_id && !our_current_platform.get_is_player_current_this_platform)
                     {
                         if (general_movement.get_top_left_platform_position == null && general_movement.get_top_right_platform_position != null)
                         {
                             is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
 
+                            if (coily_animator != null)
+                            {
+                                coily_animator.SetTrigger("jumpback");   
+                            }
+                            if (!facing_right)
+                            {
+                                ProperFilp();
+                            }
                             SoundManager.Instance.PlaySoundEffect(name_sound_effect);
                         }
                         else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position == null)
                         {
                             is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
 
+                            if (coily_animator != null)
+                            {
+                                coily_animator.SetTrigger("jumpback");
+                                
+                            }
+                            if (facing_right)
+                            {
+                                ProperFilp();
+                            }
                             SoundManager.Instance.PlaySoundEffect(name_sound_effect);
                         }
                         else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position != null)
@@ -324,107 +323,361 @@ public class snake : MonoBehaviour
 
                                 is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
 
+                                if (coily_animator != null)
+                                {
+                                    coily_animator.SetTrigger("jumpback");
+                                }
+                                if (!facing_right)
+                                {
+                                    ProperFilp();
+                                }
                                 SoundManager.Instance.PlaySoundEffect(name_sound_effect);
                             }
                             else
                             {
                                 is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
 
+                                if (coily_animator != null)
+                                {
+                                    coily_animator.SetTrigger("jumpback");
+                                }
+                                if (facing_right)
+                                {
+                                    ProperFilp();
+                                }
                                 SoundManager.Instance.PlaySoundEffect(name_sound_effect);
                             }
                         }
-                    }// all possible directions are give to snake
-                    else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position != null && general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null && !our_current_platform.get_is_player_current_this_platform)
+                    }// if the player is below us
+                    else if (player_current_platform.get_colum_id_number > current_platform_colum_id && !our_current_platform.get_is_player_current_this_platform)
                     {
-                        // checking which one is closer to the player(left or right)
-                        // than randmon numer that  decide top or botton
-                        if (Vector3.Distance(general_movement.get_bottom_right_platform_position.position, player.position) <
-                                 Vector3.Distance(general_movement.get_bottom_left_platform_position.position, player.position))
+
+                        if (general_movement.get_bottom_left_platform_position == null && general_movement.get_bottom_right_platform_position != null)
                         {
-                            if (random_nubmer >= 5)
-                            {
-                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
+                            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
 
-                                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                            }
-                            else
+                            if (coily_animator != null)
                             {
-                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
-
-                                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                coily_animator.SetTrigger("jumpfront");
                             }
+
+                            if (!facing_right)
+                            {
+                                ProperFilp();
+                            }
+
+
+                            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
                         }
-                        else
-                        {
-                            if (random_nubmer >= 5)
-                            {
-                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
-
-                                SoundManager.Instance.PlaySoundEffect(name_sound_effect1);
-                            }
-                            else
-                            {
-                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
-
-                                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                            }
-                        }
-                    }// everything movement options, but top left
-                    else if (general_movement.get_top_left_platform_position == null && general_movement.get_top_right_platform_position != null && general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null)
-                    {
-                        if (Vector3.Distance(general_movement.get_bottom_right_platform_position.position, player.position) <
-                                 Vector3.Distance(general_movement.get_bottom_left_platform_position.position, player.position))
-                        {
-                            if (random_nubmer >= 5)
-                            {
-                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
-
-                                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                            }
-                            else
-                            {
-                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
-
-                                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                            }
-                        }
-                        else
+                        else if (general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position == null)
                         {
                             is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
 
-                            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                        }
-                    }// everything movement options, but top right
-                    else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position == null && general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null)
-                    {
-                        if (Vector3.Distance(general_movement.get_bottom_right_platform_position.position, player.position) <
-                                 Vector3.Distance(general_movement.get_bottom_left_platform_position.position, player.position))
-                        {
-
-                            is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
-
-                            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
-                        }
-                        else
-                        {
-                            if (random_nubmer >= 5)
+                            if (coily_animator != null)
                             {
-                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
+                                coily_animator.SetTrigger("jumpfront");
+                            }
+
+                            if (facing_right)
+                            {
+                                ProperFilp();
+                            }
+
+                            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                        }
+                        else if (general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null)
+                        {
+                            if (Vector3.Distance(general_movement.get_bottom_right_platform_position.position, player.position) <
+                                Vector3.Distance(general_movement.get_bottom_left_platform_position.position, player.position))
+                            {
+
+                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
+
+                                if (coily_animator != null)
+                                {
+                                    coily_animator.SetTrigger("jumpfront");
+                                }
+                                if (!facing_right)
+                                {
+                                    ProperFilp();
+                                }
 
                                 SoundManager.Instance.PlaySoundEffect(name_sound_effect);
                             }
                             else
                             {
-                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
+                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
+
+                                if (coily_animator != null)
+                                {
+                                    coily_animator.SetTrigger("jumpfront");
+                                }
+                                if (facing_right)
+                                {
+                                    ProperFilp();
+                                }
 
                                 SoundManager.Instance.PlaySoundEffect(name_sound_effect);
                             }
                         }
+
+                    } // if player is on the same row/level as us
+                    else if (player_current_platform.get_colum_id_number == current_platform_colum_id && !our_current_platform.get_is_player_current_this_platform)
+                    {
+                        /// this random_number is use when there way path to the player and it does matter which way to
+                        int random_nubmer = UnityEngine.Random.Range(1, 10);
+
+                        /// at the bottom and on same level as player
+                        /// we want move up
+                        if (current_platform_colum_id == bottom_colum_id && !our_current_platform.get_is_player_current_this_platform && !our_current_platform.get_is_player_current_this_platform)
+                        {
+                            if (general_movement.get_top_left_platform_position == null && general_movement.get_top_right_platform_position != null)
+                            {
+                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
+
+                                if (coily_animator != null)
+                                {
+                                    coily_animator.SetTrigger("jumpback");
+                                }
+                                if (!facing_right)
+                                {
+                                    ProperFilp();
+                                }
+                                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                            }
+                            else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position == null)
+                            {
+                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
+
+                                if (coily_animator != null)
+                                {
+                                    coily_animator.SetTrigger("jumpback");
+                                }
+                                if (facing_right)
+                                {
+                                    ProperFilp();
+                                }
+                                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                            }
+                            else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position != null)
+                            {
+                                if (Vector3.Distance(general_movement.get_top_right_platform_position.position, player.position) <
+                                    Vector3.Distance(general_movement.get_top_left_platform_position.position, player.position))
+                                {
+
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
+
+                                    if (coily_animator != null)
+                                    {
+                                        coily_animator.SetTrigger("jumpback");
+                                    }
+                                    if (!facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                }
+                                else
+                                {
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
+
+                                    if (coily_animator != null)
+                                    {
+                                        coily_animator.SetTrigger("jumpback");
+                                    }
+                                    if (facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                }
+                            }
+                        }// all possible directions are give to snake
+                        else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position != null && general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null && !our_current_platform.get_is_player_current_this_platform)
+                        {
+                            // checking which one is closer to the player(left or right)
+                            // than randmon numer that  decide top or botton
+                            if (Vector3.Distance(general_movement.get_bottom_right_platform_position.position, player.position) <
+                                     Vector3.Distance(general_movement.get_bottom_left_platform_position.position, player.position))
+                            {
+                                if (random_nubmer >= 5)
+                                {
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
+
+                                    if (coily_animator != null)
+                                    {
+                                        coily_animator.SetTrigger("jumpfront");
+                                    }
+                                    if (!facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                }
+                                else
+                                {
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
+
+                                    if (coily_animator != null)
+                                    {
+                                        coily_animator.SetTrigger("jumpback");
+                                    }
+                                    if (!facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                }
+                            }
+                            else
+                            {
+                                if (random_nubmer >= 5)
+                                {
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
+
+                                    if (coily_animator != null)
+                                    {
+                                        coily_animator.SetTrigger("jumpfront");
+                                    }
+                                    if (facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect1);
+                                }
+                                else
+                                {
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
+
+                                    if (coily_animator != null)
+                                    {
+                                        coily_animator.SetTrigger("jumpback");
+                                    }
+                                    if (facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                }
+                            }
+                        }// everything movement options, but top left
+                        else if (general_movement.get_top_left_platform_position == null && general_movement.get_top_right_platform_position != null && general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null)
+                        {
+                            if (Vector3.Distance(general_movement.get_bottom_right_platform_position.position, player.position) <
+                                     Vector3.Distance(general_movement.get_bottom_left_platform_position.position, player.position))
+                            {
+                                if (random_nubmer >= 5)
+                                {
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
+
+                                    if (coily_animator != null)
+                                    {
+                                        coily_animator.SetTrigger("jumpback");
+                                    }
+                                    if (!facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                }
+                                else
+                                {
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_right);
+
+                                    coily_animator.SetTrigger("jumpfront");
+
+                                    if (!facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                }
+                            }
+                            else
+                            {
+                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
+
+                                if (coily_animator != null)
+                                {
+                                    coily_animator.SetTrigger("jumpfront");
+                                }
+                                if (facing_right)
+                                {
+                                    ProperFilp();
+                                }
+
+                                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                            }
+                        }// everything movement options, but top right
+                        else if (general_movement.get_top_left_platform_position != null && general_movement.get_top_right_platform_position == null && general_movement.get_bottom_left_platform_position != null && general_movement.get_bottom_right_platform_position != null)
+                        {
+                            if (Vector3.Distance(general_movement.get_bottom_right_platform_position.position, player.position) <
+                                     Vector3.Distance(general_movement.get_bottom_left_platform_position.position, player.position))
+                            {
+
+                                is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_right);
+
+                                if (coily_animator != null)
+                                {
+                                    coily_animator.SetTrigger("jumpfront");
+                                }
+
+                                if (!facing_right)
+                                {
+                                    ProperFilp();
+                                }
+
+
+                                SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                            }
+                            else
+                            {
+                                if (random_nubmer >= 5)
+                                {
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Kbottom_left);
+
+                                    
+
+                                    if (coily_animator != null)
+                                    {
+                                        coily_animator.SetTrigger("jumpfront");
+                                    }
+
+                                    if (facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                }
+                                else
+                                {
+                                    is_already_moving = general_movement.SelectADirectionForTheMovement(GerenalMovement.Direction.Ktop_left);
+
+                                    if (coily_animator != null)
+                                    {
+                                        coily_animator.SetTrigger("jumpback");
+                                    }
+                                    if (facing_right)
+                                    {
+                                        ProperFilp();
+                                    }
+
+                                    SoundManager.Instance.PlaySoundEffect(name_sound_effect);
+                                }
+                            }
+                        }
+
                     }
-
                 }
-            }
 
+            }
         }
     }
 
@@ -446,5 +699,12 @@ public class snake : MonoBehaviour
 
         m_elevator.On_elevator_event += ElevatorEventListener;
     }
-
+    void ProperFilp()
+    {
+        if (!facing_right || facing_right)
+        {
+            facing_right = !facing_right;
+            transform.Rotate(new Vector3(0, 180, 0));
+        }
+    }
 }

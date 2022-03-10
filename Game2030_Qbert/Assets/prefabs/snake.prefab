@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8857677992911653787}
   - component: {fileID: 8857677992911653784}
   - component: {fileID: 8857677992911653785}
+  - component: {fileID: 5450733177366464385}
   m_Layer: 0
   m_Name: snake
   m_TagString: Snake
@@ -172,7 +173,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -7881768608506599577, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c85781b587e9e014684faad36a948dd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -232,8 +233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9932d72b392ad4891d058eb0fab8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ball_sprite: {fileID: -7881768608506599577, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
-  snake_sprite: {fileID: 9089499675518395129, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
   general_movement: {fileID: 8857677992911653782}
   is_already_moving: 0
   are_we_at_bottom: 0
@@ -248,6 +247,9 @@ MonoBehaviour:
   has_coily_jump_off: 0
   name_sound_effect: CoilySnakejumpSound
   name_sound_effect1: CoilyballjumpSound
+  coily_animator: {fileID: 5450733177366464385}
+  delay_before_ball_pick_move: 0.2
+  delay_before_snake_pick_move: 0.5
 --- !u!114 &8857677992911653785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,3 +265,22 @@ MonoBehaviour:
   circle_collider_2d: {fileID: 8857677992911653786}
   rigid_body_2d: {fileID: 8857677992911653787}
   movement_script: {fileID: 8857677992911653782}
+--- !u!95 &5450733177366464385
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857677992911653783}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 17773f7abfd2cee4b998687bfe82217a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

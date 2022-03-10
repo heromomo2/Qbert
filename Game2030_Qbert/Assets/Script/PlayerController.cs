@@ -91,8 +91,6 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    // player_anim.SetTrigger("landed");
-
                     reach_destination = false;
                 }
                 break;
@@ -103,8 +101,6 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    // player_anim.SetTrigger("landed");
-
                     reach_destination = false;
                 }
                 break;
@@ -115,8 +111,6 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    // player_anim.SetTrigger("landed");
-
                     reach_destination = false;
                 }
                 break;
