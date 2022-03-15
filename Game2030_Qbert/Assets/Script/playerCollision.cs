@@ -12,7 +12,7 @@ public class PlayerCollision : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -33,7 +33,7 @@ public class PlayerCollision : MonoBehaviour
         if (col.gameObject.CompareTag("Platform"))
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
-           // Debug.Log(" player is touch a Platform");
+            // Debug.Log(" player is touch a Platform");
 
             // remove all prev destinations
             // clear all the old  destinations
@@ -75,15 +75,36 @@ public class PlayerCollision : MonoBehaviour
         // Player and Elevator Interaction
         if (col.gameObject.CompareTag("Elevator"))
         {
-            Debug.Log("player is touch a Elevator");
-            // remove all prev destinations
-            // clear all the old  destinations
-            pc.ClearAllDestination();
+            if (this.gameObject.GetComponent<PlayerController>().Is_go_to_elevator)
+            {
+                Debug.Log("player is touch a Elevator");
+                // remove all prev destinations
+                // clear all the old  destinations
+                pc.ClearAllDestination();
 
-           col.GetComponent<Elevator>().PlayerOnElevator(pc.gameObject);
+                col.GetComponent<Elevator>().PlayerOnElevator(pc.gameObject);
+            }
 
         }
+
+
+        if (col.gameObject.CompareTag("redirection"))
+        {
+            if (this.gameObject.CompareTag("Player"))
+            {
+                if (!this.gameObject.GetComponent<PlayerController>().Is_go_to_elevator)
+                {
+                    this.gameObject.GetComponent<PlayerController>().ChangeQberState(Qbert_Event_states.Kdeath);
+                    this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
+                    this.gameObject.GetComponent<PlayerController>().start_position = new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y);
+                    this.gameObject.GetComponent<PlayerController>().tagert_position = new Vector2(col.GetComponent<RedirectionPlatform>().target.position.x, col.GetComponent<RedirectionPlatform>().target.position.y);
+                    this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                    this.gameObject.GetComponent<PlayerController>().Is_drop_from_platform = true; 
+                }
+            }
+        }
     }
+}
 
    
-}
+

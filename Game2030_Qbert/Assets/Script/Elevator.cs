@@ -72,31 +72,33 @@ public class Elevator : MonoBehaviour
     {
         if ( player.tag == "Player")
         {
+           
 
-            if (adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_right_platform_position == our_circle_transform)
-            {
-                adjecent_Platform_circle.GetComponentInParent<Platform>().set_top_right_platform_position = adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_right_death_platform_position;
-            }
-            else if (adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_left_platform_position == our_circle_transform)
-            {
-                adjecent_Platform_circle.GetComponentInParent<Platform>().set_top_left_platform_position = adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_left_death_platform_position;
-            }
+                if (adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_right_platform_position == our_circle_transform)
+                {
+                    adjecent_Platform_circle.GetComponentInParent<Platform>().set_top_right_platform_position = adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_right_death_platform_position;
+                }
+                else if (adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_left_platform_position == our_circle_transform)
+                {
+                    adjecent_Platform_circle.GetComponentInParent<Platform>().set_top_left_platform_position = adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_left_death_platform_position;
+                }
 
-            player.transform.parent = our_circle_transform.parent;
+                player.transform.parent = our_circle_transform.parent;
 
-            player_child = player;
+                player_child = player;
 
 
-            current_state = elevator_states.Kstartmoving_to_top;
+                current_state = elevator_states.Kstartmoving_to_top;
+
+
+                if (elevator_event != null)
+                {
+                    elevator_event(true, adjecent_Platform_circle);
+                    adjecent_Platform_circle.GetComponentInParent<Platform>().set_is_player_current_this_platform = true;
+
+                }
+                SoundManager.Instance.PlaySoundEffect(name_sound_effect); 
             
-
-            if (elevator_event != null)
-            {
-                elevator_event(true, adjecent_Platform_circle);
-                adjecent_Platform_circle.GetComponentInParent<Platform>().set_is_player_current_this_platform = true;
-
-            }
-            SoundManager.Instance.PlaySoundEffect(name_sound_effect);
         }
 
     }

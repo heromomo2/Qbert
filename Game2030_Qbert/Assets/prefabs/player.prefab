@@ -192,7 +192,7 @@ MonoBehaviour:
   player_direction: 4
   reach_destination: 0
   jump_time: 1
-  fall_time: 0.5
+  fall_time: 1
   start_position: {x: 0, y: 0}
   tagert_position: {x: 0, y: 0}
   current_Platform: {fileID: 0}
@@ -201,6 +201,8 @@ MonoBehaviour:
   bottom_left_platform_position: {fileID: 0}
   bottom_right_platform_position: {fileID: 0}
   player_anim: {fileID: 4123342031795708438}
+  horizontal_value: 0
+  facing_right: 0
 --- !u!114 &4123342031795708439
 MonoBehaviour:
   m_ObjectHideFlags: 0

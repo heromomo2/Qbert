@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public float fall_time = 1;
 
     public Vector2 start_position;
+
     public Vector2 tagert_position;
 
     [SerializeField] Platform current_Platform;
@@ -31,8 +33,24 @@ public class PlayerController : MonoBehaviour
     private float timer = 0;
     private float timer2 = 0;
     private bool is_drop_from_elevator = false;
+    private bool is_drop_from_platform = false;
+    public bool Is_drop_from_platform    // the Name property
+    {
+        get => is_drop_from_platform;
+        set => is_drop_from_platform = value;
+    }
+
+    private bool is_go_to_elevator = false;
+
+    public bool Is_go_to_elevator    // the Name property
+    {
+        get => is_go_to_elevator;
+        set => is_go_to_elevator = value;
+    }
+
     private bool is_allow_to_move = true;
 
+    private Action<Qbert_Event_states> qbert_event = null;
     #endregion
 
     #region Destination/Setter
@@ -70,6 +88,22 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool facing_right = true;
 
     #endregion
+
+
+
+    public event Action<Qbert_Event_states> On_qbert_event
+    {
+        add
+        {
+            qbert_event -= value;
+            qbert_event += value;
+        }
+
+        remove
+        {
+            qbert_event -= value;
+        }
+    }
 
     void Start()
     {
@@ -121,7 +155,6 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
-                    // player_anim.SetTrigger("landed");
 
                     reach_destination = false;
                 }
@@ -139,23 +172,42 @@ public class PlayerController : MonoBehaviour
                 tagert_position = new Vector2(-0.062f, 2.4f);
                 is_drop_from_elevator = true;
                 break;
+            case direction.kfall_from_platform:
+                is_drop_from_platform = true;         
+                break;
         };
 
+        //this code activated when we reach the top of the pyrmid and elevator is gone
         if (is_drop_from_elevator)
         {
-            //start_position = this.gameObject.transform.position;
-
-            //  Vector2 start_position_vector_2 = new Vector2( this.gameObject.transform.position.x, this.gameObject.transform.position.y);
-            //   Vector2 first_platform_position_vector_2 = new Vector2(-0.02f, 2.55f);
-
-            player_direction = direction.Kfall_from_elavator_action;
+          //  player_direction = direction.Kfall_from_elavator_action;
             PlayerDropFromElevator(start_position, tagert_position);
+        }
 
+        //this code activated when collide redirtection point
+        if (is_drop_from_platform)
+        {
+            is_allow_to_move = false;// don't move when fall
+            PlayerDropFromElevator(start_position, tagert_position);// call the falling funtion
         }
 
         if (this.gameObject.transform.position.y <= -3.00f)
         {
-            Destroy(this.gameObject);
+            // this if statement for when you jump off (top-lift, -top-right)
+            //- turn on the boxcolluder, so you can get new destinations from the platfrom
+            //- put your sortingorder back to normarl(qbert in on pyramid and not bebind it)
+            //- reset the timer for PlayerDropFromElevator function becuse we are never go reach the location we are lerpping to
+            if (is_drop_from_platform)
+            {
+                this.gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                Is_drop_from_platform = false;
+                this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
+                timer2 = 0;
+            }
+            is_allow_to_move = true;// so we can move again
+            player_anim.SetTrigger("initia");// back to inita animation state
+            this.gameObject.transform.position = new Vector2(-0.062f, 2.4f);// positon on top of the pyramid
+           
 
         }
     }
@@ -257,6 +309,10 @@ public class PlayerController : MonoBehaviour
 
             if (top_left_platform_position != null)
             {
+                if (top_left_platform_position.gameObject.tag == "Elevator")
+                {
+                    is_go_to_elevator = true;
+                }
                 player_direction = direction.Ktop_left;
 
                 start_position = this.gameObject.transform.position;
@@ -277,6 +333,10 @@ public class PlayerController : MonoBehaviour
 
             if (top_right_platform_position != null)
             {
+                if (top_right_platform_position.gameObject.tag == "Elevator")
+                {
+                    is_go_to_elevator = true;
+                }
                 player_direction = direction.Ktop_right;
 
                 start_position = this.gameObject.transform.position;
@@ -356,6 +416,7 @@ public class PlayerController : MonoBehaviour
 
             player_direction = direction.Kno_direction;
             is_drop_from_elevator = false;
+            is_go_to_elevator = false;
             is_allow_to_move = true;
 
             //reset timer one it's bigger than fall time
@@ -376,6 +437,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void ChangeQberState(Qbert_Event_states qbert_event_state) 
+    {
+        Debug.Log(" ChangeQberState");
+        if (qbert_event !=  null) 
+        {
+            qbert_event(qbert_event_state);
+        } 
+    }
 }
 
 #region Enums
@@ -387,8 +456,7 @@ public enum direction
     Ktop_left,
     Kno_direction,
     Kfall_from_elavator_start,
-    Kfall_from_elavator_action,
-    Kland
+    kfall_from_platform,
 }
 
 
@@ -398,5 +466,11 @@ public enum elevator_states
     Kstartmoving_to_top,
     Kin_action_moving_to_top,
     Kat_the_top,
+}
+public enum Qbert_Event_states
+{
+    Kdeath,
+    Ktouch_greenball,
+ 
 }
 #endregion

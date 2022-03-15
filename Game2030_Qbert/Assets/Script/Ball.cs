@@ -14,6 +14,8 @@ public class Ball : MonoBehaviour
 
     [SerializeField] snake coily_event_received = null;
 
+    [SerializeField] PlayerController qbert_event_received = null;
+
     public string name_sound_effect;
     #endregion
 
@@ -63,6 +65,16 @@ public class Ball : MonoBehaviour
             {
                 coily_event_received = temp_snake.GetComponent<snake>();
                 coily_event_received.On_coily_event += CoilyEventListener;
+            }
+        }
+        if (qbert_event_received == null)
+        {
+            GameObject temp_player;
+            temp_player = GameObject.FindGameObjectWithTag("Player");
+            if (temp_player != null)
+            {
+                qbert_event_received = temp_player.GetComponent<PlayerController>();
+                qbert_event_received.On_qbert_event += QbertEventListener;
             }
         }
     }
@@ -116,21 +128,37 @@ public class Ball : MonoBehaviour
         {
             coily_event_received.On_coily_event -= CoilyEventListener;
         }
+        if (qbert_event_received != null)
+        {
+            qbert_event_received.On_qbert_event -= QbertEventListener;
+        }
+            
 
     }
     private void CoilyEventListener(bool does_coily_exist)
     {
-        if (does_coily_exist)
+        if (!does_coily_exist)
         {
-           // do notthing
-        }
-        else
-        {
-            ///
             Destroy(this.gameObject);
         }
 
+
     }
+
+
+    private void QbertEventListener(Qbert_Event_states qbert_event)
+    {
+        switch (qbert_event)
+        {
+            case Qbert_Event_states.Kdeath:
+                Destroy(this.gameObject);
+                break;
+            case Qbert_Event_states.Ktouch_greenball:
+                break;
+        }
+
+    }
+
 
     private IEnumerator WaitBeforeMoving(float waitTime)
     {

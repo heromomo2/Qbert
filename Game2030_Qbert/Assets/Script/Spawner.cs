@@ -15,6 +15,7 @@ public class Spawner : MonoBehaviour
     [SerializeField]  Transform  player;
     [SerializeField] List<Elevator> elevators;
     [SerializeField] snake coily_event_received = null;
+    [SerializeField] PlayerController qbert_event_received = null;
     #endregion
 
     #region Global
@@ -53,6 +54,26 @@ public class Spawner : MonoBehaviour
             {
                 coily_event_received = temp_snake.GetComponent<snake>();
                 coily_event_received.On_coily_event += CoilyEventListener;
+            }
+        }
+
+        if( qbert_event_received == null)
+        {
+            if (player != null)
+            {
+                qbert_event_received = player.GetComponent<PlayerController>();
+                qbert_event_received.On_qbert_event += QbertEventListener;
+            }
+            else 
+            {
+                GameObject temp_player;
+                temp_player = GameObject.FindGameObjectWithTag("Player");
+                if (temp_player != null)
+                {
+                    qbert_event_received = temp_player.GetComponent<PlayerController>();
+                    qbert_event_received.On_qbert_event += QbertEventListener;
+                }
+
             }
         }
     }
@@ -185,6 +206,10 @@ public class Spawner : MonoBehaviour
         {
             coily_event_received.On_coily_event -= CoilyEventListener;
         }
+        if (qbert_event_received != null)
+        {
+            qbert_event_received.On_qbert_event -= QbertEventListener;
+        }
 
     }
 
@@ -216,5 +241,19 @@ public class Spawner : MonoBehaviour
         yield return new WaitForSeconds( 1);
 
         StartCoroutine(WaitAndSpawn(spawn_delay));
+    }
+
+    private void QbertEventListener(Qbert_Event_states qbert_event)
+    {
+        switch (qbert_event)
+        {
+            case Qbert_Event_states.Kdeath:
+                is_there_a_snake = false;
+                StopAllCoroutines();
+                StartCoroutine(WaitAndSpawn(9f));
+                break;
+            case Qbert_Event_states.Ktouch_greenball:
+                break;
+        }
     }
 }

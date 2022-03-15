@@ -6,6 +6,7 @@ using UnityEngine;
 public class snake : MonoBehaviour
 {
     #region Global
+    [SerializeField] PlayerController qbert_event_received = null;
 
     [SerializeField] GerenalMovement general_movement;
 
@@ -45,6 +46,7 @@ public class snake : MonoBehaviour
 
     private Action<bool> coily_event = null;
 
+    
     #endregion
 
     public string name_sound_effect;
@@ -75,7 +77,6 @@ public class snake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
 
         if (coily_event != null)
         {
@@ -215,7 +216,10 @@ public class snake : MonoBehaviour
                 elevator.On_elevator_event -= ElevatorEventListener;
             }
         }
-
+        if (qbert_event_received != null )
+        {
+            qbert_event_received.On_qbert_event -= QbertEventListener;
+        }
     }
 
     void Snakebehave()
@@ -686,6 +690,12 @@ public class snake : MonoBehaviour
     public void GetPlayerPosition(Transform m_player)
     {
         player = m_player;
+
+        if (qbert_event_received == null)
+        {
+            qbert_event_received = player.GetComponent<PlayerController>();
+            qbert_event_received.On_qbert_event += QbertEventListener;
+        }
     }
 
     public void GetPlatforms(Platform m_platform)
@@ -706,5 +716,19 @@ public class snake : MonoBehaviour
             facing_right = !facing_right;
             transform.Rotate(new Vector3(0, 180, 0));
         }
+    }
+
+
+    private void QbertEventListener(Qbert_Event_states qbert_event)
+    {
+        switch (qbert_event)
+        {
+            case Qbert_Event_states.Kdeath:
+                Destroy(this.gameObject);
+                break;
+            case Qbert_Event_states.Ktouch_greenball:
+                break;
+        }
+
     }
 }
