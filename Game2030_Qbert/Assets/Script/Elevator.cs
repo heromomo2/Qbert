@@ -10,6 +10,7 @@ public class Elevator : MonoBehaviour
     [SerializeField] Transform our_circle_transform;// the object that will parnent the player
     [SerializeField] Transform first_platform_position;// our tagert destination
     [SerializeField] Transform adjecent_Platform_circle;// our tagert destination
+    [SerializeField] PlayerController qbert_event_received = null;///
 
     public float travel_time;
     [SerializeField] AnimationCurve curve_t;
@@ -25,7 +26,9 @@ public class Elevator : MonoBehaviour
     #endregion
 
 
-
+    #region
+    [SerializeField] private Animator elevator_anim = null;
+    #endregion
     public event Action <bool ,Transform> On_elevator_event
     {
         add
@@ -45,6 +48,16 @@ public class Elevator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (qbert_event_received == null) 
+        {
+            GameObject temp_player;
+            temp_player = GameObject.FindGameObjectWithTag("Player");
+            if (temp_player != null)
+            {
+                qbert_event_received = temp_player.GetComponent<PlayerController>();
+                qbert_event_received.On_qbert_event += QbertEventListener;
+            }
+        }
 
     }
 
@@ -147,6 +160,46 @@ public class Elevator : MonoBehaviour
     }
 
 
+    private void OnDestroy()
+    {
+       
+        if (qbert_event_received != null)
+        {
+            qbert_event_received.On_qbert_event -= QbertEventListener;
+        }
 
-    
+    }
+    private void QbertEventListener(Qbert_Event_states qbert_event)
+    {
+        switch (qbert_event)
+        {
+            case Qbert_Event_states.Kdeath_off_pyramid:
+                if (elevator_anim != null)
+                {
+                    elevator_anim.SetTrigger("no_spin");
+                }
+                break;
+            case Qbert_Event_states.Kdeath_on_pyramid:
+                if (elevator_anim != null)
+                {
+                    elevator_anim.SetTrigger("no_spin");
+                }
+                break;
+            case Qbert_Event_states.Krevive_player_pyramid:
+                if (elevator_anim != null)
+                {
+                    elevator_anim.SetTrigger("spin");
+                }
+                break;
+            case Qbert_Event_states.Krevive_player_off_pyramid:
+                if (elevator_anim != null)
+                {
+                    elevator_anim.SetTrigger("spin");
+                }
+                break;
+            case Qbert_Event_states.Ktouch_greenball:
+                break;
+        }
+
+    }
 }

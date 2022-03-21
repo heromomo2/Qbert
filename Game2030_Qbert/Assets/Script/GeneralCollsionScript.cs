@@ -41,7 +41,7 @@ public class GeneralCollsionScript : MonoBehaviour
             // ->we don't want get new destinations while  moving to new platform
             circle_collider_2d.enabled = false;
 
-            Debug.Log("Collsion script is working(you are hit the platform)");
+  //          Debug.Log("Collsion script is working(you are hit the platform)");
 
             // this is being use to stop the snake at the bottom of pyramid
             if (this.gameObject.tag == "Snake")

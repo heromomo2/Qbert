@@ -86,7 +86,7 @@ public class PlayerCollision : MonoBehaviour
             }
 
         }
-
+        
 
         if (col.gameObject.CompareTag("redirection"))
         {
@@ -94,7 +94,7 @@ public class PlayerCollision : MonoBehaviour
             {
                 if (!this.gameObject.GetComponent<PlayerController>().Is_go_to_elevator)
                 {
-                    this.gameObject.GetComponent<PlayerController>().ChangeQberState(Qbert_Event_states.Kdeath);
+                    this.gameObject.GetComponent<PlayerController>().ChangeQberState(Qbert_Event_states.Kdeath_off_pyramid);
                     this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 0;
                     this.gameObject.GetComponent<PlayerController>().start_position = new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y);
                     this.gameObject.GetComponent<PlayerController>().tagert_position = new Vector2(col.GetComponent<RedirectionPlatform>().target.position.x, col.GetComponent<RedirectionPlatform>().target.position.y);
@@ -104,7 +104,18 @@ public class PlayerCollision : MonoBehaviour
             }
         }
     }
+
+
+
+    ////void OnCollisionEnter2D(Collision2D col)
+    ////{
+    ////    if (col.gameObject.CompareTag("Snake"))
+    ////    {
+    ////        Destroy(this.gameObject);
+    ////        Debug.Log("Snake touch player");
+    ////    }
+    ////}
 }
 
-   
+
 

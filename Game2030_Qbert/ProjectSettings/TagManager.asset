@@ -11,6 +11,8 @@ TagManager:
   - DeathPlatform
   - Snake
   - redirection
+  - Child
+  - Greenball
   layers:
   - Default
   - TransparentFX
@@ -27,7 +29,7 @@ TagManager:
   - DeathPlatform
   - Direction
   - CoilyOffPyramid
-  - 
+  - child
   - 
   - 
   - 

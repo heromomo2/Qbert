@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8509084663286201362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2363684475415400129}
+  - component: {fileID: 267543730130089709}
+  m_Layer: 15
+  m_Name: child
+  m_TagString: Snake
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2363684475415400129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8509084663286201362}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8857677992911653788}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &267543730130089709
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8509084663286201362}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.001246307, y: -0.011600211}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.17697164, y: 0.14389685}
+  m_EdgeRadius: 0
 --- !u!1 &8857677992911653783
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,7 +90,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.43, y: 1.6299, z: 0}
   m_LocalScale: {x: 3.0026603, y: 3.0026603, z: 3.0026603}
-  m_Children: []
+  m_Children:
+  - {fileID: 2363684475415400129}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -133,6 +191,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   fall_time: 1.7
   fall_timer: 0
+  is_movement_stop: 0
 --- !u!212 &8857677992911653789
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -172,7 +231,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: c85781b587e9e014684faad36a948dd4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -233,6 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e9932d72b392ad4891d058eb0fab8c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  qbert_event_received: {fileID: 0}
   general_movement: {fileID: 8857677992911653782}
   is_already_moving: 0
   are_we_at_bottom: 0
@@ -250,6 +310,7 @@ MonoBehaviour:
   coily_animator: {fileID: 5450733177366464385}
   delay_before_ball_pick_move: 0.2
   delay_before_snake_pick_move: 0.5
+  facing_right: 1
 --- !u!114 &8857677992911653785
 MonoBehaviour:
   m_ObjectHideFlags: 0

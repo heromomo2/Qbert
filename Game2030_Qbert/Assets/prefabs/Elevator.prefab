@@ -102,6 +102,7 @@ MonoBehaviour:
   our_circle_transform: {fileID: 0}
   first_platform_position: {fileID: 0}
   adjecent_Platform_circle: {fileID: 0}
+  qbert_event_received: {fileID: 0}
   travel_time: 2.4
   curve_t:
     serializedVersion: 2
@@ -127,6 +128,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  elevator_anim: {fileID: 1719007114023639777}
   name_sound_effect: Elevatorsound
 --- !u!70 &4126143873993651886
 CapsuleCollider2D:

@@ -17,6 +17,11 @@ public class Ball : MonoBehaviour
     [SerializeField] PlayerController qbert_event_received = null;
 
     public string name_sound_effect;
+
+    // green ball stuff
+    public float freeze_time = 3.5f;
+    public float freeze_timer = 3.5f;
+    public bool  is_frozen = false;
     #endregion
 
     #region Animation stuff
@@ -36,6 +41,23 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (is_frozen) 
+        { 
+          
+            if (freeze_timer > 0) 
+            {
+                freeze_timer -= Time.deltaTime;
+                this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = true;
+            }
+            else
+            {
+                is_frozen = false;
+                freeze_timer = freeze_time;
+                this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = false;
+            }
+        }
+
         if (!is_already_moving)
         {
             BallDecisionToMove();
@@ -150,10 +172,17 @@ public class Ball : MonoBehaviour
     {
         switch (qbert_event)
         {
-            case Qbert_Event_states.Kdeath:
+            case Qbert_Event_states.Kdeath_off_pyramid:
+                Destroy(this.gameObject);
+                break;
+            case Qbert_Event_states.Kdeath_on_pyramid:
+                this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = true ;
+                break;
+            case Qbert_Event_states.Krevive_player_pyramid:
                 Destroy(this.gameObject);
                 break;
             case Qbert_Event_states.Ktouch_greenball:
+                is_frozen = true;
                 break;
         }
 

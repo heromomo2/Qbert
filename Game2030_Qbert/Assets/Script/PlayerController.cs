@@ -48,7 +48,8 @@ public class PlayerController : MonoBehaviour
         set => is_go_to_elevator = value;
     }
 
-    private bool is_allow_to_move = true;
+    private bool is_allow_to_press_key = true;
+    private bool is_movement_stop = false;
 
     private Action<Qbert_Event_states> qbert_event = null;
     #endregion
@@ -88,8 +89,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] bool facing_right = true;
 
     #endregion
+    [SerializeField] GameObject word_bubble_child_object = null;
 
-
+    [SerializeField] bool is_qbert_dead = false;
+    [SerializeField] float death_time = 3f;
+    [SerializeField] float death_timer = 3f;
 
     public event Action<Qbert_Event_states> On_qbert_event
     {
@@ -107,7 +111,10 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-
+        if (word_bubble_child_object != null)
+        {
+            word_bubble_child_object.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 
     // Update is called once per frame
@@ -173,21 +180,21 @@ public class PlayerController : MonoBehaviour
                 is_drop_from_elevator = true;
                 break;
             case direction.kfall_from_platform:
-                is_drop_from_platform = true;         
+                is_drop_from_platform = true;
                 break;
         };
 
         //this code activated when we reach the top of the pyrmid and elevator is gone
         if (is_drop_from_elevator)
         {
-          //  player_direction = direction.Kfall_from_elavator_action;
+            //  player_direction = direction.Kfall_from_elavator_action;
             PlayerDropFromElevator(start_position, tagert_position);
         }
 
         //this code activated when collide redirtection point
         if (is_drop_from_platform)
         {
-            is_allow_to_move = false;// don't move when fall
+            is_allow_to_press_key = false;// don't move when fall
             PlayerDropFromElevator(start_position, tagert_position);// call the falling funtion
         }
 
@@ -204,10 +211,27 @@ public class PlayerController : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().sortingOrder = 1;
                 timer2 = 0;
             }
-            is_allow_to_move = true;// so we can move again
+            else
+            {
+                ChangeQberState(Qbert_Event_states.Kdeath_off_pyramid);
+            }
+            is_allow_to_press_key = true;// so we can move again
             player_anim.SetTrigger("initia");// back to inita animation state
             this.gameObject.transform.position = new Vector2(-0.062f, 2.4f);// positon on top of the pyramid
-           
+            ChangeQberState(Qbert_Event_states.Krevive_player_off_pyramid);
+
+        }
+        //
+
+        if (is_qbert_dead)
+        {
+            death_timer -= Time.deltaTime;
+            if (death_timer < 0)
+            {
+                is_qbert_dead = false;
+                death_timer = death_time;
+                QbertReviceOnPyramid();
+            }
 
         }
     }
@@ -216,48 +240,51 @@ public class PlayerController : MonoBehaviour
     #region PlayermovementAndPlatforms
     void PlayerMovement(Transform target_destination)
     {
-        Vector2 start_position_vector_2 = new Vector2(start_position.x, start_position.y);
-        Vector2 target_position_vector_2 = new Vector2(target_destination.position.x, target_destination.position.y);
-
-        Vector3 mid_position_vector_3 = target_destination.position;
-
-        mid_position_vector_3.y += 0.5f;
-
-
-        // timer is increase
-        timer += Time.deltaTime;
-
-        float ratio = timer / jump_time;
-
-        // reset timer one it's bigger than jump time
-
-        if (timer >= jump_time)
+        if (!is_movement_stop)
         {
-            timer = 0;
-        }
+            Vector2 start_position_vector_2 = new Vector2(start_position.x, start_position.y);
+            Vector2 target_position_vector_2 = new Vector2(target_destination.position.x, target_destination.position.y);
 
-        if (ratio < 1)
-        {
-            this.gameObject.transform.position = Bezier(ratio, start_position, mid_position_vector_3, target_destination.position);
-        }
-        // when we get to our new location
-        else
-        {
-            this.gameObject.transform.position = target_destination.position;
+            Vector3 mid_position_vector_3 = target_destination.position;
 
-            player_direction = direction.Kno_direction;
+            mid_position_vector_3.y += 0.5f;
 
-            reach_destination = true;
 
-            Debug.Log(" ratio is at 1");
+            // timer is increase
+            timer += Time.deltaTime;
 
-            if (current_Platform != null)
+            float ratio = timer / jump_time;
+
+            // reset timer one it's bigger than jump time
+
+            if (timer >= jump_time)
             {
-                current_Platform.set_is_player_current_this_platform = false;
+                timer = 0;
             }
 
+            if (ratio < 1)
+            {
+                this.gameObject.transform.position = Bezier(ratio, start_position, mid_position_vector_3, target_destination.position);
+            }
+            // when we get to our new location
+            else
+            {
+                this.gameObject.transform.position = target_destination.position;
+
+                player_direction = direction.Kno_direction;
+
+                reach_destination = true;
+
+                ///           Debug.Log(" ratio is at 1");
+
+                if (current_Platform != null)
+                {
+                    current_Platform.set_is_player_current_this_platform = false;
+                }
+
+            }
+            //Debug.Log("MoveThePlayer is been all call");
         }
-        //Debug.Log("MoveThePlayer is been all call");
     }
 
 
@@ -303,9 +330,9 @@ public class PlayerController : MonoBehaviour
     private void PlayerPressedAKey()
     {
         // player movement key and pick a direction
-        if (Input.GetKeyDown(KeyCode.Keypad7) && player_direction == direction.Kno_direction && is_allow_to_move)
+        if (Input.GetKeyDown(KeyCode.Keypad7) && player_direction == direction.Kno_direction && is_allow_to_press_key)
         {
-            Debug.Log("Move top-left-> 7");
+            ///        Debug.Log("Move top-left-> 7");
 
             if (top_left_platform_position != null)
             {
@@ -327,9 +354,9 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad9) && player_direction == direction.Kno_direction && is_allow_to_move)
+        else if (Input.GetKeyDown(KeyCode.Keypad9) && player_direction == direction.Kno_direction && is_allow_to_press_key)
         {
-            Debug.Log(" Move top-right-> 9");
+            //          Debug.Log(" Move top-right-> 9");
 
             if (top_right_platform_position != null)
             {
@@ -350,9 +377,9 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad1) && player_direction == direction.Kno_direction && is_allow_to_move)
+        else if (Input.GetKeyDown(KeyCode.Keypad1) && player_direction == direction.Kno_direction && is_allow_to_press_key)
         {
-            Debug.Log("Move bottom-left-> 1");
+            ///            Debug.Log("Move bottom-left-> 1");
 
             if (bottom_left_platform_position != null)
             {
@@ -362,15 +389,15 @@ public class PlayerController : MonoBehaviour
                 SoundManager.Instance.PlaySoundEffect("Qbertjump");
 
                 player_anim.SetTrigger("jumpFront");
-                if (!facing_right) 
+                if (!facing_right)
                 {
                     ProperFilp();
                 }
             }
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad3) && player_direction == direction.Kno_direction && is_allow_to_move)
+        else if (Input.GetKeyDown(KeyCode.Keypad3) && player_direction == direction.Kno_direction && is_allow_to_press_key)
         {
-            Debug.Log("Move bottom-right-> 3");
+            //          Debug.Log("Move bottom-right-> 3");
 
             if (bottom_right_platform_position != null)
             {
@@ -381,9 +408,9 @@ public class PlayerController : MonoBehaviour
 
                 player_anim.SetTrigger("jumpFront");
 
-                if (facing_right) 
+                if (facing_right)
                 {
-                    ProperFilp(); 
+                    ProperFilp();
                 }
             }
         }
@@ -417,7 +444,7 @@ public class PlayerController : MonoBehaviour
             player_direction = direction.Kno_direction;
             is_drop_from_elevator = false;
             is_go_to_elevator = false;
-            is_allow_to_move = true;
+            is_allow_to_press_key = true;
 
             //reset timer one it's bigger than fall time
             if (timer2 >= fall_time)
@@ -437,13 +464,40 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void ChangeQberState(Qbert_Event_states qbert_event_state) 
+    public void ChangeQberState(Qbert_Event_states qbert_event_state)
     {
         Debug.Log(" ChangeQberState");
-        if (qbert_event !=  null) 
+        if (qbert_event != null)
         {
             qbert_event(qbert_event_state);
-        } 
+        }
+    }
+
+    public void DeathByfoes()
+    {
+        is_allow_to_press_key = false;
+        is_movement_stop = true;
+        if (word_bubble_child_object != null)
+        {
+            word_bubble_child_object.GetComponent<SpriteRenderer>().enabled = true;
+        }
+        ChangeQberState(Qbert_Event_states.Kdeath_on_pyramid);
+        player_direction = direction.Kno_direction;
+        timer = 0;
+        is_qbert_dead = true;
+
+    }
+
+     void QbertReviceOnPyramid()
+    {
+        is_allow_to_press_key = true;
+        is_movement_stop = false;
+        if (word_bubble_child_object != null)
+        {
+            word_bubble_child_object.GetComponent<SpriteRenderer>().enabled = false;
+        }
+        ChangeQberState(Qbert_Event_states.Krevive_player_pyramid);
+        player_anim.SetTrigger("initia");
     }
 }
 
@@ -469,8 +523,10 @@ public enum elevator_states
 }
 public enum Qbert_Event_states
 {
-    Kdeath,
+    Kdeath_off_pyramid,
+    Kdeath_on_pyramid,
+    Krevive_player_pyramid,
+    Krevive_player_off_pyramid,
     Ktouch_greenball,
- 
 }
 #endregion

@@ -3494,6 +3494,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc9348c60ccb5d4a9713211ac9656f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  list_platforms: []
 --- !u!4 &1003049247
 Transform:
   m_ObjectHideFlags: 0
@@ -6482,8 +6484,9 @@ MonoBehaviour:
   - {fileID: 404204291}
   - {fileID: 1086198265}
   coily_event_received: {fileID: 0}
+  qbert_event_received: {fileID: 0}
   spawn_delay_coily_time: 17
-  spawn_delay: 5
+  spawn_delay: 2
   is_there_a_snake: 0
   is_there_enemies: 0
 --- !u!4 &1926139013

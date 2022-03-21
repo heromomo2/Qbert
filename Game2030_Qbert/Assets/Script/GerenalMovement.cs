@@ -94,6 +94,16 @@ public class GerenalMovement : MonoBehaviour
 
     public float fall_timer = 0;
     #endregion
+
+    [Header("stop movement")]
+    #region var for stop movement
+    [SerializeField] private  bool is_movement_stop = false;
+    public bool Is_movement_stop    // the Name property
+    {
+        get => is_movement_stop;
+        set => is_movement_stop = value;
+    }
+    #endregion
     // Start is called before the first frame update
     void Start()
     {
@@ -237,42 +247,44 @@ public class GerenalMovement : MonoBehaviour
 
     void MovementOnPlatform()
     {
-        Vector2 start_position_vector_2 = new Vector2(start_position.x, start_position.y);
-
-        Vector2 target_position_vector_2 = tagert_position;
-
-        Vector3 mid_position_vector_3 = target_position_vector_2;
-
-        mid_position_vector_3.y += 0.7f;
-
-        // timer is increase
-        jump_timer += Time.deltaTime;
-
-        float ratio = jump_timer / jump_time;
-
-        ratio = Mathf.Clamp01(ratio);
-
-        if (ratio < 1)
+        if (!is_movement_stop)
         {
-            this.gameObject.transform.position = Bezier(ratio, start_position, mid_position_vector_3, target_position_vector_2);
-        }
-        // when we get to our new location
-        else
-        {
-            this.gameObject.transform.position = target_position_vector_2;
+            Vector2 start_position_vector_2 = new Vector2(start_position.x, start_position.y);
 
-            reach_destination = true;
+            Vector2 target_position_vector_2 = tagert_position;
 
-            current_direction = Direction.Kno_direction;
+            Vector3 mid_position_vector_3 = target_position_vector_2;
 
-            // reset timer one it's bigger than jump time
-            if (jump_timer >= jump_time)
+            mid_position_vector_3.y += 0.7f;
+
+            // timer is increase
+            jump_timer += Time.deltaTime;
+
+            float ratio = jump_timer / jump_time;
+
+            ratio = Mathf.Clamp01(ratio);
+
+            if (ratio < 1)
             {
-                jump_timer = 0;
+                this.gameObject.transform.position = Bezier(ratio, start_position, mid_position_vector_3, target_position_vector_2);
             }
+            // when we get to our new location
+            else
+            {
+                this.gameObject.transform.position = target_position_vector_2;
 
+                reach_destination = true;
+
+                current_direction = Direction.Kno_direction;
+
+                // reset timer one it's bigger than jump time
+                if (jump_timer >= jump_time)
+                {
+                    jump_timer = 0;
+                }
+
+            }
         }
-
     }
     
 
