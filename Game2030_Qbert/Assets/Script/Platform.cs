@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Platform : MonoBehaviour
@@ -29,9 +30,8 @@ public class Platform : MonoBehaviour
     {
         set => is_last_platform = false;
     }
+
     [SerializeField]  bool is_inner_platform;
-
-
 
     [SerializeField] private bool has_been_step_on = false;
 
@@ -56,11 +56,6 @@ public class Platform : MonoBehaviour
         set => is_player_current_this_platform = value;
     }
 
-    [SerializeField] Sprite inner_platform_sprite_on;
-
-    [SerializeField] Sprite platform_sprite_on;
-
-    [SerializeField] SpriteRenderer spriterenderer;
 
     [SerializeField] float Colum_id_number;
 
@@ -107,19 +102,26 @@ public class Platform : MonoBehaviour
         get => bottom_right_platform_position;
     }
 
-    [Header("Death Direction")]
-    [SerializeField] Transform top_left_death_platform_position;
-    public Transform get_top_left_death_platform_position // the Name property
+    [Header("re Direction")]
+    [SerializeField] Transform top_left_redirection_point;
+    public Transform get_top_left_redirection_point // the Name property
     {
-        get => top_left_death_platform_position;
+        get => top_left_redirection_point;
     }
 
-    [SerializeField] Transform top_right_death_platform_position;
-    public Transform get_top_right_death_platform_position // the Name property
+    [SerializeField] Transform top_right_redirection_point;
+    public Transform get_top_right_redirection_point // the Name property
     {
-        get => top_right_death_platform_position;
+        get => top_right_redirection_point;
     }
 
+    #endregion
+
+    private Action <bool> platform_event = null;
+
+    [Header("Animator")]
+    #region Animator
+    [SerializeField] private Animator platform_anim = null;
     #endregion
 
     // Start is called before the first frame update
@@ -141,23 +143,54 @@ public class Platform : MonoBehaviour
     {
         if (is_inner_platform && has_been_step_on) 
         {
-            if (spriterenderer != null)
+            if (platform_anim != null)
             {
-                spriterenderer.sprite = inner_platform_sprite_on;
+                platform_anim.SetTrigger("Step");
+
+                if (platform_event != null)
+                {
+                    platform_event(true);
+                }
             }
+
         }
 
         if (!is_inner_platform && has_been_step_on && !is_first_platform)
         {
-            if (spriterenderer != null)
+            if (platform_anim != null)
             {
-                spriterenderer.sprite = platform_sprite_on;
+                platform_anim.SetTrigger("Step");
+                if (platform_event != null)
+                {
+                    platform_event(true);
+                }
             }
         }
-        
+
 
     }
 
+    public event Action<bool> On_platform_event
+    {
+        add
+        {
+            platform_event -= value;
+            platform_event += value;
+        }
+
+        remove
+        {
+            platform_event -= value;
+        }
+    }
+
+    public void GetPlatformToPlayWinAnimation()
+    {
+        if (platform_anim != null)
+        {
+            platform_anim.SetTrigger("win");
+        }
+    }
 
 }
 

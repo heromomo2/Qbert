@@ -264,6 +264,10 @@ public class Spawner : MonoBehaviour
                 StopAllCoroutines();
                 StartCoroutine(WaitAndSpawn(5.5f));
                 break;
+            case Qbert_Event_states.kplayer_has_won:
+                is_there_a_snake = false;
+                StopAllCoroutines();
+                break;
         }
     }
 }

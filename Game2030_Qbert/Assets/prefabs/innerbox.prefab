@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 1267340084245845830}
   - component: {fileID: -5702357543015771062}
   - component: {fileID: 1173762837331363573}
+  - component: {fileID: 3003581486301845160}
   m_Layer: 0
   m_Name: innerbox
   m_TagString: Platform
@@ -184,9 +185,6 @@ MonoBehaviour:
   is_inner_platform: 1
   has_been_step_on: 0
   is_player_current_this_platform: 0
-  inner_platform_sprite_on: {fileID: -6379350831655040001, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
-  platform_sprite_on: {fileID: -6469223595132164514, guid: fc7e3709b7068824c91bc24f7976ddb3, type: 3}
-  spriterenderer: {fileID: 1267340084245845830}
   Colum_id_number: 0
   top_left_platform_position: {fileID: 0}
   top_right_platform_position: {fileID: 0}
@@ -194,6 +192,7 @@ MonoBehaviour:
   bottom_right_platform_position: {fileID: 0}
   top_left_death_platform_position: {fileID: 0}
   top_right_death_platform_position: {fileID: 0}
+  platform_anim: {fileID: 3003581486301845160}
 --- !u!61 &1173762837331363573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -220,3 +219,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14679927, y: 0.088505745}
   m_EdgeRadius: 0
+--- !u!95 &3003581486301845160
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2483626937148811347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c475befe40eabed4b9d960782b2a52a5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -7,7 +7,8 @@ public class GameLogic : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] GameObject player;
     [SerializeField] List <Platform> list_platforms;
-
+    [SerializeField] private bool is_win_cin = false;
+    [SerializeField] private int counter_step_on_platform = 0;
     void Start()
     {
         int random_number = Random.Range(0, 600);
@@ -45,11 +46,11 @@ public class GameLogic : MonoBehaviour
 
             if (list_platforms.Count == 0)
             {
-               // int i = 0;
+              
                 foreach (GameObject go in game_Objects)
                 {
-                    list_platforms.Add ( go.GetComponent<Platform>());
-                   // i++;
+                    list_platforms.Add (go.GetComponent<Platform>());
+                    go.GetComponent<Platform>().On_platform_event += PlatformEventListener;
                 }
             }
         }
@@ -70,6 +71,14 @@ public class GameLogic : MonoBehaviour
             player.GetComponent<PlayerController>().On_qbert_event -= QbertEventListener;
         }
 
+        if (list_platforms != null && list_platforms.Count != 0 ) 
+        {
+            foreach (Platform platform in list_platforms)
+            {
+                platform.On_platform_event -= PlatformEventListener;
+            }
+        }
+
     }
 
     private void QbertEventListener(Qbert_Event_states qbert_event)
@@ -83,6 +92,18 @@ public class GameLogic : MonoBehaviour
 
     }
 
+    private void PlatformEventListener(bool is_step)
+    {
+        if (is_step) 
+        {
+            counter_step_on_platform++;
+            if (counter_step_on_platform == list_platforms.Count) 
+            {
+                CheckIfAllPlatformBeenStepOn();
+            }
+        }
+    }
+
     void PlacePlayerOnRightplatform() 
     {
         if (player!= null && list_platforms.Count != 0) 
@@ -92,14 +113,43 @@ public class GameLogic : MonoBehaviour
                 if (platform.get_is_player_current_this_platform) 
                 {
                     GameObject child = platform.gameObject.transform.GetChild(0).gameObject;
-                   
                     
                     
                     player.transform.position = child.transform.position;
                    
                     break;
                 }
+
             }
+        }
+    }
+
+
+
+
+
+    void CheckIfAllPlatformBeenStepOn()
+    {
+        foreach (Platform platform in list_platforms) 
+        {
+            if (!platform.get_has_been_step_on)
+            {
+                is_win_cin = false;
+                break;
+            }
+            else 
+            {
+                is_win_cin = true;
+            }
+        }
+
+        if (is_win_cin)
+        {
+            foreach (Platform platform in list_platforms)
+            {
+                platform.GetPlatformToPlayWinAnimation();
+            }
+            player.GetComponent<PlayerController>().QbertWin();
         }
     }
 }

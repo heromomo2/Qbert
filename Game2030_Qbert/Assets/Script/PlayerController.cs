@@ -488,7 +488,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-     void QbertReviceOnPyramid()
+    void QbertReviceOnPyramid()
     {
         is_allow_to_press_key = true;
         is_movement_stop = false;
@@ -498,6 +498,13 @@ public class PlayerController : MonoBehaviour
         }
         ChangeQberState(Qbert_Event_states.Krevive_player_pyramid);
         player_anim.SetTrigger("initia");
+    }
+
+    public  void QbertWin()
+    {
+        is_allow_to_press_key = false;
+        player_anim.SetTrigger("initia");
+        ChangeQberState(Qbert_Event_states.kplayer_has_won);
     }
 }
 
@@ -527,6 +534,7 @@ public enum Qbert_Event_states
     Kdeath_on_pyramid,
     Krevive_player_pyramid,
     Krevive_player_off_pyramid,
+    kplayer_has_won,
     Ktouch_greenball,
 }
 #endregion

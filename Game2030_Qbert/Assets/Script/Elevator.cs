@@ -89,11 +89,11 @@ public class Elevator : MonoBehaviour
 
                 if (adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_right_platform_position == our_circle_transform)
                 {
-                    adjecent_Platform_circle.GetComponentInParent<Platform>().set_top_right_platform_position = adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_right_death_platform_position;
+                    adjecent_Platform_circle.GetComponentInParent<Platform>().set_top_right_platform_position = adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_right_redirection_point;
                 }
                 else if (adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_left_platform_position == our_circle_transform)
                 {
-                    adjecent_Platform_circle.GetComponentInParent<Platform>().set_top_left_platform_position = adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_left_death_platform_position;
+                    adjecent_Platform_circle.GetComponentInParent<Platform>().set_top_left_platform_position = adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_left_redirection_point;
                 }
 
                 player.transform.parent = our_circle_transform.parent;

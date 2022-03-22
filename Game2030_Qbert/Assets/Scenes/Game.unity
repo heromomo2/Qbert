@@ -3496,6 +3496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   list_platforms: []
+  is_win_cin: 0
 --- !u!4 &1003049247
 Transform:
   m_ObjectHideFlags: 0
@@ -4141,9 +4142,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 937920005}
     - target: {fileID: 8466590979441290203, guid: 718f0e285b3ccbd4096b4d1d6b21d670, type: 3}
+      propertyPath: top_left_redirection_point
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466590979441290203, guid: 718f0e285b3ccbd4096b4d1d6b21d670, type: 3}
       propertyPath: top_right_platform_position
       value: 
       objectReference: {fileID: 383647193}
+    - target: {fileID: 8466590979441290203, guid: 718f0e285b3ccbd4096b4d1d6b21d670, type: 3}
+      propertyPath: top_right_redirection_point
+      value: 
+      objectReference: {fileID: 2014311502}
     - target: {fileID: 8466590979441290203, guid: 718f0e285b3ccbd4096b4d1d6b21d670, type: 3}
       propertyPath: bottom_left_platform_position
       value: 
@@ -4693,6 +4702,10 @@ PrefabInstance:
       propertyPath: top_left_platform_position
       value: 
       objectReference: {fileID: 1078697675}
+    - target: {fileID: 8466590979441290203, guid: 718f0e285b3ccbd4096b4d1d6b21d670, type: 3}
+      propertyPath: top_left_redirection_point
+      value: 
+      objectReference: {fileID: 556310808}
     - target: {fileID: 8466590979441290203, guid: 718f0e285b3ccbd4096b4d1d6b21d670, type: 3}
       propertyPath: top_right_platform_position
       value: 

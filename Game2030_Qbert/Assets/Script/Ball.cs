@@ -184,6 +184,9 @@ public class Ball : MonoBehaviour
             case Qbert_Event_states.Ktouch_greenball:
                 is_frozen = true;
                 break;
+            case Qbert_Event_states.kplayer_has_won:
+                Destroy(this.gameObject);
+                break;
         }
 
     }
