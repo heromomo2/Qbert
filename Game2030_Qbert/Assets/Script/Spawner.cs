@@ -88,7 +88,7 @@ public class Spawner : MonoBehaviour
         {
             if (spawnpoints[0] != null)
             {
-                if (random_number_spawn_entity <= 50)
+                if (random_number_spawn_entity <= 25)
                 {
                     if (green_ball != null)
                     {
@@ -145,7 +145,7 @@ public class Spawner : MonoBehaviour
         {
             if (spawnpoints[1] != null)
             {
-                if (random_number_spawn_entity <= 50)
+                if (random_number_spawn_entity <= 25)
                 {
                     if (green_ball != null)
                     {
@@ -250,7 +250,6 @@ public class Spawner : MonoBehaviour
             case Qbert_Event_states.Kdeath_off_pyramid:
                 is_there_a_snake = false;
                 StopAllCoroutines();
-                StartCoroutine(WaitAndSpawn(9f));
                 break;
             case Qbert_Event_states.Kdeath_on_pyramid:
                 StopAllCoroutines(); 
@@ -260,11 +259,18 @@ public class Spawner : MonoBehaviour
                 StopAllCoroutines();
                 StartCoroutine(WaitAndSpawn(3f));
                 break;
+            case Qbert_Event_states.Krevive_player_off_pyramid:
+                StartCoroutine(WaitAndSpawn(1f));
+                break;
             case Qbert_Event_states.Ktouch_greenball:
                 StopAllCoroutines();
                 StartCoroutine(WaitAndSpawn(5.5f));
                 break;
             case Qbert_Event_states.kplayer_has_won:
+                is_there_a_snake = false;
+                StopAllCoroutines();
+                break;
+            case Qbert_Event_states.kplayer_has_lost:
                 is_there_a_snake = false;
                 StopAllCoroutines();
                 break;

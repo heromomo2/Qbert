@@ -37,6 +37,7 @@ public class PlayerCollision : MonoBehaviour
 
             // remove all prev destinations
             // clear all the old  destinations
+           // pc
             pc.ClearAllDestination();
 
             // get new destinations from the platform we are on
@@ -68,8 +69,13 @@ public class PlayerCollision : MonoBehaviour
                 col.GetComponent<Platform>().set_is_first_platform = false;
             }
 
-            col.gameObject.GetComponent<Platform>().set_is_player_current_this_platform = true;
-            pc.GetCurrentPlatform(col.gameObject.GetComponent<Platform>());
+            if (!col.gameObject.GetComponent<Platform>().get_is_player_current_this_platform) 
+            {
+                col.gameObject.GetComponent<Platform>().set_is_player_current_this_platform = true;
+                 pc.GetCurrentPlatform(col.gameObject.GetComponent<Platform>());
+            }
+            // col.gameObject.GetComponent<Platform>().set_is_player_current_this_platform = true;
+            // pc.GetCurrentPlatform(col.gameObject.GetComponent<Platform>());
         }
 
         // Player and Elevator Interaction

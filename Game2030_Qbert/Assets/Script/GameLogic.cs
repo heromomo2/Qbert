@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour
@@ -9,6 +10,27 @@ public class GameLogic : MonoBehaviour
     [SerializeField] List <Platform> list_platforms;
     [SerializeField] private bool is_win_cin = false;
     [SerializeField] private int counter_step_on_platform = 0;
+    [Header("UI")]
+    #region UI for the game
+    [SerializeField] Text round_text_ui = null;
+    [SerializeField] Text level_text_ui = null;
+    [SerializeField] Text score_text_ui = null;
+    [SerializeField] Image [] lives_display = null;
+    [SerializeField] private int number_of_lives = 3;
+    [SerializeField] private int number_of_arounds = 0;
+    [SerializeField] private int player_score = 0;
+    #endregion
+
+    #region Delay on player
+    [SerializeField] bool is_qbert_dead_from_foe = false;
+    [SerializeField] private float delay_time_qbert_death_by_foe = 4f;
+    [SerializeField] private float delay_timer_qbert_death_by_foe = 0;
+
+    [SerializeField] bool is_qbert_dead_off_pyramid = false;
+    [SerializeField] private float delay_time_qbert_death_by_jump = 4f;
+    [SerializeField] private float delay_timer_qbert_death_by_jump = 0;
+    #endregion
+
     void Start()
     {
         int random_number = Random.Range(0, 600);
@@ -55,11 +77,60 @@ public class GameLogic : MonoBehaviour
             }
         }
 
+        delay_timer_qbert_death_by_foe = delay_time_qbert_death_by_foe;
+        delay_timer_qbert_death_by_jump = delay_time_qbert_death_by_jump;
+        StartCoroutine(WaitAndDisplaylives(0.5f));
     }
 
     // Update is called once per frame
     void Update()
     {
+        /// - when you dead on platform
+        if (is_qbert_dead_from_foe)
+        {
+            delay_timer_qbert_death_by_foe -= Time.deltaTime;
+            if (delay_timer_qbert_death_by_foe < 0)
+            {
+                if (number_of_lives <= 0) 
+                {
+                    player.GetComponent<PlayerController>().Qbertlost();
+                    is_qbert_dead_from_foe = false;
+                    delay_timer_qbert_death_by_foe = delay_time_qbert_death_by_foe;
+                }
+                else
+                {
+                    is_qbert_dead_from_foe = false;
+                    delay_timer_qbert_death_by_foe = delay_time_qbert_death_by_foe;
+                    player.GetComponent<PlayerController>().QbertReviceOnPyramid();
+                }
+            }
+
+        }
+
+        /// - when you dead off platform
+        if (is_qbert_dead_off_pyramid) 
+        {
+            delay_timer_qbert_death_by_jump -= Time.deltaTime;
+            if (delay_timer_qbert_death_by_jump < 0) 
+            {
+                if (number_of_lives <= 0)
+                {
+                    player.GetComponent<PlayerController>().Qbertlost();
+                    is_qbert_dead_off_pyramid = false;
+                    delay_timer_qbert_death_by_jump = delay_time_qbert_death_by_jump;
+                }
+                else
+                {
+                    is_qbert_dead_off_pyramid = false;
+                    delay_timer_qbert_death_by_jump = delay_time_qbert_death_by_jump;
+                    ResetThePlatfromsofLastPlayerLocation();
+                    player.GetComponent<PlayerController>().QbertReviceOffPyramid();
+                }
+
+
+            }
+
+        }
         
     }
 
@@ -85,7 +156,19 @@ public class GameLogic : MonoBehaviour
     {
         switch (qbert_event)
         {
+            case Qbert_Event_states.Kdeath_player_reach_bottom:
+                number_of_lives -= 1;
+                is_qbert_dead_off_pyramid = true;
+                break;
+            case Qbert_Event_states.Krevive_player_off_pyramid:              
+                ChangeLivesDisplayed();
+                break;
+            case Qbert_Event_states.Kdeath_on_pyramid:
+                number_of_lives -= 1;
+                is_qbert_dead_from_foe = true;
+                break;
             case Qbert_Event_states.Krevive_player_pyramid:
+                ChangeLivesDisplayed();
                 PlacePlayerOnRightplatform();
                 break;
         }
@@ -126,8 +209,69 @@ public class GameLogic : MonoBehaviour
 
 
 
+    void ResetThePlatfromsofLastPlayerLocation()
+    {
+        if ( list_platforms.Count != 0)
+        {
+            foreach (Platform platform in list_platforms)
+            {
+                platform.set_is_player_current_this_platform = false;
+
+            }
+        }
+    }
 
 
+
+
+
+    void ChangeLivesDisplayed() 
+    {
+        if (lives_display.Length > 0 && lives_display != null) 
+        {
+            switch (number_of_lives) 
+            {
+                case 3:
+                    for (int i= 0; i < lives_display.Length ; i++)
+                    {
+                        if (i < 2)
+                        {
+                            lives_display[i].gameObject.SetActive(true);
+                        }
+                        else 
+                        {
+                            lives_display[i].gameObject.SetActive(false);
+                        }
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < lives_display.Length; i++)
+                    {
+                        if (i < 1)
+                        {
+                            lives_display[i].gameObject.SetActive(true);
+                        }
+                        else
+                        {
+                            lives_display[i].gameObject.SetActive(false);
+                        }
+                    }
+                    break;
+                case 1:
+                    for (int i = 0; i < lives_display.Length; i++)
+                    {
+                       
+                            lives_display[i].gameObject.SetActive(false);
+                    }
+                    break;
+            }
+        }
+        
+    }
+
+    /// <summary>
+    /// win cond
+    /// </summary>
     void CheckIfAllPlatformBeenStepOn()
     {
         foreach (Platform platform in list_platforms) 
@@ -151,5 +295,12 @@ public class GameLogic : MonoBehaviour
             }
             player.GetComponent<PlayerController>().QbertWin();
         }
+    }
+
+
+    IEnumerator WaitAndDisplaylives(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        ChangeLivesDisplayed();
     }
 }

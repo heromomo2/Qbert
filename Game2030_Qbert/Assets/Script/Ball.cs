@@ -187,6 +187,9 @@ public class Ball : MonoBehaviour
             case Qbert_Event_states.kplayer_has_won:
                 Destroy(this.gameObject);
                 break;
+            case Qbert_Event_states.kplayer_has_lost:
+                Destroy(this.gameObject);
+                break;
         }
 
     }

@@ -17,7 +17,7 @@ public class CollsionChildobject : MonoBehaviour
         {
             if (this.gameObject.CompareTag("Player"))
             {
-                if (!parenent_object.GetComponent<PlayerController>().Is_go_to_elevator)
+                if (!parenent_object.GetComponent<PlayerController>().Is_go_to_elevator && !parenent_object.GetComponent<PlayerController>().Is_drop_from_platform)
                 {
                     Debug.Log("player's Childobject has touch snake");
                     this.gameObject.GetComponentInParent<PlayerController>().DeathByfoes();
@@ -29,7 +29,7 @@ public class CollsionChildobject : MonoBehaviour
         {
             if (this.gameObject.CompareTag("Player"))
             {
-                if (!parenent_object.GetComponent<PlayerController>().Is_go_to_elevator) 
+                if (!parenent_object.GetComponent<PlayerController>().Is_go_to_elevator && !parenent_object.GetComponent<PlayerController>().Is_drop_from_platform) 
                 {
                     Debug.Log("player's Childobject has touch Redball");
                     this.gameObject.GetComponentInParent<PlayerController>().DeathByfoes();
@@ -43,7 +43,7 @@ public class CollsionChildobject : MonoBehaviour
         {
             if (this.gameObject.CompareTag("Player"))
             {
-                if (!parenent_object.GetComponent<PlayerController>().Is_go_to_elevator)
+                if (!parenent_object.GetComponent<PlayerController>().Is_go_to_elevator && !parenent_object.GetComponent<PlayerController>().Is_drop_from_platform)
                 {
                     Debug.Log("player's Childobject has touch Greenball");
                     this.gameObject.GetComponentInParent<PlayerController>().ChangeQberState(Qbert_Event_states.Ktouch_greenball);
