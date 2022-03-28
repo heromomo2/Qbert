@@ -2572,6 +2572,36 @@ MonoBehaviour:
     pitch: 0.132
     loop: 0
     Source: {fileID: 0}
+  - name: WinSound
+    Clip: {fileID: 8300000, guid: a8485984fecd1b14d9dcc12f9440541a, type: 3}
+    volume: 1
+    pitch: 0.1
+    loop: 0
+    Source: {fileID: 0}
+  - name: AddElevatorToScore
+    Clip: {fileID: 8300000, guid: bf6ca87800315194ca1ce1b937345cd8, type: 3}
+    volume: 0.594
+    pitch: 0.1651
+    loop: 0
+    Source: {fileID: 0}
+  - name: QbertScream
+    Clip: {fileID: 8300000, guid: 951ab35f66b18304a9cdabe9f3b55e26, type: 3}
+    volume: 0.715
+    pitch: 0.1651
+    loop: 0
+    Source: {fileID: 0}
+  - name: stoptime
+    Clip: {fileID: 8300000, guid: b9b81d23f4adb6c4caaa0a6605ecdd03, type: 3}
+    volume: 0.669
+    pitch: 0.1651
+    loop: 0
+    Source: {fileID: 0}
+  - name: QbertFallScream
+    Clip: {fileID: 8300000, guid: 2f148856b0916df4fb9d88e49ff81088, type: 3}
+    volume: 0.669
+    pitch: 0.1651
+    loop: 0
+    Source: {fileID: 0}
   music_sound:
     name: QberMainThere
     Clip: {fileID: 8300000, guid: 32926e2878aeae2448432b927715f1aa, type: 3}

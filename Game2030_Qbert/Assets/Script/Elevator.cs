@@ -84,8 +84,7 @@ public class Elevator : MonoBehaviour
     public void PlayerOnElevator(GameObject player)
     {
         if ( player.tag == "Player")
-        {
-           
+        {      
 
                 if (adjecent_Platform_circle.GetComponentInParent<Platform>().get_top_right_platform_position == our_circle_transform)
                 {
@@ -132,7 +131,6 @@ public class Elevator : MonoBehaviour
         else 
         {
             Debug.Log("We at top of pyramid and elevator");
-
             current_state = elevator_states.Kat_the_top;
         }
 
@@ -198,6 +196,18 @@ public class Elevator : MonoBehaviour
                 }
                 break;
             case Qbert_Event_states.Ktouch_greenball:
+                break;
+            case Qbert_Event_states.kplayer_has_won:
+                if (elevator_anim != null)
+                {
+                    elevator_anim.SetTrigger("no_spin");
+                }
+                break;
+            case Qbert_Event_states.kplayer_has_lost:
+                if (elevator_anim != null)
+                {
+                    elevator_anim.SetTrigger("no_spin");
+                }
                 break;
         }
 

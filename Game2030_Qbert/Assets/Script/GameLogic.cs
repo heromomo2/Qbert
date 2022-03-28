@@ -7,7 +7,8 @@ public class GameLogic : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject player;
-    [SerializeField] List <Platform> list_platforms;
+    [SerializeField] GameObject coily;
+    [SerializeField] List<Platform> list_platforms;
     [SerializeField] private bool is_win_cin = false;
     [SerializeField] private int counter_step_on_platform = 0;
     [Header("UI")]
@@ -15,12 +16,13 @@ public class GameLogic : MonoBehaviour
     [SerializeField] Text round_text_ui = null;
     [SerializeField] Text level_text_ui = null;
     [SerializeField] Text score_text_ui = null;
-    [SerializeField] Image [] lives_display = null;
+    [SerializeField] Text score_bouus_text_ui = null;
+    [SerializeField] Image[] lives_display = null;
     [SerializeField] private int number_of_lives = 3;
     [SerializeField] private int number_of_arounds = 0;
     [SerializeField] private int player_score = 0;
     #endregion
-
+    [Header("Delay for qbert")]
     #region Delay on player
     [SerializeField] bool is_qbert_dead_from_foe = false;
     [SerializeField] private float delay_time_qbert_death_by_foe = 4f;
@@ -29,6 +31,16 @@ public class GameLogic : MonoBehaviour
     [SerializeField] bool is_qbert_dead_off_pyramid = false;
     [SerializeField] private float delay_time_qbert_death_by_jump = 4f;
     [SerializeField] private float delay_timer_qbert_death_by_jump = 0;
+    #endregion
+
+    [Header("Delay for score count")]
+    #region Delay for counting points
+    [SerializeField] bool is_there_elevater_to_count = false;
+    [SerializeField] private float delay_time_each_elevator = 2f;
+    [SerializeField] private float delay_timer_each_elevator = 0;
+    [SerializeField] bool is_level_clear = false;
+    [SerializeField] private float delay_time_bewteen_win_score_count = 4f;
+    [SerializeField] private float delay_timer_bewteen_win_score_count = 0;
     #endregion
 
     void Start()
@@ -45,7 +57,7 @@ public class GameLogic : MonoBehaviour
         {
             player.GetComponent<PlayerController>().On_qbert_event += QbertEventListener;
         }
-        else 
+        else
         {
             GameObject temp_player = temp_player = GameObject.FindGameObjectWithTag("Player");
             if (temp_player != null)
@@ -53,7 +65,7 @@ public class GameLogic : MonoBehaviour
                 player = temp_player;
                 player.GetComponent<PlayerController>().On_qbert_event += QbertEventListener;
             }
-            else 
+            else
             {
                 Debug.LogWarning("Couldn't find Player Game object in Gamelogic");
             }
@@ -61,24 +73,26 @@ public class GameLogic : MonoBehaviour
 
         GameObject[] game_Objects = GameObject.FindGameObjectsWithTag("Platform");
 
-        list_platforms = new List <Platform>();
+        list_platforms = new List<Platform>();
 
-        if (game_Objects.Length > 0) 
+        if (game_Objects.Length > 0)
         {
 
             if (list_platforms.Count == 0)
             {
-              
+
                 foreach (GameObject go in game_Objects)
                 {
-                    list_platforms.Add (go.GetComponent<Platform>());
+                    list_platforms.Add(go.GetComponent<Platform>());
                     go.GetComponent<Platform>().On_platform_event += PlatformEventListener;
                 }
             }
         }
-
+        score_bouus_text_ui.enabled = false;
+        delay_timer_each_elevator = delay_time_each_elevator;
         delay_timer_qbert_death_by_foe = delay_time_qbert_death_by_foe;
         delay_timer_qbert_death_by_jump = delay_time_qbert_death_by_jump;
+        delay_timer_bewteen_win_score_count = delay_time_bewteen_win_score_count;
         StartCoroutine(WaitAndDisplaylives(0.5f));
     }
 
@@ -91,7 +105,7 @@ public class GameLogic : MonoBehaviour
             delay_timer_qbert_death_by_foe -= Time.deltaTime;
             if (delay_timer_qbert_death_by_foe < 0)
             {
-                if (number_of_lives <= 0) 
+                if (number_of_lives <= 0)
                 {
                     player.GetComponent<PlayerController>().Qbertlost();
                     is_qbert_dead_from_foe = false;
@@ -108,10 +122,10 @@ public class GameLogic : MonoBehaviour
         }
 
         /// - when you dead off platform
-        if (is_qbert_dead_off_pyramid) 
+        if (is_qbert_dead_off_pyramid)
         {
             delay_timer_qbert_death_by_jump -= Time.deltaTime;
-            if (delay_timer_qbert_death_by_jump < 0) 
+            if (delay_timer_qbert_death_by_jump < 0)
             {
                 if (number_of_lives <= 0)
                 {
@@ -131,25 +145,89 @@ public class GameLogic : MonoBehaviour
             }
 
         }
-        
+
+        if (coily == null)
+        {
+            GameObject temp_snake;
+            temp_snake = GameObject.FindGameObjectWithTag("Snake");
+            if (temp_snake != null)
+            {
+                coily = temp_snake;
+                coily.GetComponent<snake>().On_coily_event += CoilyEventListener;
+            }
+
+        }
+
+        if (is_level_clear)
+        {
+            delay_timer_bewteen_win_score_count -= Time.deltaTime;
+
+            if (delay_timer_bewteen_win_score_count < 0)
+            {
+                if (player != null)
+                {
+                    player.GetComponent<PlayerController>().QbertCountScore();
+                    foreach (Platform platform in list_platforms)
+                    {
+                        platform.GetComponent<Platform>().GetPlatformStopPlayingWinAnimation();
+                    }
+                    is_level_clear = false;
+                }
+            }
+
+        }
+
+        /// add score if there is elevator
+        if (is_there_elevater_to_count)
+        {
+            GameObject temp_elevator;
+            temp_elevator = GameObject.FindGameObjectWithTag("Elevator");
+
+            if (temp_elevator != null)
+            {
+
+                delay_timer_each_elevator -= Time.deltaTime;
+
+                if (delay_timer_each_elevator < 0)
+                {
+                    SoundManager.Instance.PlaySoundEffect("AddElevatorToScore");
+                    player_score += 100;
+                    DisplayScore();
+                    Destroy(temp_elevator);
+                    delay_timer_each_elevator = delay_time_each_elevator;
+                }
+
+            }
+            else
+            {
+                is_there_elevater_to_count = false;
+            }
+        }
+
+
     }
+
+
 
     private void OnDestroy()
     {
-        
+
         if (player != null)
         {
             player.GetComponent<PlayerController>().On_qbert_event -= QbertEventListener;
         }
 
-        if (list_platforms != null && list_platforms.Count != 0 ) 
+        if (list_platforms != null && list_platforms.Count != 0)
         {
             foreach (Platform platform in list_platforms)
             {
                 platform.On_platform_event -= PlatformEventListener;
             }
         }
-
+        if (coily != null)
+        {
+            coily.GetComponent<snake>().On_coily_event -= CoilyEventListener;
+        }
     }
 
     private void QbertEventListener(Qbert_Event_states qbert_event)
@@ -160,7 +238,7 @@ public class GameLogic : MonoBehaviour
                 number_of_lives -= 1;
                 is_qbert_dead_off_pyramid = true;
                 break;
-            case Qbert_Event_states.Krevive_player_off_pyramid:              
+            case Qbert_Event_states.Krevive_player_off_pyramid:
                 ChangeLivesDisplayed();
                 break;
             case Qbert_Event_states.Kdeath_on_pyramid:
@@ -171,35 +249,57 @@ public class GameLogic : MonoBehaviour
                 ChangeLivesDisplayed();
                 PlacePlayerOnRightplatform();
                 break;
+            case Qbert_Event_states.Ktouch_greenball:
+                player_score += 100;
+                DisplayScore();
+                break;
+            case Qbert_Event_states.kcount_score:    
+                StartCoroutine(WaitAndclearBonusScore( 2f));
+                break;
         }
 
     }
 
     private void PlatformEventListener(bool is_step)
     {
-        if (is_step) 
+        if (is_step)
         {
+
+            player_score += 25;
+            DisplayScore();
             counter_step_on_platform++;
-            if (counter_step_on_platform == list_platforms.Count) 
+            if (counter_step_on_platform == list_platforms.Count)
             {
                 CheckIfAllPlatformBeenStepOn();
             }
         }
     }
 
-    void PlacePlayerOnRightplatform() 
+
+    private void CoilyEventListener(bool does_coily_exist)
     {
-        if (player!= null && list_platforms.Count != 0) 
+        if (!does_coily_exist)
         {
-            foreach(Platform platform in list_platforms)
+            player_score += 500;
+            DisplayScore();
+        }
+
+    }
+
+
+    void PlacePlayerOnRightplatform()
+    {
+        if (player != null && list_platforms.Count != 0)
+        {
+            foreach (Platform platform in list_platforms)
             {
-                if (platform.get_is_player_current_this_platform) 
+                if (platform.get_is_player_current_this_platform)
                 {
                     GameObject child = platform.gameObject.transform.GetChild(0).gameObject;
-                    
-                    
+
+
                     player.transform.position = child.transform.position;
-                   
+
                     break;
                 }
 
@@ -211,7 +311,7 @@ public class GameLogic : MonoBehaviour
 
     void ResetThePlatfromsofLastPlayerLocation()
     {
-        if ( list_platforms.Count != 0)
+        if (list_platforms.Count != 0)
         {
             foreach (Platform platform in list_platforms)
             {
@@ -225,20 +325,20 @@ public class GameLogic : MonoBehaviour
 
 
 
-    void ChangeLivesDisplayed() 
+    void ChangeLivesDisplayed()
     {
-        if (lives_display.Length > 0 && lives_display != null) 
+        if (lives_display.Length > 0 && lives_display != null)
         {
-            switch (number_of_lives) 
+            switch (number_of_lives)
             {
                 case 3:
-                    for (int i= 0; i < lives_display.Length ; i++)
+                    for (int i = 0; i < lives_display.Length; i++)
                     {
                         if (i < 2)
                         {
                             lives_display[i].gameObject.SetActive(true);
                         }
-                        else 
+                        else
                         {
                             lives_display[i].gameObject.SetActive(false);
                         }
@@ -260,13 +360,13 @@ public class GameLogic : MonoBehaviour
                 case 1:
                     for (int i = 0; i < lives_display.Length; i++)
                     {
-                       
-                            lives_display[i].gameObject.SetActive(false);
+
+                        lives_display[i].gameObject.SetActive(false);
                     }
                     break;
             }
         }
-        
+
     }
 
     /// <summary>
@@ -274,14 +374,14 @@ public class GameLogic : MonoBehaviour
     /// </summary>
     void CheckIfAllPlatformBeenStepOn()
     {
-        foreach (Platform platform in list_platforms) 
+        foreach (Platform platform in list_platforms)
         {
             if (!platform.get_has_been_step_on)
             {
                 is_win_cin = false;
                 break;
             }
-            else 
+            else
             {
                 is_win_cin = true;
             }
@@ -294,6 +394,7 @@ public class GameLogic : MonoBehaviour
                 platform.GetPlatformToPlayWinAnimation();
             }
             player.GetComponent<PlayerController>().QbertWin();
+            is_level_clear = true;
         }
     }
 
@@ -302,5 +403,26 @@ public class GameLogic : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
         ChangeLivesDisplayed();
+    }
+
+    IEnumerator WaitAndclearBonusScore(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        score_bouus_text_ui.enabled = true;
+        score_bouus_text_ui.text = "<color=#ff00ffff>" + "Bonus: " + "</color>" + "<color=orange>" + "1000" + "</color>";
+        yield return new WaitForSeconds(waitTime);
+        score_bouus_text_ui.enabled = false;
+        player_score += 1000;
+        DisplayScore();
+        yield return new WaitForSeconds(waitTime);
+        is_there_elevater_to_count = true;
+    }
+
+    void DisplayScore()
+    {
+        if (score_text_ui != null)
+        {
+            score_text_ui.text = player_score.ToString();
+        }
     }
 }

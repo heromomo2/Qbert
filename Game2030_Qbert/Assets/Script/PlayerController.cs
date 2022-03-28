@@ -203,11 +203,12 @@ public class PlayerController : MonoBehaviour
         //  death
         if (this.gameObject.transform.position.y <= -3.00f && !is_qbert_dead_from_jump_off)
         {
+            SoundManager.Instance.PlaySoundEffect("QbertFallScream");
             // this if statement for when you jump off (top-lift, -top-right)
             //- turn on the boxcolluder, so you can get new destinations from the platfrom
             //- put your sortingorder back to normarl(qbert in on pyramid and not bebind it)
             //- reset the timer for PlayerDropFromElevator function becuse we are never go reach the location we are lerpping to
-           // this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            // this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             is_qbert_dead_from_jump_off = true;
            // is_movement_stop = true;
 
@@ -481,6 +482,7 @@ public class PlayerController : MonoBehaviour
         player_direction = direction.Kno_direction;
         timer = 0;
         is_qbert_dead_from_foe = true;
+        SoundManager.Instance.PlaySoundEffect("QbertScream");
 
     }
 
@@ -502,6 +504,8 @@ public class PlayerController : MonoBehaviour
         is_allow_to_press_key = false;
         player_anim.SetTrigger("initia");
         ChangeQberState(Qbert_Event_states.kplayer_has_won);
+        SoundManager.Instance.PlaySoundEffect("WinSound");
+       
     }
     //
     public void Qbertlost()
@@ -526,7 +530,13 @@ public class PlayerController : MonoBehaviour
         this.gameObject.transform.position = new Vector2(-0.062f, 2.4f);// positon on top of the pyramid
     }
 
-
+    public void QbertCountScore()
+    {
+        is_allow_to_press_key = false;
+        player_anim.SetTrigger("initia");
+        ChangeQberState(Qbert_Event_states.kcount_score);
+        this.gameObject.SetActive(false);
+    }
 
 }
 
@@ -558,6 +568,7 @@ public enum Qbert_Event_states
     Krevive_player_pyramid,
     Krevive_player_off_pyramid,
     kplayer_has_won,
+    kcount_score,
     kplayer_has_lost,
     Ktouch_greenball,
 }

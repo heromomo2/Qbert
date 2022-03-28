@@ -48,6 +48,7 @@ public class CollsionChildobject : MonoBehaviour
                     Debug.Log("player's Childobject has touch Greenball");
                     this.gameObject.GetComponentInParent<PlayerController>().ChangeQberState(Qbert_Event_states.Ktouch_greenball);
                     Destroy(col.transform.parent.gameObject);
+                    SoundManager.Instance.PlaySoundEffect("stoptime");
                 }
             }
         }

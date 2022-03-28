@@ -191,6 +191,13 @@ public class Platform : MonoBehaviour
             platform_anim.SetTrigger("win");
         }
     }
+    public void GetPlatformStopPlayingWinAnimation()
+    {
+        if (platform_anim != null)
+        {
+            platform_anim.SetTrigger("Step");
+        }
+    }
 
 }
 
