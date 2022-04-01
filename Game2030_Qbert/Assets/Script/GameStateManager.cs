@@ -13,7 +13,10 @@ public class GameStateManager : MonoBehaviour
     #endregion
     #region pauseMenu
     public   GameObject pause_menu = null;
-   
+    #endregion
+    #region
+    public GameObject game_over = null;
+    private bool is_game_over = false;
     #endregion
     public static GameStateManager Instance { get; private set; }
     private void Awake()
@@ -88,9 +91,9 @@ public class GameStateManager : MonoBehaviour
     {
       
 
-        if (pause_menu != null)
+        if (pause_menu != null && !is_game_over )
         {
-            if (Input.GetKeyDown(KeyCode.Escape) /*&& sceneName == "Game"*/)
+            if (Input.GetKeyDown(KeyCode.Escape))
             {
                 print("Esc key was pressed");
                 if (Time.timeScale == 1)
@@ -129,41 +132,60 @@ public class GameStateManager : MonoBehaviour
     }
     #endregion;
 
+    #region GameOverFunction
+    public void ReturnButtionIsPressed() 
+    {
+        LoadScene("MainMenu");
+    }
+    #endregion
+
+    
+
 
     public void ChangeGameState(int newState)
     {
         switch (newState)
         {
-            case GameStates.MainMenu:
+            case GameStates.MainMenuState:
                 main_menu.SetActive(true);
                 leader_board.SetActive(false);
                 SoundManager.Instance.PlayMusic();
                 break;
-            case GameStates.LeaderBoard:
+            case GameStates.LeaderBoardState:
                 main_menu.SetActive(false);
                 leader_board.SetActive(true);
                 SoundManager.Instance.StopMusic();
                 break;
-            case GameStates.Pause:
+            case GameStates.PauseState:
                 pause_menu.SetActive(true);
                 SoundManager.Instance.PlayMusic();
                 break;
-            case GameStates.Gamemode:
+            case GameStates.GamemodeState:
+                is_game_over = false;
                 pause_menu.SetActive(false);
+                game_over.SetActive(false);
                 SoundManager.Instance.StopMusic();
                 break;
+            case GameStates.GameOverState:
+                is_game_over = true;
+                pause_menu.SetActive(false);
+                game_over.SetActive(true);
+                break;
+               
         }
     }
 
     static public class GameStates
     {
-        public const int MainMenu = 1;
+        public const int MainMenuState = 1;
 
-        public const int LeaderBoard = 2;
+        public const int LeaderBoardState = 2;
 
-        public const int Pause = 3;
+        public const int PauseState = 3;
 
-        public const int Gamemode = 4;
+        public const int GamemodeState = 4;
+
+        public const int GameOverState = 5;
 
     }
 }

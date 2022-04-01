@@ -45,13 +45,13 @@ public class GameLogic : MonoBehaviour
 
     void Start()
     {
-        int random_number = Random.Range(0, 600);
-        RankPlayerData test_rank_player = new RankPlayerData("Momo", random_number);
+        //int random_number = Random.Range(0, 600);
+        //RankPlayerData test_rank_player = new RankPlayerData("Momo", random_number);
 
-        if (GameData.Instance.IsYourScoreRankWorthy((test_rank_player.get_player_score_data())))
-        {
-            GameData.Instance.AddPlayerDataToRankPlayersData(test_rank_player);
-        }
+        //if (GameData.Instance.IsYourScoreRankWorthy((test_rank_player.get_player_score_data())))
+        //{
+        //    GameData.Instance.AddPlayerDataToRankPlayersData(test_rank_player);
+        //}
 
         if (player != null)
         {
@@ -177,32 +177,8 @@ public class GameLogic : MonoBehaviour
 
         }
 
-        /// add score if there is elevator
-        if (is_there_elevater_to_count)
-        {
-            GameObject temp_elevator;
-            temp_elevator = GameObject.FindGameObjectWithTag("Elevator");
-
-            if (temp_elevator != null)
-            {
-
-                delay_timer_each_elevator -= Time.deltaTime;
-
-                if (delay_timer_each_elevator < 0)
-                {
-                    SoundManager.Instance.PlaySoundEffect("AddElevatorToScore");
-                    player_score += 100;
-                    DisplayScore();
-                    Destroy(temp_elevator);
-                    delay_timer_each_elevator = delay_time_each_elevator;
-                }
-
-            }
-            else
-            {
-                is_there_elevater_to_count = false;
-            }
-        }
+       
+       
 
 
     }
@@ -253,9 +229,42 @@ public class GameLogic : MonoBehaviour
                 player_score += 100;
                 DisplayScore();
                 break;
-            case Qbert_Event_states.kcount_score:    
-                StartCoroutine(WaitAndclearBonusScore( 2f));
+            case Qbert_Event_states.kcount_score:
+                StartCoroutine(WaitAndclearBonusScore(2f));
                 break;
+            case Qbert_Event_states.kplayer_has_lost:
+
+                // RankPlayerData test_rank_player = new RankPlayerData("player", player_score);
+
+                if (GameData.Instance.IsYourScoreRankWorthy(player_score))
+                {
+                    GameOver.Instance.GameOverInitial(false, true);
+
+                }
+                else
+                {
+                    GameOver.Instance.GameOverInitial(false, false);
+                }
+
+                GameStateManager.Instance.ChangeGameState(5);
+                break;
+            case Qbert_Event_states.kreach_Game_over_win:
+
+                // RankPlayerData test_rank_player = new RankPlayerData("player", player_score);
+
+                if (GameData.Instance.IsYourScoreRankWorthy(player_score))
+                {
+                    GameOver.Instance.GameOverInitial(true, true);
+
+                }
+                else
+                {
+                    GameOver.Instance.GameOverInitial(true, false);
+                }
+
+                GameStateManager.Instance.ChangeGameState(5);
+                break;
+
         }
 
     }
@@ -405,6 +414,10 @@ public class GameLogic : MonoBehaviour
         ChangeLivesDisplayed();
     }
 
+    /// add display the text bonus 100 at the bottom
+    /// add100 point for clear the level
+    /// display it
+   
     IEnumerator WaitAndclearBonusScore(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
@@ -415,8 +428,34 @@ public class GameLogic : MonoBehaviour
         player_score += 1000;
         DisplayScore();
         yield return new WaitForSeconds(waitTime);
-        is_there_elevater_to_count = true;
+        StartCoroutine(WaitAndCheckForElevatorpoint(delay_time_each_elevator));
     }
+
+    /// add score if there is elevator left
+    IEnumerator WaitAndCheckForElevatorpoint(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+
+        GameObject temp_elevator;
+        temp_elevator = GameObject.FindGameObjectWithTag("Elevator");
+
+        if (temp_elevator != null)
+        {
+            SoundManager.Instance.PlaySoundEffect("AddElevatorToScore");
+            player_score += 100;
+            DisplayScore();
+            Destroy(temp_elevator);
+            StartCoroutine(WaitAndCheckForElevatorpoint(delay_time_each_elevator));
+        }
+        else
+        {
+            player.GetComponent<PlayerController>().ChangeQberState(Qbert_Event_states.kreach_Game_over_win);
+            GameOver.Instance.player_score = player_score;
+            StopAllCoroutines();
+        }
+    }
+
+
 
     void DisplayScore()
     {

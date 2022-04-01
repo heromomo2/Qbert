@@ -568,6 +568,7 @@ public enum Qbert_Event_states
     Krevive_player_pyramid,
     Krevive_player_off_pyramid,
     kplayer_has_won,
+    kreach_Game_over_win,
     kcount_score,
     kplayer_has_lost,
     Ktouch_greenball,
