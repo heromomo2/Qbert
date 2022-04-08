@@ -331,7 +331,7 @@ public class PlayerController : MonoBehaviour
 
             if (top_left_platform_position != null)
             {
-                if (top_left_platform_position.gameObject.tag == "Elevator")
+                if (top_left_platform_position.gameObject.tag == "ElevatorChild")
                 {
                     is_go_to_elevator = true;
                 }
@@ -355,7 +355,7 @@ public class PlayerController : MonoBehaviour
 
             if (top_right_platform_position != null)
             {
-                if (top_right_platform_position.gameObject.tag == "Elevator")
+                if (top_right_platform_position.gameObject.tag == "ElevatorChild")
                 {
                     is_go_to_elevator = true;
                 }

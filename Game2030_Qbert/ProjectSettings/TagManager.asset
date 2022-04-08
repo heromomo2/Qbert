@@ -13,6 +13,10 @@ TagManager:
   - redirection
   - Child
   - Greenball
+  - SnakeTrigger
+  - GreenballTrigger
+  - RedBallTrigger
+  - ElevatorChild
   layers:
   - Default
   - TransparentFX

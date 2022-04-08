@@ -13,7 +13,7 @@ public class CollsionChildobject : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Snake"))
+        if (col.gameObject.CompareTag("SnakeTrigger"))
         {
             if (this.gameObject.CompareTag("Player"))
             {
@@ -25,7 +25,7 @@ public class CollsionChildobject : MonoBehaviour
             }
         }
 
-        if (col.gameObject.CompareTag("RedBall"))
+        if (col.gameObject.CompareTag("RedBallTrigger"))
         {
             if (this.gameObject.CompareTag("Player"))
             {
@@ -39,7 +39,7 @@ public class CollsionChildobject : MonoBehaviour
 
 
 
-        if (col.gameObject.CompareTag("Greenball"))
+        if (col.gameObject.CompareTag("GreenballTrigger"))
         {
             if (this.gameObject.CompareTag("Player"))
             {

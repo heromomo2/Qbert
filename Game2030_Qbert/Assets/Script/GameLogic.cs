@@ -18,9 +18,10 @@ public class GameLogic : MonoBehaviour
     [SerializeField] Text score_text_ui = null;
     [SerializeField] Text score_bouus_text_ui = null;
     [SerializeField] Image[] lives_display = null;
+    [SerializeField] ArrowUI[] Arrow_display = null;
     [SerializeField] private int number_of_lives = 3;
     [SerializeField] private int number_of_arounds = 0;
-    [SerializeField] private int player_score = 0;
+    [SerializeField] private int m_player_score = 0;
     #endregion
     [Header("Delay for qbert")]
     #region Delay on player
@@ -110,6 +111,7 @@ public class GameLogic : MonoBehaviour
                     player.GetComponent<PlayerController>().Qbertlost();
                     is_qbert_dead_from_foe = false;
                     delay_timer_qbert_death_by_foe = delay_time_qbert_death_by_foe;
+                    stopAllArrows();
                 }
                 else
                 {
@@ -132,6 +134,7 @@ public class GameLogic : MonoBehaviour
                     player.GetComponent<PlayerController>().Qbertlost();
                     is_qbert_dead_off_pyramid = false;
                     delay_timer_qbert_death_by_jump = delay_time_qbert_death_by_jump;
+                    stopAllArrows();
                 }
                 else
                 {
@@ -166,12 +169,14 @@ public class GameLogic : MonoBehaviour
             {
                 if (player != null)
                 {
+                    stopAllArrows();
                     player.GetComponent<PlayerController>().QbertCountScore();
                     foreach (Platform platform in list_platforms)
                     {
                         platform.GetComponent<Platform>().GetPlatformStopPlayingWinAnimation();
                     }
                     is_level_clear = false;
+                    
                 }
             }
 
@@ -226,20 +231,21 @@ public class GameLogic : MonoBehaviour
                 PlacePlayerOnRightplatform();
                 break;
             case Qbert_Event_states.Ktouch_greenball:
-                player_score += 100;
+                m_player_score += 100;
                 DisplayScore();
                 break;
             case Qbert_Event_states.kcount_score:
+                stopAllArrows();
                 StartCoroutine(WaitAndclearBonusScore(2f));
                 break;
             case Qbert_Event_states.kplayer_has_lost:
 
                 // RankPlayerData test_rank_player = new RankPlayerData("player", player_score);
-
-                if (GameData.Instance.IsYourScoreRankWorthy(player_score))
+                
+                if (GameData.Instance.IsYourScoreRankWorthy(m_player_score))
                 {
                     GameOver.Instance.GameOverInitial(false, true);
-
+                    GameOver.Instance.player_score = m_player_score;
                 }
                 else
                 {
@@ -251,8 +257,9 @@ public class GameLogic : MonoBehaviour
             case Qbert_Event_states.kreach_Game_over_win:
 
                 // RankPlayerData test_rank_player = new RankPlayerData("player", player_score);
+               
 
-                if (GameData.Instance.IsYourScoreRankWorthy(player_score))
+                if (GameData.Instance.IsYourScoreRankWorthy(m_player_score))
                 {
                     GameOver.Instance.GameOverInitial(true, true);
 
@@ -274,7 +281,7 @@ public class GameLogic : MonoBehaviour
         if (is_step)
         {
 
-            player_score += 25;
+            m_player_score += 25;
             DisplayScore();
             counter_step_on_platform++;
             if (counter_step_on_platform == list_platforms.Count)
@@ -289,7 +296,7 @@ public class GameLogic : MonoBehaviour
     {
         if (!does_coily_exist)
         {
-            player_score += 500;
+            m_player_score += 500;
             DisplayScore();
         }
 
@@ -425,7 +432,7 @@ public class GameLogic : MonoBehaviour
         score_bouus_text_ui.text = "<color=#ff00ffff>" + "Bonus: " + "</color>" + "<color=orange>" + "1000" + "</color>";
         yield return new WaitForSeconds(waitTime);
         score_bouus_text_ui.enabled = false;
-        player_score += 1000;
+        m_player_score += 1000;
         DisplayScore();
         yield return new WaitForSeconds(waitTime);
         StartCoroutine(WaitAndCheckForElevatorpoint(delay_time_each_elevator));
@@ -442,15 +449,15 @@ public class GameLogic : MonoBehaviour
         if (temp_elevator != null)
         {
             SoundManager.Instance.PlaySoundEffect("AddElevatorToScore");
-            player_score += 100;
+            m_player_score += 100;
             DisplayScore();
             Destroy(temp_elevator);
             StartCoroutine(WaitAndCheckForElevatorpoint(delay_time_each_elevator));
         }
-        else
+        else if(temp_elevator == null)
         {
             player.GetComponent<PlayerController>().ChangeQberState(Qbert_Event_states.kreach_Game_over_win);
-            GameOver.Instance.player_score = player_score;
+            GameOver.Instance.player_score = m_player_score;
             StopAllCoroutines();
         }
     }
@@ -461,7 +468,19 @@ public class GameLogic : MonoBehaviour
     {
         if (score_text_ui != null)
         {
-            score_text_ui.text = player_score.ToString();
+            score_text_ui.text = m_player_score.ToString();
+        }
+    }
+
+    void stopAllArrows() 
+    {
+        if (Arrow_display.Length > 0) 
+        {
+            foreach (ArrowUI arrow_ui in Arrow_display)
+            {
+                arrow_ui.StopArrow();
+            }
+
         }
     }
 }

@@ -79,6 +79,7 @@ public class snake : MonoBehaviour
     public float freeze_time = 3.5f;
     public float freeze_timer = 3.5f;
     public bool is_frozen = false;
+    public bool is_ignore_frozen = false;
 
 
     // Start is called before the first frame update
@@ -89,6 +90,23 @@ public class snake : MonoBehaviour
         {
             coily_event(true);
         }
+
+        GameObject[] gos;
+        gos = GameObject.FindGameObjectsWithTag("Greenball");
+        foreach (GameObject go in gos)
+        {
+            go.GetComponent<Ball>().SubToCoily();
+        }
+
+        GameObject[] gos2;
+        gos2 = GameObject.FindGameObjectsWithTag("RedBall");
+
+        foreach (GameObject go2 in gos2)
+        {
+            go2.GetComponent<Ball>().SubToCoily();
+        }
+
+
     }
 
     // Update is called once per frame
@@ -105,9 +123,12 @@ public class snake : MonoBehaviour
             }
             else
             {
-                is_frozen = false;
-                freeze_timer = freeze_time;
-                this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = false;
+                if (!is_ignore_frozen)
+                {
+                    is_frozen = false;
+                    freeze_timer = freeze_time;
+                    this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = false;
+                }
             }
         }
 
@@ -748,18 +769,42 @@ public class snake : MonoBehaviour
         switch (qbert_event)
         {
             case Qbert_Event_states.Kdeath_off_pyramid:
+                is_ignore_frozen = true;
+                is_frozen = false;
+                if (qbert_event_received != null)
+                {
+                    qbert_event_received.On_qbert_event -= QbertEventListener;
+                }               
                 Destroy(this.gameObject);
                 break;
             case Qbert_Event_states.Kdeath_on_pyramid:
                 this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = true;
                 break;
             case Qbert_Event_states.Krevive_player_pyramid:
+                is_ignore_frozen = true;
+                is_frozen = false;
+                if (qbert_event_received != null)
+                {
+                    qbert_event_received.On_qbert_event -= QbertEventListener;
+                }
                 Destroy(this.gameObject);
                 break;
             case Qbert_Event_states.kplayer_has_won:
+                is_ignore_frozen = true;
+                is_frozen = false;
+                if (qbert_event_received != null)
+                {
+                    qbert_event_received.On_qbert_event -= QbertEventListener;
+                }
                 Destroy(this.gameObject);
                 break;
             case Qbert_Event_states.kplayer_has_lost:
+                is_ignore_frozen = true;
+                if (qbert_event_received != null)
+                {
+                    qbert_event_received.On_qbert_event -= QbertEventListener;
+                }
+                is_frozen = false;
                 Destroy(this.gameObject);
                 break;
             case Qbert_Event_states.Ktouch_greenball:

@@ -22,6 +22,8 @@ public class Ball : MonoBehaviour
     public float freeze_time = 3.5f;
     public float freeze_timer = 3.5f;
     public bool  is_frozen = false;
+    public bool is_ignore_frozen = false;
+
     #endregion
 
     #region Animation stuff
@@ -35,7 +37,27 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (qbert_event_received == null)
+        {
+            GameObject temp_player;
+            temp_player = GameObject.FindGameObjectWithTag("Player");
+            if (temp_player != null)
+            {
+                qbert_event_received = temp_player.GetComponent<PlayerController>();
+                qbert_event_received.On_qbert_event += QbertEventListener;
+            }
+        }
+
+        if (coily_event_received == null)
+        {
+            GameObject temp_snake;
+            temp_snake = GameObject.FindGameObjectWithTag("Snake");
+            if (temp_snake != null)
+            {
+                coily_event_received = temp_snake.GetComponent<snake>();
+                coily_event_received.On_coily_event += CoilyEventListener;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -52,9 +74,12 @@ public class Ball : MonoBehaviour
             }
             else
             {
-                is_frozen = false;
-                freeze_timer = freeze_time;
-                this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = false;
+                if (!is_ignore_frozen)
+                {
+                    is_frozen = false;
+                    freeze_timer = freeze_time;
+                    this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = false;
+                }
             }
         }
 
@@ -89,6 +114,7 @@ public class Ball : MonoBehaviour
                 coily_event_received.On_coily_event += CoilyEventListener;
             }
         }
+
         if (qbert_event_received == null)
         {
             GameObject temp_player;
@@ -150,11 +176,11 @@ public class Ball : MonoBehaviour
         {
             coily_event_received.On_coily_event -= CoilyEventListener;
         }
+
         if (qbert_event_received != null)
         {
             qbert_event_received.On_qbert_event -= QbertEventListener;
-        }
-            
+        }       
 
     }
     private void CoilyEventListener(bool does_coily_exist)
@@ -164,7 +190,6 @@ public class Ball : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-
     }
 
 
@@ -173,27 +198,55 @@ public class Ball : MonoBehaviour
         switch (qbert_event)
         {
             case Qbert_Event_states.Kdeath_off_pyramid:
+                is_ignore_frozen = true;
+                is_frozen = false;
+                
                 Destroy(this.gameObject);
                 break;
             case Qbert_Event_states.Kdeath_on_pyramid:
-                this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = true ;
+              //  is_ignore_frozen = t;
+           //     is_frozen = true;
+                this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = true;
+                this.gameObject.GetComponent<GerenalMovement>().Is_movement_stop = true;
+                // Destroy(this.gameObject);
                 break;
             case Qbert_Event_states.Krevive_player_pyramid:
+                is_frozen = false;
                 Destroy(this.gameObject);
                 break;
             case Qbert_Event_states.Ktouch_greenball:
+                is_ignore_frozen = false;
                 is_frozen = true;
                 break;
             case Qbert_Event_states.kplayer_has_won:
+                is_ignore_frozen = true;
+                is_frozen = false;
+               
                 Destroy(this.gameObject);
                 break;
             case Qbert_Event_states.kplayer_has_lost:
+                is_ignore_frozen = true;
+                is_frozen = false;
+                
                 Destroy(this.gameObject);
                 break;
         }
 
     }
 
+    public void SubToCoily() 
+    {
+        if (coily_event_received == null)
+        {
+            GameObject temp_snake;
+            temp_snake = GameObject.FindGameObjectWithTag("Snake");
+            if (temp_snake != null)
+            {
+                coily_event_received = temp_snake.GetComponent<snake>();
+                coily_event_received.On_coily_event += CoilyEventListener;
+            }
+        }
+    }
 
     private IEnumerator WaitBeforeMoving(float waitTime)
     {

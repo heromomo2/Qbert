@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 267543730130089709}
   m_Layer: 15
   m_Name: child
-  m_TagString: Snake
+  m_TagString: SnakeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  jump_time: 1
+  jump_time: 0.6
   jump_timer: 0
   curve_fall:
     serializedVersion: 2
@@ -311,6 +311,10 @@ MonoBehaviour:
   delay_before_ball_pick_move: 0.2
   delay_before_snake_pick_move: 0.5
   facing_right: 1
+  freeze_time: 3.5
+  freeze_timer: 3.5
+  is_frozen: 0
+  is_ignore_frozen: 0
 --- !u!114 &8857677992911653785
 MonoBehaviour:
   m_ObjectHideFlags: 0

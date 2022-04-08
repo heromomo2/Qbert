@@ -38,7 +38,7 @@ public class GameOver : MonoBehaviour
             name = value;
         }
     }
-        [SerializeField] private int score = 0;
+        [SerializeField] private int score = -1;
     public int player_score
     {
         get
@@ -194,7 +194,7 @@ public class GameOver : MonoBehaviour
             name = name_inputField.text.ToString();
 
 
-            if (name != null && score != 0)
+            if (name != null && score != -1)
             {
                 GameData.Instance.AddPlayerDataToRankPlayersData(new RankPlayerData(name, score));
             }
@@ -212,6 +212,7 @@ public class GameOver : MonoBehaviour
             {
                 return_button_2.gameObject.SetActive(true);
             }
+            GameData.Instance.SaveAllRankPlayersData();
         }
        
 

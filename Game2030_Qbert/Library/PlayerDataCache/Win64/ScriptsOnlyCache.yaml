@@ -1,10 +1,13 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ArrowUI
     - Ball
+    - CollsionChildobject
     - Elevator
     - GameData
     - GameLogic
+    - GameOver
     - GameStateManager
     - GeneralCollsionScript
     - GerenalMovement
@@ -15,14 +18,18 @@ ScriptsOnlyBuild:
     - PlayerCollision
     - PlayerController
     - RedirectionPlatform
+    - SoundManager
     - Spawner
     - snake
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -46,6 +53,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.InputField
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Game.unity:
@@ -84,41 +92,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 1772}
+      Script: {instanceID: 1590}
     - Class: 114
-      Script: {instanceID: 1868}
+      Script: {instanceID: 1774}
     - Class: 114
-      Script: {instanceID: 2186}
+      Script: {instanceID: 1870}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 2008}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 2192}
     - Class: 114
-      Script: {instanceID: 2864}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 2578}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 2700}
     - Class: 114
-      Script: {instanceID: 3250}
+      Script: {instanceID: 2872}
     - Class: 114
-      Script: {instanceID: 3350}
+      Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3166}
     - Class: 114
-      Script: {instanceID: 3620}
+      Script: {instanceID: 3214}
     - Class: 114
-      Script: {instanceID: 3802}
+      Script: {instanceID: 3258}
     - Class: 114
-      Script: {instanceID: 3806}
+      Script: {instanceID: 3358}
     - Class: 114
-      Script: {instanceID: 4504}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 4930}
+      Script: {instanceID: 3628}
     - Class: 114
-      Script: {instanceID: 5362}
+      Script: {instanceID: 3810}
     - Class: 114
-      Script: {instanceID: 5492}
+      Script: {instanceID: 3814}
+    - Class: 114
+      Script: {instanceID: 4512}
+    - Class: 114
+      Script: {instanceID: 4940}
+    - Class: 114
+      Script: {instanceID: 5372}
+    - Class: 114
+      Script: {instanceID: 5502}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -152,8 +168,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
     - Class: 104
@@ -161,25 +175,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1522}
     - Class: 114
-      Script: {instanceID: 1772}
+      Script: {instanceID: 1774}
     - Class: 114
-      Script: {instanceID: 1938}
+      Script: {instanceID: 1940}
     - Class: 114
-      Script: {instanceID: 2266}
+      Script: {instanceID: 1978}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 2272}
     - Class: 114
-      Script: {instanceID: 2864}
+      Script: {instanceID: 2700}
     - Class: 114
-      Script: {instanceID: 3100}
+      Script: {instanceID: 2872}
     - Class: 114
-      Script: {instanceID: 3350}
+      Script: {instanceID: 3108}
     - Class: 114
-      Script: {instanceID: 3470}
+      Script: {instanceID: 3358}
     - Class: 114
-      Script: {instanceID: 4084}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 5658}
+      Script: {instanceID: 4092}
+    - Class: 114
+      Script: {instanceID: 5668}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -217,10 +233,16 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
-      Hash: 2a24cc7ac14dd38553064d683a95ce13
+      Hash: 961ddf9f38bf4c229368dba2c2f583a3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
+  - hash:
+      serializedVersion: 2
+      Hash: 2987c79d614d62139d08db9a325f20bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ArrowUI
   - hash:
       serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
@@ -277,7 +299,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 6e80932e06d83fa50e8728b78417e04e
+      Hash: 61a51afe5a1eaa77dc15f9dba9698771
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameStateManager
@@ -299,6 +321,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 7ea4a0a6966d491ccf1e3ba1afb89fa6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SoundManager
+  - hash:
+      serializedVersion: 2
+      Hash: e2bed028ce8f10dcd8207c18a1016aa6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CollsionChildobject
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -353,6 +387,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: IKManager2D
+  - hash:
+      serializedVersion: 2
+      Hash: 020b41e927c4c24edb0dd31016bf1200
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameOver
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -439,13 +479,13 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
-      Hash: d5da23abd97cf5520bfc3789031c474b
+      Hash: 344362bf7b96db5b8e53c75cfabddeb1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Elevator
   - hash:
       serializedVersion: 2
-      Hash: 2a568b8682a792794667aff85156b360
+      Hash: a9b749b0dc53e11a8e94ef96c7cb0cb9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Spawner
@@ -505,7 +545,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: ec3089de24df3c16397542f82bed755e
+      Hash: ffd9d17f41fd84466e75686da73277f4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: snake
@@ -523,7 +563,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ec39cf0fa11c9bcc9ca33ec710e6d47e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameLogic
@@ -643,7 +683,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 26340fc1c375d0cc06805adbecb9e3a8
+      Hash: 240bbef5824ece68087d1034711acf41
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ball
@@ -703,7 +743,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: f86e6c92461bfa46bc4849d452fe9813
+      Hash: 1c40bf8f3c4f8234ef1ce34316fbeb6f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CoilyMovement
@@ -763,13 +803,13 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
-      Hash: f86e6c92461bfa46bc4849d452fe9813
+      Hash: 1c40bf8f3c4f8234ef1ce34316fbeb6f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GerenalMovement
   - hash:
       serializedVersion: 2
-      Hash: 0cbc99ebb139177dbfb3dd4883163e1a
+      Hash: 2b4b7592f839dc67fc23d6138539e7f7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Platform
@@ -819,4 +859,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/Owner/Desktop/GAME2030_M2_[Mohamed]_[Mohamud]_QBert/Game2030_Qbert.exe
+  playerPath: C:/Users/Owner/Desktop/GAME2030_M3_[Mohamed]_[Mohamud]_QBert/Game2030_Qbert.exe

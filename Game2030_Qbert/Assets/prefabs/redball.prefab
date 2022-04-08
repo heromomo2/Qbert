@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8668005923428209731}
   m_Layer: 0
   m_Name: redball
-  m_TagString: Ball
+  m_TagString: RedBall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +107,10 @@ MonoBehaviour:
   coily_event_received: {fileID: 0}
   qbert_event_received: {fileID: 0}
   name_sound_effect: RedBallJumpSound
+  freeze_time: 3.5
+  freeze_timer: 3.5
+  is_frozen: 0
+  is_ignore_frozen: 0
   ball_animator: {fileID: 8668005923428209731}
   delay_before_pick_move: 0
   name_Anim_bool: is_red_ball_jumping
@@ -290,7 +294,7 @@ GameObject:
   - component: {fileID: 9112547877702883548}
   m_Layer: 15
   m_Name: GameObject
-  m_TagString: RedBall
+  m_TagString: RedBallTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -110,6 +110,7 @@ MonoBehaviour:
   freeze_time: 3.5
   freeze_timer: 3.5
   is_frozen: 0
+  is_ignore_frozen: 0
   ball_animator: {fileID: 1497424794504369224}
   delay_before_pick_move: 0.3
   name_Anim_bool: Is_green_ball_jumping
@@ -293,7 +294,7 @@ GameObject:
   - component: {fileID: 3394145154192142769}
   m_Layer: 15
   m_Name: GameObject
-  m_TagString: Greenball
+  m_TagString: GreenballTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
